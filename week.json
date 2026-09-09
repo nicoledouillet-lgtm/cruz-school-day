@@ -12,6 +12,9 @@
       "text": "Summer Reading Slides", "due": "due Thu",
       "submit": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx/a/ODc2NzE1MjcwODYy/details" },
 
+    { "id": "math6h-p15", "date": "2026-09-09", "cls": "Math 6H", "teacher": "Ms. Rivera", "period": 4,
+      "text": "Math book p.15, 16, 17" },
+
     { "id": "ela-summer-reading", "date": "2026-09-09", "cls": "ELA", "teacher": "Ms. Metsack", "period": 7,
       "text": "Summer Reading Slides", "due": "due tomorrow",
       "submit": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx/a/ODc2NzE1MjcwODYy/details" },
@@ -20,6 +23,10 @@
       "text": "Policies Google form — fill it in with a grown-up", "due": "due Fri", "adult": true,
       "note": "A signed blue policies sheet works too." },
 
+    { "id": "sci-stations", "date": "2026-09-09", "cls": "Science", "teacher": "Mrs. Vocke", "period": 2,
+      "text": "Last call to check in the green \u201cback to school stations\u201d notebook", "due": "due Fri",
+      "note": "Mrs. Vocke scores it Friday whether or not you've checked in." },
+
     { "id": "ela-summer-reading", "date": "2026-09-10", "cls": "ELA", "teacher": "Ms. Metsack", "period": 7,
       "text": "Summer Reading Slides", "due": "DUE TODAY",
       "submit": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx/a/ODc2NzE1MjcwODYy/details" },
@@ -27,6 +34,16 @@
     { "id": "sci-policies", "date": "2026-09-10", "cls": "Science", "teacher": "Mrs. Vocke", "period": 2,
       "text": "Policies Google form — fill it in with a grown-up", "due": "due tomorrow", "adult": true,
       "note": "A signed blue policies sheet works too." },
+
+    { "id": "sci-stations", "date": "2026-09-10", "cls": "Science", "teacher": "Mrs. Vocke", "period": 2,
+      "text": "Last call to check in the green \u201cback to school stations\u201d notebook", "due": "due tomorrow",
+      "note": "Mrs. Vocke scores it Friday whether or not you've checked in." },
+
+    { "id": "ss-5branches", "date": "2026-09-10", "cls": "Social Studies", "teacher": "Mr. Fleming", "period": 5,
+      "text": "5 Branches of Social Studies check", "due": "due Fri" },
+
+    { "id": "ss-5branches", "date": "2026-09-11", "cls": "Social Studies", "teacher": "Mr. Fleming", "period": 5,
+      "text": "5 Branches of Social Studies check", "due": "DUE TODAY" },
 
     { "id": "choir-polo", "date": "2026-09-25", "cls": "6th Grade Choir", "teacher": null, "period": null,
       "text": "Music polo shirts", "link": "https://classroom.google.com/u/3/c/ODc1MDY0MDAwMzkw" },
@@ -39,7 +56,7 @@
     { "date": "2026-09-09", "text": "ELA — Writing Baseline" },
     { "date": "2026-09-10", "text": "ELA — Writing Baseline" },
     { "date": "2026-09-14", "text": "Science — lab safety quiz",
-      "note": "Date unconfirmed — the week-of-9/7 deck lists it, the week-of-9/14 deck doesn't. Worth asking Mrs. Vocke." },
+      "note": "Mrs. Vocke said this twice in the week-of-9/7 deck. Next week's deck is still blank, so it isn't confirmed there yet." },
     { "date": "2026-09-15", "text": "Spanish — matching quiz on greetings vocab" }
   ],
 

@@ -6,7 +6,7 @@
    week.json: try the network first so a Sunday refresh lands immediately,
    fall back to the last saved copy when there's nothing to reach. */
 
-var CACHE = "cruz-school-day-v1";
+var CACHE = "cruz-school-day-v2";
 var SHELL = [
   "./",
   "./index.html",

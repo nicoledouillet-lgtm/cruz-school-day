@@ -686,20 +686,31 @@
     return d;
   }
 
-  /* The focus day: what the "just today" pane is about. Evenings and
-     non-school days look ahead to the next school day, because packing the
-     night before beats packing in the morning rush. Recomputed after the data
-     loads, since no-school days shift which day counts as "next". */
-  var LOOKING_AHEAD = false, FOCUS = TODAY, FOCUS_KEY = TODAY_KEY, FOCUS_WD = TODAY.getDay();
+  /* Two different days, and treating them as one was a bug. At 7pm on a
+     Wednesday the homework he owes is still Wednesday's — he's sitting down to
+     do it right now — but the bag he should pack is Thursday's.
+
+     So homework stays on today for the whole school day, and only looks ahead
+     when today isn't a school day at all. The bag rolls over at 6pm, because
+     packing the night before beats packing in the morning rush.
+
+     Recomputed after the data loads, since no-school days shift what counts as
+     the next school day. */
+  var HW  = TODAY, HW_KEY  = TODAY_KEY, HW_WD  = TODAY.getDay(), HW_AHEAD  = false;
+  var BAG = TODAY, BAG_KEY = TODAY_KEY, BAG_WD = TODAY.getDay(), BAG_AHEAD = false;
 
   function pickFocus() {
-    if (isSchoolDay(TODAY) && NOW.getHours() < EVENING_FROM) {
-      FOCUS = TODAY; LOOKING_AHEAD = false;
-    } else {
-      FOCUS = nextSchoolDay(TODAY); LOOKING_AHEAD = true;
-    }
-    FOCUS_KEY = key(FOCUS);
-    FOCUS_WD  = FOCUS.getDay();
+    var schoolToday = isSchoolDay(TODAY);
+    var evening = NOW.getHours() >= EVENING_FROM;
+
+    HW  = schoolToday ? TODAY : nextSchoolDay(TODAY);
+    BAG = (schoolToday && !evening) ? TODAY : nextSchoolDay(TODAY);
+
+    HW_AHEAD  = !schoolToday;
+    BAG_AHEAD = !(schoolToday && !evening);
+
+    HW_KEY  = key(HW);  HW_WD  = HW.getDay();
+    BAG_KEY = key(BAG); BAG_WD = BAG.getDay();
   }
 
   /* ---------------- storage (this device only) ---------------- */
@@ -711,7 +722,7 @@
 
   function savePack()   { lsSet("pack", store.pack); }
   function saveTicked() { lsSet("ticked", store.ticked); }
-  function savePacked() { lsSet("packed:" + FOCUS_KEY, store.packed); }
+  function savePacked() { lsSet("packed:" + BAG_KEY, store.packed); }
 
   store.pack = lsGet("pack", null) || DEFAULT_PACK.map(function (i) {
     return { id: i.id, label: i.label, days: i.days.slice(), maybe: (i.maybe || []).slice() };
@@ -843,9 +854,9 @@
     return RUNNING.filter(function (r) { return r.weekOf === wk; });
   }
 
-  function focusHomework() { return itemsOn(FOCUS_KEY).concat(runningFor(FOCUS)); }
-  function packItems()  { return store.pack.filter(function (i) { return i.days.indexOf(FOCUS_WD) !== -1; }); }
-  function packMaybes() { return store.pack.filter(function (i) { return i.maybe.indexOf(FOCUS_WD) !== -1; }); }
+  function focusHomework() { return itemsOn(HW_KEY).concat(runningFor(HW)); }
+  function packItems()  { return store.pack.filter(function (i) { return i.days.indexOf(BAG_WD) !== -1; }); }
+  function packMaybes() { return store.pack.filter(function (i) { return i.maybe.indexOf(BAG_WD) !== -1; }); }
 
   /* ---------------- today pane ---------------- */
 
@@ -853,15 +864,15 @@
     var host = document.getElementById("todayHw");
     host.textContent = "";
 
-    quizzesOn(FOCUS_KEY).forEach(function (q) { host.appendChild(quizCard(q)); });
+    quizzesOn(HW_KEY).forEach(function (q) { host.appendChild(quizCard(q)); });
 
     var hw = focusHomework();
     hw.forEach(function (it) { host.appendChild(hwCard(it, isDone(it) ? "" : "is-now")); });
 
-    if (!hw.length && !quizzesOn(FOCUS_KEY).length) {
+    if (!hw.length && !quizzesOn(HW_KEY).length) {
       var e = document.createElement("div");
       e.className = "empty";
-      e.textContent = "No homework listed for " + DAY_NAMES[FOCUS_WD] + ".";
+      e.textContent = "No homework listed for " + DAY_NAMES[HW_WD] + ".";
       host.appendChild(e);
     }
 
@@ -871,7 +882,7 @@
   }
 
   function packChip(i, soft) {
-    var k = FOCUS_KEY + "|" + i.id;
+    var k = BAG_KEY + "|" + i.id;
     var on = !!store.packed[k];
     var li = document.createElement("li");
     if (soft) li.className = "maybe";
@@ -896,7 +907,11 @@
   function renderPack() {
     var ul = document.getElementById("packList");
     ul.textContent = "";
-    document.getElementById("packDay").textContent = DAY_NAMES[FOCUS_WD];
+    /* Says which day the bag is for — on a Wednesday evening the homework
+       above it is Wednesday's while this is Thursday's, and that has to be
+       impossible to misread. */
+    document.getElementById("packDay").textContent =
+      BAG_KEY === HW_KEY ? DAY_NAMES[BAG_WD] : "Packing for " + DAY_NAMES[BAG_WD];
 
     var items = packItems();
     var maybes = packMaybes();
@@ -904,7 +919,7 @@
     var done = 0;
 
     items.forEach(function (i) {
-      if (store.packed[FOCUS_KEY + "|" + i.id]) done++;
+      if (store.packed[BAG_KEY + "|" + i.id]) done++;
       ul.appendChild(packChip(i, false));
     });
     maybes.forEach(function (i) { ul.appendChild(packChip(i, true)); });
@@ -936,7 +951,7 @@
     var hw = focusHomework();
     var items = packItems();
     var hwLeft = hw.filter(function (it) { return !isDone(it); }).length;
-    var packLeft = items.filter(function (i) { return !store.packed[FOCUS_KEY + "|" + i.id]; }).length;
+    var packLeft = items.filter(function (i) { return !store.packed[BAG_KEY + "|" + i.id]; }).length;
 
     /* Nothing to celebrate if there was nothing to do in the first place. */
     if (!hw.length && !items.length) return;
@@ -947,9 +962,10 @@
     var tick = document.createElement("div");
     tick.className = "tick";
     var h = document.createElement("h2");
-    h.textContent = LOOKING_AHEAD ? "Set for " + DAY_NAMES[FOCUS_WD] : "You're good to go";
+    var ahead = BAG_KEY !== HW_KEY;
+    h.textContent = ahead ? "Set for " + DAY_NAMES[BAG_WD] : "You're good to go";
     var p = document.createElement("p");
-    p.textContent = LOOKING_AHEAD
+    p.textContent = ahead
       ? "Homework's done and the bag is packed. Nothing left to think about tonight."
       : "Homework's done and everything's in the bag.";
     box.appendChild(tick); box.appendChild(h); box.appendChild(p);
@@ -960,15 +976,14 @@
 
   function renderMast() {
     var eyebrow = document.getElementById("eyebrow");
-    if (LOOKING_AHEAD) {
-      eyebrow.hidden = false;
-      eyebrow.textContent = NOW.getHours() >= EVENING_FROM ? "Getting ready for" : "Next school day";
-    } else {
-      eyebrow.hidden = true;
-    }
-    document.getElementById("dayName").textContent = DAY_NAMES[FOCUS_WD];
+    var label = HW_AHEAD ? "Next school day"
+              : NOW.getHours() >= EVENING_FROM ? "Tonight" : null;
+    eyebrow.hidden = !label;
+    if (label) eyebrow.textContent = label;
+
+    document.getElementById("dayName").textContent = DAY_NAMES[HW_WD];
     document.getElementById("dayDate").textContent =
-      FOCUS.toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" });
+      HW.toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" });
 
     var hw = focusHomework();
     var left = hw.filter(function (it) { return !isDone(it); }).length;
@@ -1387,7 +1402,7 @@
     META = { updated: d.updated || null, deck: d.deck || null, archive: d.archive || null };
 
     pickFocus();
-    store.packed = lsGet("packed:" + FOCUS_KEY, {}) || {};
+    store.packed = lsGet("packed:" + BAG_KEY, {}) || {};
 
     applyMode();
     renderAll();
