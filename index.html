@@ -1,0 +1,1426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="School Day">
+<meta name="theme-color" content="#FAF7F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12161A" media="(prefers-color-scheme: dark)">
+<title>Cruz's School Day</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png" sizes="192x192">
+
+<style>
+  /* No web fonts on purpose: if the phone is locked to an allow-list of
+     websites, an external font request is blocked and the page renders wrong.
+     Everything here is self-contained and works with no network at all. */
+  :root {
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --serif: "Iowan Old Style", Georgia, "Times New Roman", serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+
+    --paper:        #FAF7F2;
+    --surface:      #FFFFFF;
+    --surface-sunk: #F2EEE6;
+    --ink:          #15202B;
+    --ink-soft:     #3C4653;
+    --muted:        #6E7683;
+    --rule:         #E4DDD2;
+    --rule-strong:  #CFC6B8;
+    --accent:       #1F6F5C;
+    --accent-soft:  #E2EFEA;
+    --urgent:       #B4531B;
+    --urgent-soft:  #FBEADC;
+    --overdue:      #A32B22;
+    --overdue-soft: #FAE3E1;
+    --quiz:         #5B4B8A;
+    --quiz-soft:    #ECE8F5;
+    --shadow:       0 1px 2px rgba(21,32,43,.06), 0 8px 24px -16px rgba(21,32,43,.22);
+
+    --step--1: .8125rem;
+    --step-0:  .9375rem;
+    --step-1:  1.0625rem;
+    --step-2:  1.375rem;
+    --step-3:  2rem;
+    --step-4:  2.75rem;
+
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:        #12161A;
+      --surface:      #1B2127;
+      --surface-sunk: #232A31;
+      --ink:          #E9E5DE;
+      --ink-soft:     #C3C7CC;
+      --muted:        #949AA3;
+      --rule:         #2C343C;
+      --rule-strong:  #3D464F;
+      --accent:       #55AB90;
+      --accent-soft:  #17322B;
+      --urgent:       #E09758;
+      --urgent-soft:  #33241A;
+      --overdue:      #E2857C;
+      --overdue-soft: #38201E;
+      --quiz:         #A99BD4;
+      --quiz-soft:    #262138;
+      --shadow:       0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:        #12161A;
+    --surface:      #1B2127;
+    --surface-sunk: #232A31;
+    --ink:          #E9E5DE;
+    --ink-soft:     #C3C7CC;
+    --muted:        #949AA3;
+    --rule:         #2C343C;
+    --rule-strong:  #3D464F;
+    --accent:       #55AB90;
+    --accent-soft:  #17322B;
+    --urgent:       #E09758;
+    --urgent-soft:  #33241A;
+    --overdue:      #E2857C;
+    --overdue-soft: #38201E;
+    --quiz:         #A99BD4;
+    --quiz-soft:    #262138;
+    --shadow:       0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: var(--step-0);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: max(clamp(1.1rem, 4vw, 2.75rem), env(safe-area-inset-top))
+             clamp(.9rem, 4vw, 2rem)
+             calc(4rem + env(safe-area-inset-bottom));
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    display: flex; flex-wrap: wrap; align-items: flex-end;
+    justify-content: space-between; gap: .75rem 1.5rem;
+    padding-bottom: 1rem; border-bottom: 2px solid var(--ink);
+  }
+
+  .eyebrow {
+    margin: 0 0 .15rem;
+    font-family: var(--mono);
+    font-size: var(--step--1); font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--accent);
+  }
+
+  .masthead h1 {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 700; font-size: var(--step-4);
+    line-height: .95; letter-spacing: -.02em; text-wrap: balance;
+  }
+
+  .masthead .date {
+    margin: .3rem 0 0;
+    font-family: var(--mono);
+    font-size: var(--step--1); font-weight: 500;
+    letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+  }
+
+  .tally { display: flex; gap: 1.5rem; }
+  .tally div { text-align: right; }
+  .tally b {
+    display: block;
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    font-size: var(--step-3); line-height: 1; font-weight: 700;
+  }
+  .tally span { font-size: var(--step--1); color: var(--muted); }
+  .tally .hot b { color: var(--urgent); }
+  .tally .clear b { color: var(--accent); }
+
+  /* ---------- mode switch ---------- */
+
+  .modes { display: flex; gap: .3rem; }
+
+  .mode {
+    appearance: none; font: inherit; font-size: var(--step--1); font-weight: 600;
+    padding: .55rem 1.05rem; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--rule-strong); background: var(--surface); color: var(--ink-soft);
+  }
+  .mode[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+  .mode:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- section chrome ---------- */
+
+  .sec-head {
+    display: flex; flex-wrap: wrap; align-items: baseline;
+    justify-content: space-between; gap: .75rem; margin-bottom: .85rem;
+  }
+  .sec-head h2 {
+    margin: 0; font-family: var(--serif);
+    font-size: var(--step-2); font-weight: 700; letter-spacing: -.01em;
+  }
+  .sec-head .note { font-size: var(--step--1); color: var(--muted); }
+
+  h3.rule {
+    display: flex; align-items: center; gap: .6rem; margin: 0 0 .6rem;
+    font-size: var(--step--1); font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+  }
+  h3.rule::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+  /* ---------- today pane ---------- */
+
+  .stack { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .bigcard {
+    background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 10px; box-shadow: var(--shadow); overflow: hidden;
+  }
+
+  .bigcard > header {
+    padding: .85rem 1.1rem; border-bottom: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: space-between; gap: .75rem; flex-wrap: wrap;
+  }
+  .bigcard > header strong {
+    font-family: var(--mono); font-size: var(--step--1);
+    letter-spacing: .1em; text-transform: uppercase;
+  }
+  .bigcard > header .right { display: flex; align-items: center; gap: 1rem; }
+
+  .progress {
+    font-family: var(--mono); font-size: var(--step--1);
+    font-variant-numeric: tabular-nums; color: var(--muted);
+  }
+
+  .biglist { padding: .6rem; display: flex; flex-direction: column; gap: .5rem; }
+
+  /* bigger tap targets in the today pane */
+  .biglist .card { padding: .9rem .85rem; font-size: var(--step-0); }
+  .biglist .box { width: 1.5rem; height: 1.5rem; }
+  .biglist .box::after { width: .8rem; height: .4rem; }
+
+  /* ---------- notices ---------- */
+
+  .notice {
+    border: 1px solid var(--rule-strong); background: var(--surface-sunk);
+    border-radius: 8px; padding: .7rem .85rem;
+    font-size: var(--step--1); color: var(--ink-soft);
+    display: flex; align-items: center; justify-content: space-between; gap: .75rem; flex-wrap: wrap;
+  }
+  .notice.warn { border-color: var(--urgent); background: var(--urgent-soft); color: var(--urgent); }
+  .notice.bad  { border-color: var(--overdue); background: var(--overdue-soft); color: var(--overdue); }
+  .notice b { font-weight: 700; }
+
+  /* ---------- done banner ---------- */
+
+  .alldone {
+    border: 1px solid var(--accent); background: var(--accent-soft);
+    border-radius: 10px; padding: 1.5rem 1.25rem; text-align: center;
+    display: flex; flex-direction: column; align-items: center; gap: .5rem;
+  }
+  .alldone .tick {
+    width: 3rem; height: 3rem; border-radius: 50%;
+    background: var(--accent); display: grid; place-content: center;
+  }
+  .alldone .tick::after {
+    content: ""; width: 1.15rem; height: .6rem;
+    border-left: 3px solid var(--surface); border-bottom: 3px solid var(--surface);
+    transform: rotate(-45deg) translate(2px, -2px);
+  }
+  .alldone h2 {
+    margin: .25rem 0 0; font-family: var(--serif);
+    font-size: var(--step-2); font-weight: 700; color: var(--accent);
+  }
+  .alldone p { margin: 0; font-size: var(--step--1); color: var(--ink-soft); max-width: 32ch; }
+
+  /* ---------- cards ---------- */
+
+  .card {
+    display: grid; grid-template-columns: auto 1fr; gap: .55rem;
+    align-items: start; padding: .55rem .6rem;
+    background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 6px; font-size: var(--step--1);
+  }
+  .card.tappable { cursor: pointer; }
+  .card.tappable:active { background: var(--surface-sunk); }
+  .daycol.is-today .card { background: var(--surface); }
+  .card.is-late { border-color: var(--overdue); box-shadow: inset 3px 0 0 var(--overdue); }
+  .card.is-now  { border-color: var(--urgent);  box-shadow: inset 3px 0 0 var(--urgent);  }
+
+  /* Done styling hangs off the checkbox itself, never a JS class, so the
+     strike-through can never disagree with the box. */
+  .card:has(.box:checked) { opacity: .55; box-shadow: none; border-color: var(--rule); }
+  .card .box:checked ~ div .ctitle { text-decoration: line-through; color: var(--muted); }
+
+  .card.quiz { border-color: var(--quiz); background: var(--quiz-soft); grid-template-columns: 1fr; }
+  .card.quiz .ctitle { color: var(--quiz); }
+
+  .ctitle { font-weight: 600; line-height: 1.35; overflow-wrap: anywhere; }
+  .ctitle a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule-strong); }
+  .ctitle a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .cmeta {
+    margin-top: .28rem; display: flex; flex-wrap: wrap;
+    align-items: center; gap: .3rem; color: var(--muted); font-size: .75rem;
+  }
+
+  .period {
+    font-family: var(--mono); font-size: .6875rem; font-weight: 700;
+    color: var(--accent); background: var(--accent-soft);
+    border-radius: 3px; padding: .05rem .28rem;
+  }
+  .daycol.is-today .period { background: var(--paper); }
+
+  .badge {
+    font-family: var(--mono); font-size: .6875rem; font-weight: 700;
+    border-radius: 3px; padding: .05rem .3rem; letter-spacing: .02em;
+    color: var(--urgent); background: var(--urgent-soft);
+  }
+  .badge.grown { color: var(--quiz); background: var(--quiz-soft); }
+  .badge.qz { color: var(--quiz); background: var(--surface); border: 1px solid var(--quiz); }
+
+  .cnote { margin-top: .25rem; font-size: .75rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- checkbox ---------- */
+
+  .box {
+    appearance: none; -webkit-appearance: none; margin: .1rem 0 0;
+    width: 1.1rem; height: 1.1rem; flex: none;
+    border: 1.5px solid var(--rule-strong); border-radius: 4px;
+    background: var(--surface); cursor: pointer; display: grid; place-content: center;
+    transition: background .12s ease, border-color .12s ease;
+  }
+  .box::after {
+    content: ""; width: .58rem; height: .3rem;
+    border-left: 2px solid var(--surface); border-bottom: 2px solid var(--surface);
+    transform: rotate(-45deg) translate(1px, -1px) scale(0);
+    transition: transform .12s ease;
+  }
+  .box:checked { background: var(--accent); border-color: var(--accent); }
+  .box:checked::after { transform: rotate(-45deg) translate(1px, -1px) scale(1); }
+  .box:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- banner ---------- */
+
+  .banner {
+    border: 1px solid var(--overdue); background: var(--overdue-soft);
+    border-radius: 8px; padding: .8rem .9rem;
+    display: flex; flex-direction: column; gap: .55rem;
+  }
+  .banner h3 {
+    margin: 0; font-size: var(--step--1); font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--overdue);
+  }
+  .banner .card { background: var(--surface); }
+
+  /* ---------- bag chips ---------- */
+
+  .chips { list-style: none; margin: 0; padding: .85rem 1rem; display: flex; flex-wrap: wrap; gap: .55rem; }
+  .chips li {
+    display: flex; align-items: center; gap: .55rem;
+    padding: .65rem .95rem; border: 1px solid var(--rule-strong);
+    border-radius: 999px; background: var(--paper);
+  }
+  .chips li:has(.box:checked) { background: var(--surface-sunk); border-color: var(--rule); }
+  .chips .box:checked ~ label { text-decoration: line-through; color: var(--muted); }
+  .chips li.unset { border-style: dashed; border-color: var(--urgent); }
+  .chips li.maybe { border-style: dashed; border-color: var(--accent); }
+  .chips label { cursor: pointer; font-weight: 500; }
+  .chips .tag {
+    font-family: var(--mono); font-size: .6875rem;
+    letter-spacing: .04em; color: var(--urgent); font-weight: 700; text-transform: uppercase;
+  }
+  .chips .tag.soft { color: var(--accent); }
+
+  button.link {
+    appearance: none; background: none; border: none; padding: .2rem 0;
+    font-family: var(--sans); font-size: var(--step--1);
+    font-weight: 600; color: var(--accent); cursor: pointer;
+    border-bottom: 1px solid transparent;
+  }
+  button.link:hover { border-bottom-color: var(--accent); }
+  button.link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  /* ---------- editor ---------- */
+
+  .editor { padding: .85rem 1rem 1rem; border-top: 1px solid var(--rule); background: var(--surface-sunk); }
+  .editor p.hint { margin: 0 0 .75rem; font-size: var(--step--1); color: var(--muted); }
+  .erow { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; padding: .45rem 0; }
+  .erow + .erow { border-top: 1px dashed var(--rule); }
+  .erow .name { flex: 1 1 9rem; font-weight: 500; }
+  .days { display: flex; gap: .2rem; }
+  .day {
+    appearance: none; background: var(--surface); border: 1px solid var(--rule-strong);
+    color: var(--muted); font-family: var(--mono);
+    font-size: .6875rem; font-weight: 700; width: 1.9rem; height: 1.9rem;
+    border-radius: 4px; cursor: pointer;
+  }
+  .day[data-state="on"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .day[data-state="maybe"] {
+    background: var(--accent-soft); border-color: var(--accent);
+    border-style: dashed; color: var(--accent);
+  }
+  .day:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .kill {
+    appearance: none; background: none; border: none; color: var(--muted);
+    font-size: 1rem; line-height: 1; padding: .4rem; cursor: pointer; border-radius: 4px;
+  }
+  .kill:hover { color: var(--overdue); }
+  .kill:focus-visible { outline: 2px solid var(--overdue); outline-offset: 1px; }
+  .addrow { display: flex; gap: .5rem; margin-top: .85rem; }
+  .addrow input {
+    flex: 1; font: inherit; font-size: 16px; padding: .5rem .6rem;
+    border: 1px solid var(--rule-strong); border-radius: 5px;
+    background: var(--surface); color: var(--ink);
+  }
+  .addrow input:focus-visible { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .addrow button {
+    font: inherit; font-weight: 600; padding: .5rem .9rem;
+    border: 1px solid var(--accent); background: var(--accent);
+    color: #fff; border-radius: 5px; cursor: pointer;
+  }
+  .addrow button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+  /* ---------- week grid ---------- */
+
+  .weeknav { display: flex; align-items: center; gap: .4rem; font-family: var(--mono); font-size: var(--step--1); }
+  .weeknav .label { font-variant-numeric: tabular-nums; letter-spacing: .04em; color: var(--muted); min-width: 11rem; text-align: center; }
+  .nav {
+    appearance: none; background: var(--surface);
+    border: 1px solid var(--rule-strong); color: var(--ink-soft);
+    border-radius: 5px; width: 2.2rem; height: 2.2rem;
+    font-size: 1rem; line-height: 1; cursor: pointer;
+  }
+  .nav:hover { border-color: var(--accent); color: var(--accent); }
+  .nav:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .today-btn {
+    appearance: none; background: none; border: 1px solid transparent;
+    font-family: var(--sans); font-size: var(--step--1);
+    font-weight: 600; color: var(--accent);
+    padding: .3rem .5rem; border-radius: 5px; cursor: pointer;
+  }
+  .today-btn:hover { border-color: var(--accent); }
+  .today-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .today-btn[hidden] { display: none; }
+
+  .running {
+    border: 1px solid var(--rule); border-left: 3px solid var(--accent);
+    background: var(--surface); border-radius: 6px;
+    padding: .7rem .9rem; display: flex; flex-direction: column; gap: .5rem;
+  }
+  .running .lbl {
+    font-family: var(--mono); font-size: .6875rem;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+  }
+
+  .weekgrid { display: grid; grid-template-columns: 1fr; gap: .75rem; }
+  @media (min-width: 900px) {
+    .weekgrid {
+      gap: 0; border: 1px solid var(--rule); border-radius: 8px;
+      overflow: hidden; background: var(--surface); box-shadow: var(--shadow);
+    }
+    .daycol + .daycol { border-left: 1px solid var(--rule); }
+    .daycol { border-radius: 0; border: none; box-shadow: none; min-height: 13rem; }
+  }
+  .daycol { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; display: flex; flex-direction: column; }
+  .daycol.is-today { background: var(--accent-soft); }
+  .daycol.is-past, .daycol.is-off { background: var(--surface-sunk); }
+  .dayhead {
+    padding: .6rem .7rem; border-bottom: 1px solid var(--rule);
+    display: flex; align-items: baseline; justify-content: space-between; gap: .5rem;
+  }
+  .dayhead .dow {
+    font-family: var(--mono); font-size: var(--step--1);
+    font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  }
+  .dayhead .dnum {
+    font-family: var(--mono); font-size: var(--step--1);
+    font-variant-numeric: tabular-nums; color: var(--muted);
+  }
+  .daycol.is-today .dow, .daycol.is-today .dnum { color: var(--accent); }
+  .daybody { padding: .55rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
+  .none { color: var(--muted); font-size: var(--step--1); font-style: italic; padding: .15rem .1rem; }
+  .offday {
+    color: var(--muted); font-size: var(--step--1); font-weight: 600;
+    padding: .3rem .1rem; text-transform: uppercase; letter-spacing: .06em;
+    font-family: var(--mono);
+  }
+
+  /* ---------- lower ---------- */
+
+  .lower { display: grid; grid-template-columns: 1fr; gap: 1.75rem; align-items: start; }
+  @media (min-width: 760px) { .lower { grid-template-columns: 1fr 1fr; } }
+
+  ul.plain { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
+  li.row {
+    display: grid; grid-template-columns: auto 1fr auto; gap: .7rem;
+    align-items: start; padding: .65rem .8rem; background: var(--surface);
+    border: 1px solid var(--rule); border-radius: 6px;
+  }
+  li.row:has(.box:checked) { background: var(--surface-sunk); }
+  li.row .box:checked ~ div .ctitle { text-decoration: line-through; color: var(--muted); }
+  li.row.quizrow { grid-template-columns: 1fr auto; border-color: var(--quiz); background: var(--quiz-soft); }
+  li.row.quizrow .ctitle { color: var(--quiz); }
+  .rwhen {
+    font-family: var(--mono); font-size: var(--step--1);
+    font-variant-numeric: tabular-nums; color: var(--muted);
+    white-space: nowrap; text-align: right; padding-top: .1rem;
+  }
+  .empty {
+    padding: .8rem .85rem; border: 1px dashed var(--rule-strong);
+    border-radius: 6px; color: var(--muted); font-size: var(--step--1);
+  }
+
+  .roster { border-top: 1px solid var(--rule); padding-top: 1.25rem; }
+  .roster h2 {
+    margin: 0 0 .75rem; font-family: var(--sans);
+    font-size: var(--step--1); font-weight: 700; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .classes { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: .3rem 1.25rem; }
+  .classes a {
+    display: flex; align-items: baseline; gap: .55rem; padding: .35rem 0;
+    color: var(--ink-soft); text-decoration: none; font-size: var(--step--1);
+  }
+  .classes a:hover { color: var(--accent); }
+  .classes a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+  .classes .pnum {
+    font-family: var(--mono); font-size: .6875rem; font-weight: 700;
+    color: var(--muted); border: 1px solid var(--rule-strong); border-radius: 3px;
+    min-width: 1.5rem; text-align: center; padding: .05rem 0; flex: none;
+  }
+
+  footer.note {
+    font-size: var(--step--1); color: var(--muted);
+    border-top: 1px solid var(--rule); padding-top: 1rem; line-height: 1.65;
+  }
+  footer.note a { color: var(--accent); }
+  footer.note strong { color: var(--ink-soft); }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div>
+      <p class="eyebrow" id="eyebrow" hidden></p>
+      <h1 id="dayName">Loading…</h1>
+      <p class="date" id="dayDate"></p>
+    </div>
+    <div class="tally">
+      <div class="hot"><b id="cDo">0</b><span id="cDoLabel">to do</span></div>
+      <div><b id="cPack">0</b><span>to pack</span></div>
+    </div>
+  </header>
+
+  <div id="noticeHost"></div>
+
+  <div class="modes">
+    <button class="mode" id="modeToday" type="button" aria-pressed="true">Just today</button>
+    <button class="mode" id="modeWeek" type="button" aria-pressed="false">Whole week</button>
+  </div>
+
+  <div id="overdueHost"></div>
+
+  <!-- ---------------- today pane ---------------- -->
+  <div class="stack" id="todayPane">
+
+    <div id="doneHost"></div>
+
+    <section aria-labelledby="hwHead">
+      <div class="sec-head">
+        <h2 id="hwHead">Homework</h2>
+        <span class="note" id="hwNote"></span>
+      </div>
+      <div class="bigcard">
+        <div class="biglist" id="todayHw"></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="packHead">
+      <div class="sec-head">
+        <h2 id="packHead">In the bag</h2>
+        <span class="note" id="packNote"></span>
+      </div>
+      <div class="bigcard">
+        <header>
+          <strong id="packDay">Today</strong>
+          <span class="right">
+            <span class="progress" id="packProgress">0 / 0</span>
+            <button class="link" id="editBtn" aria-expanded="false">Edit list</button>
+          </span>
+        </header>
+        <ul class="chips" id="packList"></ul>
+        <div class="editor" id="editor" hidden>
+          <p class="hint">Tap a day letter to cycle it: solid = always bring it, dashed = some weeks, blank = never. M T W T F.</p>
+          <div id="editRows"></div>
+          <div class="addrow">
+            <input id="newItem" type="text" placeholder="Add something (gym clothes, library book…)" aria-label="New checklist item">
+            <button id="addBtn" type="button">Add</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ---------------- week pane ---------------- -->
+  <div class="stack" id="weekPane" hidden>
+
+    <section aria-labelledby="weekHead">
+      <div class="sec-head">
+        <h2 id="weekHead">The week</h2>
+        <div class="weeknav">
+          <button class="today-btn" id="jumpToday" hidden>Back to this week</button>
+          <button class="nav" id="prevWeek" type="button" aria-label="Previous week">&lsaquo;</button>
+          <span class="label" id="weekLabel"></span>
+          <button class="nav" id="nextWeek" type="button" aria-label="Next week">&rsaquo;</button>
+        </div>
+      </div>
+      <div id="runningHost" style="margin-bottom:.75rem"></div>
+      <div class="weekgrid" id="weekgrid"></div>
+    </section>
+
+    <div class="lower">
+      <section aria-labelledby="laterHead">
+        <h3 class="rule" id="laterHead">Later on</h3>
+        <div id="later"></div>
+      </section>
+      <section aria-labelledby="openHead">
+        <h3 class="rule" id="openHead">No deadline given</h3>
+        <div id="open"></div>
+      </section>
+    </div>
+
+    <section class="roster">
+      <h2>Where this comes from</h2>
+      <div class="classes" id="classes"></div>
+    </section>
+
+    <footer class="note" id="footNote"></footer>
+
+  </div>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------------- the packing list ----------------
+     Lives in code, not in week.json: it's Cruz's to change from inside the
+     page, and a weekly homework refresh must never overwrite it. */
+
+  var DEFAULT_PACK = [
+    { id: "homework", label: "Homework folder",          days: [1,2,3,4,5] },
+    { id: "irb",      label: "Independent reading book", days: [1,2,3,4,5] },
+    { id: "binder",   label: "Binder (green Learning Lab sheet)", days: [1,2,3,4,5] },
+    { id: "water",    label: "Water bottle",             days: [1,2,3,4,5] },
+    { id: "lunch",    label: "Lunch or lunch money",     days: [1,2,3,4,5] },
+    { id: "trumpet",  label: "Trumpet",                  days: [2,5], maybe: [3] }
+  ];
+
+  /* Filled in from week.json before the first render. */
+  var ITEMS = [], QUIZZES = [], RUNNING = [], OPEN = [], SOURCES = [];
+  var NO_SCHOOL = {};
+  var META = { updated: null, deck: null, archive: null };
+
+  /* ---------------- dates ---------------- */
+
+  var NOW = new Date();
+  var DAY_NAMES  = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var DAY_SHORT  = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var MONTHS     = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var DAY_LETTERS = ["M","T","W","T","F"];
+  var EVENING_FROM = 18;   /* 6pm — after this the page looks ahead to the next school day */
+
+  function startOfDay(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
+  function mondayOf(d) { var s = startOfDay(d); s.setDate(s.getDate() - ((s.getDay() + 6) % 7)); return s; }
+  function addDays(d, n) { var c = new Date(d.getFullYear(), d.getMonth(), d.getDate()); c.setDate(c.getDate() + n); return c; }
+  function key(d) {
+    return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+  }
+  function fromKey(s) { var p = s.split("-").map(Number); return new Date(p[0], p[1]-1, p[2]); }
+
+  var TODAY = startOfDay(NOW);
+  var TODAY_KEY = key(TODAY);
+  var THIS_MON = mondayOf(NOW);
+
+  function isSchoolDay(d) {
+    var w = d.getDay();
+    return w >= 1 && w <= 5 && !NO_SCHOOL[key(d)];
+  }
+  function nextSchoolDay(after) {
+    var d = addDays(after, 1);
+    for (var i = 0; i < 21; i++) { if (isSchoolDay(d)) return d; d = addDays(d, 1); }
+    return d;
+  }
+
+  /* The focus day: what the "just today" pane is about. Evenings and
+     non-school days look ahead to the next school day, because packing the
+     night before beats packing in the morning rush. Recomputed after the data
+     loads, since no-school days shift which day counts as "next". */
+  var LOOKING_AHEAD = false, FOCUS = TODAY, FOCUS_KEY = TODAY_KEY, FOCUS_WD = TODAY.getDay();
+
+  function pickFocus() {
+    if (isSchoolDay(TODAY) && NOW.getHours() < EVENING_FROM) {
+      FOCUS = TODAY; LOOKING_AHEAD = false;
+    } else {
+      FOCUS = nextSchoolDay(TODAY); LOOKING_AHEAD = true;
+    }
+    FOCUS_KEY = key(FOCUS);
+    FOCUS_WD  = FOCUS.getDay();
+  }
+
+  /* ---------------- storage (this device only) ---------------- */
+
+  var store = { pack: null, ticked: {}, packed: {} };
+
+  function lsGet(k, fb) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; } catch (e) { return fb; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+
+  function savePack()   { lsSet("pack", store.pack); }
+  function saveTicked() { lsSet("ticked", store.ticked); }
+  function savePacked() { lsSet("packed:" + FOCUS_KEY, store.packed); }
+
+  store.pack = lsGet("pack", null) || DEFAULT_PACK.map(function (i) {
+    return { id: i.id, label: i.label, days: i.days.slice(), maybe: (i.maybe || []).slice() };
+  });
+  normalisePack();
+  store.ticked = lsGet("ticked", {}) || {};
+
+  function normalisePack() {
+    /* No school Chromebook — drop it from lists saved before that was known. */
+    store.pack = store.pack.filter(function (i) { return i.id !== "chromebook"; });
+    store.pack.forEach(function (i) {
+      if (!Array.isArray(i.days)) i.days = [];
+      if (!Array.isArray(i.maybe)) i.maybe = [];
+      if (i.id === "trumpet" && !i.days.length && !i.maybe.length) { i.days = [2,5]; i.maybe = [3]; }
+    });
+  }
+
+  function dayState(item, d) {
+    if (item.days.indexOf(d) !== -1) return "on";
+    if (item.maybe.indexOf(d) !== -1) return "maybe";
+    return "off";
+  }
+  function cycleDay(item, d) {
+    var s = dayState(item, d);
+    var drop = function (arr) { var at = arr.indexOf(d); if (at !== -1) arr.splice(at, 1); };
+    drop(item.days); drop(item.maybe);
+    if (s === "off") { item.days.push(d); item.days.sort(); }
+    else if (s === "on") { item.maybe.push(d); item.maybe.sort(); }
+  }
+
+  function isDone(it) { return !!store.ticked[it.id]; }
+  function toggle(it, on) {
+    if (on) store.ticked[it.id] = true; else delete store.ticked[it.id];
+    saveTicked();
+    renderAll();
+  }
+
+  /* ---------------- card builders ---------------- */
+
+  function metaFor(it) {
+    var meta = document.createElement("div");
+    meta.className = "cmeta";
+    if (it.period) {
+      var p = document.createElement("span");
+      p.className = "period"; p.textContent = "P" + it.period;
+      meta.appendChild(p);
+    }
+    var c = document.createElement("span");
+    c.textContent = it.teacher ? it.cls + " · " + it.teacher : it.cls;
+    meta.appendChild(c);
+    if (it.due) {
+      var d = document.createElement("span");
+      d.className = "badge"; d.textContent = it.due;
+      meta.appendChild(d);
+    }
+    if (it.adult) {
+      var g = document.createElement("span");
+      g.className = "badge grown"; g.textContent = "needs a grown-up";
+      meta.appendChild(g);
+    }
+    return meta;
+  }
+
+  function hwCard(it, flavour) {
+    var el = document.createElement("div");
+    el.className = "card tappable " + (flavour || "");
+
+    var cb = document.createElement("input");
+    cb.type = "checkbox"; cb.className = "box"; cb.checked = isDone(it);
+    cb.setAttribute("aria-label", "Mark " + it.text + " done");
+    cb.addEventListener("change", function () { toggle(it, cb.checked); });
+
+    var body = document.createElement("div");
+    var t = document.createElement("div");
+    t.className = "ctitle";
+    var target = it.submit || it.link;
+    if (target) {
+      var a = document.createElement("a");
+      a.href = target; a.target = "_blank"; a.rel = "noopener";
+      a.textContent = it.text;
+      t.appendChild(a);
+    } else { t.textContent = it.text; }
+    body.appendChild(t);
+    body.appendChild(metaFor(it));
+    if (it.note) {
+      var n = document.createElement("div");
+      n.className = "cnote"; n.textContent = it.note;
+      body.appendChild(n);
+    }
+    el.appendChild(cb);
+    el.appendChild(body);
+
+    /* Whole card is the tap target — a 1rem checkbox is a mean thing to ask a
+       kid to hit on a phone. Links and the box itself keep their own behaviour. */
+    el.addEventListener("click", function (ev) {
+      if (ev.target.closest("a") || ev.target === cb) return;
+      toggle(it, !cb.checked);
+    });
+    return el;
+  }
+
+  function quizCard(q) {
+    var el = document.createElement("div");
+    el.className = "card quiz";
+    var body = document.createElement("div");
+    var t = document.createElement("div");
+    t.className = "ctitle"; t.textContent = q.text;
+    var meta = document.createElement("div");
+    meta.className = "cmeta";
+    var b = document.createElement("span");
+    b.className = "badge qz"; b.textContent = "assessment";
+    meta.appendChild(b);
+    body.appendChild(t); body.appendChild(meta);
+    if (q.note) {
+      var n = document.createElement("div");
+      n.className = "cnote"; n.textContent = q.note;
+      body.appendChild(n);
+    }
+    el.appendChild(body);
+    return el;
+  }
+
+  /* ---------------- what's on for the focus day ---------------- */
+
+  function itemsOn(dk) { return ITEMS.filter(function (i) { return i.date === dk; }); }
+  function quizzesOn(dk) { return QUIZZES.filter(function (q) { return q.date === dk; }); }
+  function runningFor(d) {
+    var wk = key(mondayOf(d));
+    return RUNNING.filter(function (r) { return r.weekOf === wk; });
+  }
+
+  function focusHomework() { return itemsOn(FOCUS_KEY).concat(runningFor(FOCUS)); }
+  function packItems()  { return store.pack.filter(function (i) { return i.days.indexOf(FOCUS_WD) !== -1; }); }
+  function packMaybes() { return store.pack.filter(function (i) { return i.maybe.indexOf(FOCUS_WD) !== -1; }); }
+
+  /* ---------------- today pane ---------------- */
+
+  function renderToday() {
+    var host = document.getElementById("todayHw");
+    host.textContent = "";
+
+    quizzesOn(FOCUS_KEY).forEach(function (q) { host.appendChild(quizCard(q)); });
+
+    var hw = focusHomework();
+    hw.forEach(function (it) { host.appendChild(hwCard(it, isDone(it) ? "" : "is-now")); });
+
+    if (!hw.length && !quizzesOn(FOCUS_KEY).length) {
+      var e = document.createElement("div");
+      e.className = "empty";
+      e.textContent = "No homework listed for " + DAY_NAMES[FOCUS_WD] + ".";
+      host.appendChild(e);
+    }
+
+    var left = hw.filter(function (it) { return !isDone(it); }).length;
+    document.getElementById("hwNote").textContent =
+      hw.length ? (left ? left + " still to do" : "all done") : "";
+  }
+
+  function packChip(i, soft) {
+    var k = FOCUS_KEY + "|" + i.id;
+    var on = !!store.packed[k];
+    var li = document.createElement("li");
+    if (soft) li.className = "maybe";
+    var cb = document.createElement("input");
+    cb.type = "checkbox"; cb.className = "box"; cb.id = "pk-" + i.id; cb.checked = on;
+    cb.addEventListener("change", function () {
+      if (cb.checked) store.packed[k] = true; else delete store.packed[k];
+      savePacked(); renderAll();
+    });
+    var lb = document.createElement("label");
+    lb.setAttribute("for", "pk-" + i.id);
+    lb.textContent = i.label;
+    li.appendChild(cb); li.appendChild(lb);
+    if (soft) {
+      var tag = document.createElement("span");
+      tag.className = "tag soft"; tag.textContent = "some weeks";
+      li.appendChild(tag);
+    }
+    return li;
+  }
+
+  function renderPack() {
+    var ul = document.getElementById("packList");
+    ul.textContent = "";
+    document.getElementById("packDay").textContent = DAY_NAMES[FOCUS_WD];
+
+    var items = packItems();
+    var maybes = packMaybes();
+    var unset = store.pack.filter(function (i) { return !i.days.length && !i.maybe.length; });
+    var done = 0;
+
+    items.forEach(function (i) {
+      if (store.packed[FOCUS_KEY + "|" + i.id]) done++;
+      ul.appendChild(packChip(i, false));
+    });
+    maybes.forEach(function (i) { ul.appendChild(packChip(i, true)); });
+
+    unset.forEach(function (i) {
+      var li = document.createElement("li");
+      li.className = "unset";
+      var lb = document.createElement("label");
+      lb.style.color = "var(--muted)";
+      lb.textContent = i.label;
+      var tag = document.createElement("span");
+      tag.className = "tag"; tag.textContent = "which days?";
+      li.appendChild(lb); li.appendChild(tag);
+      ul.appendChild(li);
+    });
+
+    document.getElementById("packProgress").textContent = done + " / " + items.length;
+    document.getElementById("packNote").textContent =
+      items.length && done === items.length ? "all in" : "";
+    document.getElementById("cPack").textContent = Math.max(items.length - done, 0);
+  }
+
+  /* ---------------- the all-clear ---------------- */
+
+  function renderDone() {
+    var host = document.getElementById("doneHost");
+    host.textContent = "";
+
+    var hw = focusHomework();
+    var items = packItems();
+    var hwLeft = hw.filter(function (it) { return !isDone(it); }).length;
+    var packLeft = items.filter(function (i) { return !store.packed[FOCUS_KEY + "|" + i.id]; }).length;
+
+    /* Nothing to celebrate if there was nothing to do in the first place. */
+    if (!hw.length && !items.length) return;
+    if (hwLeft || packLeft) return;
+
+    var box = document.createElement("div");
+    box.className = "alldone";
+    var tick = document.createElement("div");
+    tick.className = "tick";
+    var h = document.createElement("h2");
+    h.textContent = LOOKING_AHEAD ? "Set for " + DAY_NAMES[FOCUS_WD] : "You're good to go";
+    var p = document.createElement("p");
+    p.textContent = LOOKING_AHEAD
+      ? "Homework's done and the bag is packed. Nothing left to think about tonight."
+      : "Homework's done and everything's in the bag.";
+    box.appendChild(tick); box.appendChild(h); box.appendChild(p);
+    host.appendChild(box);
+  }
+
+  /* ---------------- masthead ---------------- */
+
+  function renderMast() {
+    var eyebrow = document.getElementById("eyebrow");
+    if (LOOKING_AHEAD) {
+      eyebrow.hidden = false;
+      eyebrow.textContent = NOW.getHours() >= EVENING_FROM ? "Getting ready for" : "Next school day";
+    } else {
+      eyebrow.hidden = true;
+    }
+    document.getElementById("dayName").textContent = DAY_NAMES[FOCUS_WD];
+    document.getElementById("dayDate").textContent =
+      FOCUS.toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" });
+
+    var hw = focusHomework();
+    var left = hw.filter(function (it) { return !isDone(it); }).length;
+    document.getElementById("cDo").textContent = left;
+    document.getElementById("cDoLabel").textContent = left === 1 ? "thing to do" : "to do";
+    document.querySelector(".tally .hot, .tally .clear").className = left ? "hot" : "clear";
+  }
+
+  /* ---------------- overdue ---------------- */
+
+  function renderOverdue() {
+    var host = document.getElementById("overdueHost");
+    host.textContent = "";
+
+    var seen = {}, late = [];
+    ITEMS.forEach(function (it) {
+      if (isDone(it) || seen[it.id]) return;
+      if (fromKey(it.date) < TODAY) { seen[it.id] = true; late.push(it); }
+    });
+    late = late.filter(function (it) {
+      return !ITEMS.some(function (o) { return o.id === it.id && fromKey(o.date) >= TODAY; });
+    });
+    if (!late.length) return;
+
+    var box = document.createElement("div");
+    box.className = "banner";
+    var h = document.createElement("h3");
+    h.textContent = late.length === 1 ? "1 thing slipped past" : late.length + " things slipped past";
+    box.appendChild(h);
+    late.forEach(function (it) { box.appendChild(hwCard(it, "is-late")); });
+    host.appendChild(box);
+  }
+
+  /* ---------------- week grid ---------------- */
+
+  var viewMon = new Date(THIS_MON.getTime());
+
+  function renderWeek() {
+    var host = document.getElementById("weekgrid");
+    host.textContent = "";
+
+    var dayCount = 5;
+    for (var extra = 5; extra <= 6; extra++) {
+      var xk = key(addDays(viewMon, extra));
+      if (itemsOn(xk).length || quizzesOn(xk).length) dayCount = extra + 1;
+    }
+
+    if (window.matchMedia && window.matchMedia("(min-width: 900px)").matches) {
+      host.style.gridTemplateColumns = "repeat(" + dayCount + ", 1fr)";
+    } else {
+      host.style.gridTemplateColumns = "1fr";
+    }
+
+    for (var i = 0; i < dayCount; i++) {
+      var day = addDays(viewMon, i);
+      var dk = key(day);
+      var off = NO_SCHOOL[dk];
+
+      var col = document.createElement("div");
+      col.className = "daycol";
+      if (dk === TODAY_KEY) col.className += " is-today";
+      else if (off) col.className += " is-off";
+      else if (day < TODAY) col.className += " is-past";
+
+      var head = document.createElement("div");
+      head.className = "dayhead";
+      var dow = document.createElement("span");
+      dow.className = "dow";
+      dow.textContent = dk === TODAY_KEY ? "Today" : DAY_SHORT[day.getDay()];
+      var dnum = document.createElement("span");
+      dnum.className = "dnum";
+      dnum.textContent = MONTHS[day.getMonth()] + " " + day.getDate();
+      head.appendChild(dow); head.appendChild(dnum);
+      col.appendChild(head);
+
+      var body = document.createElement("div");
+      body.className = "daybody";
+
+      if (off) {
+        var o = document.createElement("div");
+        o.className = "offday";
+        o.textContent = off + " — no school";
+        body.appendChild(o);
+      } else {
+        quizzesOn(dk).forEach(function (q) { body.appendChild(quizCard(q)); });
+        var hw = itemsOn(dk);
+        (function (dk, day) {
+          hw.forEach(function (it) {
+            var flav = "";
+            if (!isDone(it)) {
+              if (dk === TODAY_KEY) flav = "is-now";
+              else if (day < TODAY) flav = "is-late";
+            }
+            body.appendChild(hwCard(it, flav));
+          });
+        })(dk, day);
+        if (!hw.length && !quizzesOn(dk).length) {
+          var none = document.createElement("div");
+          none.className = "none"; none.textContent = "nothing set";
+          body.appendChild(none);
+        }
+      }
+
+      col.appendChild(body);
+      host.appendChild(col);
+    }
+
+    var end = addDays(viewMon, dayCount - 1);
+    var label = MONTHS[viewMon.getMonth()] + " " + viewMon.getDate() + " – " +
+                MONTHS[end.getMonth()] + " " + end.getDate();
+    if (viewMon.getTime() === THIS_MON.getTime()) label = "This week · " + label;
+    document.getElementById("weekLabel").textContent = label;
+    document.getElementById("jumpToday").hidden = viewMon.getTime() === THIS_MON.getTime();
+
+    renderRunning();
+    renderLater(addDays(viewMon, 6));
+  }
+
+  function renderRunning() {
+    var host = document.getElementById("runningHost");
+    host.textContent = "";
+    var list = runningFor(viewMon);
+    if (!list.length) return;
+    var box = document.createElement("div");
+    box.className = "running";
+    var lbl = document.createElement("div");
+    lbl.className = "lbl"; lbl.textContent = "Running all week";
+    box.appendChild(lbl);
+    list.forEach(function (r) { box.appendChild(hwCard(r, "")); });
+    host.appendChild(box);
+  }
+
+  function rowFor(it, whenText) {
+    var li = document.createElement("li");
+    li.className = "row";
+    var cb = document.createElement("input");
+    cb.type = "checkbox"; cb.className = "box"; cb.checked = isDone(it);
+    cb.setAttribute("aria-label", "Mark " + it.text + " done");
+    cb.addEventListener("change", function () { toggle(it, cb.checked); });
+    var body = document.createElement("div");
+    var t = document.createElement("div");
+    t.className = "ctitle";
+    var target = it.submit || it.link;
+    if (target) {
+      var a = document.createElement("a");
+      a.href = target; a.target = "_blank"; a.rel = "noopener";
+      a.textContent = it.text;
+      t.appendChild(a);
+    } else { t.textContent = it.text; }
+    body.appendChild(t);
+    body.appendChild(metaFor(it));
+    var when = document.createElement("div");
+    when.className = "rwhen"; when.textContent = whenText;
+    li.appendChild(cb); li.appendChild(body); li.appendChild(when);
+    li.addEventListener("click", function (ev) {
+      if (ev.target.closest("a") || ev.target === cb) return;
+      toggle(it, !cb.checked);
+    });
+    return li;
+  }
+
+  function renderLater(weekEnd) {
+    var host = document.getElementById("later");
+    host.textContent = "";
+
+    var rows = [];
+    ITEMS.forEach(function (it) { if (fromKey(it.date) > weekEnd) rows.push({ kind: "hw", date: it.date, it: it }); });
+    QUIZZES.forEach(function (q) { if (fromKey(q.date) > weekEnd) rows.push({ kind: "quiz", date: q.date, it: q }); });
+    Object.keys(NO_SCHOOL).forEach(function (dk) {
+      if (fromKey(dk) > weekEnd) rows.push({ kind: "off", date: dk, it: { text: NO_SCHOOL[dk] + " — no school" } });
+    });
+    rows.sort(function (a, b) { return fromKey(a.date) - fromKey(b.date); });
+
+    var seen = {};
+    rows = rows.filter(function (r) {
+      if (r.kind !== "hw") return true;
+      if (seen[r.it.id]) return false;
+      seen[r.it.id] = true;
+      return true;
+    });
+
+    if (!rows.length) {
+      var e = document.createElement("div");
+      e.className = "empty";
+      e.textContent = "Nothing in the weeks after this one.";
+      host.appendChild(e);
+      return;
+    }
+
+    var ul = document.createElement("ul");
+    ul.className = "plain";
+    rows.forEach(function (r) {
+      var d = fromKey(r.date);
+      var wk = Math.round((mondayOf(d) - viewMon) / 604800000);
+      var whenText = DAY_SHORT[d.getDay()] + " " + MONTHS[d.getMonth()] + " " + d.getDate() +
+                     (wk === 1 ? " · next week" : wk > 1 ? " · in " + wk + " wks" : "");
+      if (r.kind === "hw") {
+        ul.appendChild(rowFor(r.it, whenText));
+      } else {
+        var li = document.createElement("li");
+        li.className = "row quizrow";
+        var body = document.createElement("div");
+        var t = document.createElement("div");
+        t.className = "ctitle"; t.textContent = r.it.text;
+        body.appendChild(t);
+        if (r.kind === "quiz") {
+          var m = document.createElement("div");
+          m.className = "cmeta";
+          var b = document.createElement("span");
+          b.className = "badge qz"; b.textContent = "assessment";
+          m.appendChild(b);
+          body.appendChild(m);
+          if (r.it.note) {
+            var n = document.createElement("div");
+            n.className = "cnote"; n.textContent = r.it.note;
+            body.appendChild(n);
+          }
+        }
+        var when = document.createElement("div");
+        when.className = "rwhen"; when.textContent = whenText;
+        li.appendChild(body); li.appendChild(when);
+        ul.appendChild(li);
+      }
+    });
+    host.appendChild(ul);
+  }
+
+  function renderOpen() {
+    var host = document.getElementById("open");
+    host.textContent = "";
+    if (!OPEN.length) {
+      var e = document.createElement("div");
+      e.className = "empty"; e.textContent = "Nothing without a date right now.";
+      host.appendChild(e);
+      return;
+    }
+    var ul = document.createElement("ul");
+    ul.className = "plain";
+    OPEN.forEach(function (it) { ul.appendChild(rowFor(it, it.note || "—")); });
+    host.appendChild(ul);
+  }
+
+  function renderSources() {
+    var host = document.getElementById("classes");
+    host.textContent = "";
+    SOURCES.forEach(function (c) {
+      var a = document.createElement("a");
+      a.href = c.url; a.target = "_blank"; a.rel = "noopener";
+      var p = document.createElement("span");
+      p.className = "pnum"; p.textContent = c.tag;
+      var n = document.createElement("span");
+      n.textContent = c.name;
+      a.appendChild(p); a.appendChild(n);
+      host.appendChild(a);
+    });
+  }
+
+  /* ---------------- checklist editor ---------------- */
+
+  function renderEditor() {
+    var host = document.getElementById("editRows");
+    host.textContent = "";
+    store.pack.forEach(function (item, idx) {
+      var row = document.createElement("div");
+      row.className = "erow";
+      var name = document.createElement("span");
+      name.className = "name"; name.textContent = item.label;
+      var days = document.createElement("div");
+      days.className = "days";
+      DAY_LETTERS.forEach(function (letter, n) {
+        var d = n + 1;
+        var s = dayState(item, d);
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "day"; b.textContent = letter;
+        b.setAttribute("data-state", s);
+        b.setAttribute("aria-label", item.label + " on " + DAY_NAMES[d] + ": " +
+          (s === "on" ? "always" : s === "maybe" ? "some weeks" : "never") + ". Tap to change.");
+        b.addEventListener("click", function () {
+          cycleDay(item, d);
+          savePack(); renderEditor(); renderAll();
+        });
+        days.appendChild(b);
+      });
+      var kill = document.createElement("button");
+      kill.type = "button"; kill.className = "kill";
+      kill.setAttribute("aria-label", "Remove " + item.label);
+      kill.textContent = "✕";
+      kill.addEventListener("click", function () {
+        store.pack.splice(idx, 1);
+        savePack(); renderEditor(); renderAll();
+      });
+      row.appendChild(name); row.appendChild(days); row.appendChild(kill);
+      host.appendChild(row);
+    });
+  }
+
+  function addItem() {
+    var input = document.getElementById("newItem");
+    var label = input.value.trim();
+    if (!label) return;
+    store.pack.push({ id: "i" + Date.now().toString(36), label: label, days: [1,2,3,4,5], maybe: [] });
+    input.value = "";
+    savePack(); renderEditor(); renderAll();
+  }
+
+  document.getElementById("addBtn").addEventListener("click", addItem);
+  document.getElementById("newItem").addEventListener("keydown", function (e) {
+    if (e.key === "Enter") { e.preventDefault(); addItem(); }
+  });
+  document.getElementById("editBtn").addEventListener("click", function () {
+    var ed = document.getElementById("editor");
+    var opening = ed.hidden;
+    ed.hidden = !opening;
+    this.setAttribute("aria-expanded", opening ? "true" : "false");
+    this.textContent = opening ? "Done editing" : "Edit list";
+    if (opening) renderEditor();
+  });
+
+  /* ---------------- mode switch ---------------- */
+
+  var mode = lsGet("mode", "today");
+
+  function applyMode() {
+    var isToday = mode === "today";
+    document.getElementById("todayPane").hidden = !isToday;
+    document.getElementById("weekPane").hidden = isToday;
+    document.getElementById("modeToday").setAttribute("aria-pressed", isToday ? "true" : "false");
+    document.getElementById("modeWeek").setAttribute("aria-pressed", isToday ? "false" : "true");
+  }
+  function setMode(m) { mode = m; lsSet("mode", m); applyMode(); renderAll(); }
+
+  document.getElementById("modeToday").addEventListener("click", function () { setMode("today"); });
+  document.getElementById("modeWeek").addEventListener("click", function () { setMode("week"); });
+
+  document.getElementById("prevWeek").addEventListener("click", function () { viewMon = addDays(viewMon, -7); renderWeek(); });
+  document.getElementById("nextWeek").addEventListener("click", function () { viewMon = addDays(viewMon, 7); renderWeek(); });
+  document.getElementById("jumpToday").addEventListener("click", function () { viewMon = new Date(THIS_MON.getTime()); renderWeek(); });
+
+  if (window.matchMedia) {
+    var mq = window.matchMedia("(min-width: 900px)");
+    if (mq.addEventListener) mq.addEventListener("change", renderWeek);
+    else if (mq.addListener) mq.addListener(renderWeek);
+  }
+
+  /* ---------------- notices ---------------- */
+
+  function notice(cls, text, action) {
+    var d = document.createElement("div");
+    d.className = "notice " + (cls || "");
+    var s = document.createElement("span");
+    s.innerHTML = text;
+    d.appendChild(s);
+    if (action) {
+      var b = document.createElement("button");
+      b.className = "link"; b.type = "button"; b.textContent = action.label;
+      b.addEventListener("click", action.fn);
+      d.appendChild(b);
+    }
+    return d;
+  }
+
+  function renderNotices(offline) {
+    var host = document.getElementById("noticeHost");
+    host.textContent = "";
+
+    /* If the weekly refresh stops happening, say so rather than quietly
+       showing a stale week as if it were current. */
+    if (META.updated) {
+      var age = Math.round((TODAY - fromKey(META.updated)) / 86400000);
+      if (age >= 8) {
+        host.appendChild(notice("warn",
+          "This homework was last updated <b>" + age + " days ago</b>. It may be out of date — check with a grown-up."));
+      }
+    }
+    if (offline) {
+      host.appendChild(notice("", "No internet — showing the last saved copy."));
+    }
+  }
+
+  /* The service worker answers from cache so cleanly that a failed fetch is
+     not a reliable signal; the connection state is. */
+  window.addEventListener("online",  function () { renderNotices(false); });
+  window.addEventListener("offline", function () { renderNotices(true); });
+
+  function renderFooter() {
+    var f = document.getElementById("footNote");
+    f.textContent = "";
+    f.appendChild(document.createTextNode(
+      "Homework comes from the Diamond Team HW Calendar — the weekly slide deck is the real source, and it carries work that never reaches Google Classroom. "));
+    var s = document.createElement("strong");
+    s.textContent = "Last updated " + (META.updated ? fromKey(META.updated).toLocaleDateString(undefined,
+      { month: "long", day: "numeric", year: "numeric" }) : "—") + ".";
+    f.appendChild(s);
+    f.appendChild(document.createTextNode(
+      " Every week has its own deck, all listed in the team's archive doc. Future weeks exist but teachers fill in the homework as each week arrives."));
+  }
+
+  /* ---------------- go ---------------- */
+
+  function renderAll() {
+    renderMast();
+    renderOverdue();
+    renderToday();
+    renderPack();
+    renderDone();
+    if (mode === "week") { renderWeek(); renderOpen(); }
+  }
+
+  function applyData(d) {
+    ITEMS     = d.items    || [];
+    QUIZZES   = d.quizzes  || [];
+    RUNNING   = d.running  || [];
+    OPEN      = d.open     || [];
+    SOURCES   = d.sources  || [];
+    NO_SCHOOL = d.noSchool || {};
+    META = { updated: d.updated || null, deck: d.deck || null, archive: d.archive || null };
+
+    pickFocus();
+    store.packed = lsGet("packed:" + FOCUS_KEY, {}) || {};
+
+    applyMode();
+    renderAll();
+    renderWeek();
+    renderOpen();
+    renderSources();
+    renderFooter();
+  }
+
+  function fail(msg) {
+    document.getElementById("dayName").textContent = "Can't load";
+    document.getElementById("noticeHost").appendChild(
+      notice("bad", msg, { label: "Try again", fn: function () { location.reload(); } }));
+  }
+
+  /* Cache-bust so a refreshed week.json is never served from the HTTP cache;
+     the service worker still answers this instantly when there's no signal. */
+  fetch("week.json?t=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) { applyData(d); renderNotices(!navigator.onLine); })
+    .catch(function () {
+      return fetch("week.json").then(function (r) { return r.json(); })
+        .then(function (d) { applyData(d); renderNotices(true); })
+        .catch(function () { fail("Couldn't load this week's homework. Connect to wi-fi and try again."); });
+    });
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("sw.js").catch(function () {});
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+{
+  "updated": "2026-09-09",
+  "weekOf": "2026-09-07",
+  "deck": "https://docs.google.com/presentation/d/1Bv8gZcw51HIKOUsrCkm9AnSQdyGcGVT7H5152WDWzzc/edit",
+  "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
+
+  "items": [
+    { "id": "math6h-p12", "date": "2026-09-08", "cls": "Math 6H", "teacher": "Ms. Rivera", "period": 4,
+      "text": "Math book p.12 #6–8, p.13 #1–2, p.14 #3 & 5" },
+
+    { "id": "ela-summer-reading", "date": "2026-09-08", "cls": "ELA", "teacher": "Ms. Metsack", "period": 7,
+      "text": "Summer Reading Slides", "due": "due Thu",
+      "submit": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx/a/ODc2NzE1MjcwODYy/details" },
+
+    { "id": "ela-summer-reading", "date": "2026-09-09", "cls": "ELA", "teacher": "Ms. Metsack", "period": 7,
+      "text": "Summer Reading Slides", "due": "due tomorrow",
+      "submit": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx/a/ODc2NzE1MjcwODYy/details" },
+
+    { "id": "sci-policies", "date": "2026-09-09", "cls": "Science", "teacher": "Mrs. Vocke", "period": 2,
+      "text": "Policies Google form — fill it in with a grown-up", "due": "due Fri", "adult": true,
+      "note": "A signed blue policies sheet works too." },
+
+    { "id": "ela-summer-reading", "date": "2026-09-10", "cls": "ELA", "teacher": "Ms. Metsack", "period": 7,
+      "text": "Summer Reading Slides", "due": "DUE TODAY",
+      "submit": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx/a/ODc2NzE1MjcwODYy/details" },
+
+    { "id": "sci-policies", "date": "2026-09-10", "cls": "Science", "teacher": "Mrs. Vocke", "period": 2,
+      "text": "Policies Google form — fill it in with a grown-up", "due": "due tomorrow", "adult": true,
+      "note": "A signed blue policies sheet works too." },
+
+    { "id": "choir-polo", "date": "2026-09-25", "cls": "6th Grade Choir", "teacher": null, "period": null,
+      "text": "Music polo shirts", "link": "https://classroom.google.com/u/3/c/ODc1MDY0MDAwMzkw" },
+
+    { "id": "math-summer-pkt", "date": "2026-09-30", "cls": "Math 6H", "teacher": "Ms. Rivera", "period": 4,
+      "text": "Summer Math Packet due", "note": "6H answer key is linked in the HW calendar." }
+  ],
+
+  "quizzes": [
+    { "date": "2026-09-09", "text": "ELA — Writing Baseline" },
+    { "date": "2026-09-10", "text": "ELA — Writing Baseline" },
+    { "date": "2026-09-14", "text": "Science — lab safety quiz",
+      "note": "Date unconfirmed — the week-of-9/7 deck lists it, the week-of-9/14 deck doesn't. Worth asking Mrs. Vocke." },
+    { "date": "2026-09-15", "text": "Spanish — matching quiz on greetings vocab" }
+  ],
+
+  "running": [
+    { "id": "ela-noredink", "cls": "ELA", "teacher": "Ms. Metsack", "period": 7,
+      "text": "Capitalization Practice on NoRedInk", "due": "finish by Sunday night",
+      "weekOf": "2026-09-07" }
+  ],
+
+  "noSchool": {
+    "2026-09-07": "Labor Day",
+    "2026-09-21": "Yom Kippur"
+  },
+
+  "open": [
+    { "id": "ss-mapping", "cls": "Social Studies", "teacher": "Mr. Fleming", "period": 5,
+      "text": "Lesson #1: Mapping Your Schedule", "note": "Posted Sep 1",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy" },
+    { "id": "dt-goals", "cls": "Diamond Team", "teacher": null, "period": null,
+      "text": "Goal Setting Slides (setting up for SLC)", "note": "Posted Sep 2",
+      "link": "https://classroom.google.com/u/3/c/ODY3MTg2ODc0Njg5" },
+    { "id": "dt-schedule", "cls": "Diamond Team", "teacher": null, "period": null,
+      "text": "Student Fill-in Schedule", "note": "Posted Jun 15",
+      "link": "https://classroom.google.com/u/3/c/ODY3MTg2ODc0Njg5" }
+  ],
+
+  "sources": [
+    { "tag": "HW",  "name": "Diamond HW Calendar, this week", "url": "https://docs.google.com/presentation/d/1Bv8gZcw51HIKOUsrCkm9AnSQdyGcGVT7H5152WDWzzc/edit" },
+    { "tag": "ALL", "name": "Weekly calendar archive",        "url": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit" },
+    { "tag": "P1",  "name": "La Clase de Español (1A)",   "url": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz" },
+    { "tag": "P2",  "name": "Science — Mrs. Vocke",       "url": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0" },
+    { "tag": "P4",  "name": "Honors Math 6 — Ms. Rivera", "url": "https://classroom.google.com/u/3/c/ODc1MTQ3MTUxNjEw" },
+    { "tag": "P5",  "name": "Social Studies — Mr. Fleming","url": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy" },
+    { "tag": "P7",  "name": "ELA — Ms. Metsack",          "url": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx" },
+    { "tag": "—", "name": "Diamond Team",                "url": "https://classroom.google.com/u/3/c/ODY3MTg2ODc0Njg5" },
+    { "tag": "—", "name": "6th Grade Choir",             "url": "https://classroom.google.com/u/3/c/ODc1MDY0MDAwMzkw" }
+  ]
+}
