@@ -74,13 +74,29 @@ for n, r in enumerate(data.get("running", [])):
 for dk in data.get("noSchool", {}):
     check_date(dk, "noSchool")
 
-# Ms. Rivera teaches 6S, 6H and 7H. Only 6H is Cruz's; the other two turning up
-# is the single most likely way a refresh goes wrong.
-for n, it in enumerate(data.get("items", []) + data.get("running", [])):
-    blob = f"{it.get('cls','')} {it.get('text','')}"
-    for wrong in ("6S", "7H"):
-        if re.search(rf"\b{wrong}\b", blob):
-            warnings.append(f"item {it.get('id')}: mentions {wrong} — Cruz is in 6H only")
+# Both sources list several sections and only one is Cruz's. Picking up a
+# neighbouring column is the likeliest way a refresh goes wrong: Ms. Rivera's
+# rows carry 6S/6H/7H, and the World Language calendar has six teachers.
+NOT_HIS = ("6S", "7H", "Luzusky", "Gallagher", "Yao", "Li", "French", "Chinese")
+for it in data.get("items", []) + data.get("running", []):
+    blob = f"{it.get('cls','')} {it.get('teacher','')} {it.get('text','')}"
+    for wrong in NOT_HIS:
+        if re.search(rf"\b{re.escape(wrong)}\b", blob):
+            warnings.append(
+                f"item {it.get('id')}: mentions {wrong} — Cruz is 6H math and Spanish with Profe Zeiner")
+
+# Spanish only ever comes from the World Language calendar, so a week with
+# none at all usually means that second document went unread.
+week_of = data.get("weekOf")
+if week_of and DATE.match(str(week_of)):
+    monday = datetime.date.fromisoformat(week_of)
+    this_week = [i for i in data.get("items", [])
+                 if DATE.match(str(i.get("date", "")))
+                 and 0 <= (datetime.date.fromisoformat(i["date"]) - monday).days <= 4]
+    if this_week and not any("spanish" in str(i.get("cls", "")).lower() for i in this_week):
+        warnings.append(
+            "no Spanish anywhere in the published week — did the World Language "
+            "calendar get read? (REFRESH.md step 2)")
 
 # Same id on the same day twice would render a duplicate card.
 seen = set()

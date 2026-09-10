@@ -101,6 +101,12 @@ python3 validate.py
 
 ## Things that will bite you
 
+- **There are two sources, not one.** The Diamond deck carries ELA, math,
+  science and social studies. **Spanish is not on it** — the slides link out to
+  a separate World Language calendar, which the refresh must read as well. A
+  whole class was missing from this app until Sep 9 because of that.
+- **Both sources list sections that aren't his.** 6H not 6S or 7H in math;
+  Profe Zeiner, not Luzusky, in Spanish. `validate.py` flags the others.
 - **Google Classroom is not the source.** Its to-do view showed no math at all
   in a week Cruz had math homework every night. The weekly deck is the truth.
 - **Future decks exist but are empty.** All the term's decks were created up

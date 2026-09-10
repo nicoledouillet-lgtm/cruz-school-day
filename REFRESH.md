@@ -27,7 +27,27 @@ If there is no row for that week, the archive hasn't been extended (it ran
 through the week of 10/26 as of Sep 2026). Change nothing; say the archive
 stops at the last week listed.
 
-## 2. What a date means
+## 2. Also read the World Language calendar — it is a second source
+
+**The Diamond deck does not carry Spanish homework.** Its weekday slides have
+rows for ELA, Math, Science and Social Studies, then an "Off Team Classes"
+link out to a different document. Read that one too, every week:
+
+- `read_file_content` on fileId `1XyZsc2gaUmUgL7UebKo6ro7_ueerCvv1WsX8caqUhzQ`
+- *"6th Grade World Language — DAILY HOMEWORK 2026-2027"*
+
+It is one table per school day, with a column per teacher: Spanish-Luzusky,
+French-Luzusky, **Spanish-Zeiner**, French-Gallagher, Chinese-Yao, Chinese-Li.
+
+**Cruz has Profe Zeiner.** Use only the "Spanish - Zeiner" column — the same
+discipline as taking only 6H from Ms. Rivera's rows. Luzusky's Spanish column
+is a different section with different work, and it is easy to grab by mistake
+because both mention flashcards and a 9/15 quiz.
+
+Note the newest week is at the TOP of this document and older weeks follow
+below, which is the opposite of the deck archive's ordering.
+
+## 3. What a date means
 
 **Each weekday slide is the homework given that day, to do that night.** The
 Wednesday slide's Science row says *"due Friday"*; the Thursday slide's says
@@ -37,9 +57,10 @@ deadline itself as an absolute `dueDate`, not as the deck's relative wording.
 Getting this backwards is how the first version lost a whole night of math.
 Read every weekday slide, and put each row on the day whose slide it came from.
 
-## 3. Pull from the deck
+## 4. Pull from the deck
 
-- Homework per weekday, by class.
+- Homework per weekday, by class — **from both documents**. Spanish comes only
+  from the World Language calendar; everything else from the deck.
   **Cruz is in 6H math.** Ms. Rivera's rows list 6S, 6H and 7H — only 6H is
   his. Ignore 6S and 7H everywhere, including on the assessment calendar (a
   "7H Quick Quiz" is not his).
@@ -55,16 +76,17 @@ filled in yet, rather than reporting a free week.
 
 Teachers: Ms. Metsack (ELA, P7), Ms. Rivera (math, P4), Mrs. Vocke (science,
 P2), Mr. Fleming (social studies, P5), Profe Zeiner (Spanish, P1 — she also
-owns the calendar).
+owns the deck archive). **Not** Luzusky, Gallagher, Yao or Li: those are other
+sections in the World Language calendar.
 
-## 4. Cross-check the assessments
+## 5. Cross-check the assessments
 
 Each deck carries its own copy of the month's assessment calendar, and they
 drift. **Read the previous week's deck too and compare.** Where they disagree,
 keep the entry and add a `note` saying the decks disagree. Never silently pick
 one.
 
-## 5. Write week.json
+## 6. Write week.json
 
 Edit **only** `week.json`. Set `updated` to today and `weekOf` to the Monday of
 the week being published.
@@ -129,7 +151,7 @@ Rules that matter:
   how homework goes missing. Science and Social Studies rows also carry
   starred "last call" notes and checks that are real homework.
 
-## 6. Validate, then show the diff
+## 7. Validate, then show the diff
 
 ```bash
 python3 validate.py
@@ -139,7 +161,7 @@ git diff week.json
 Fix anything the validator flags. Do **not** push without showing the diff
 first.
 
-## 7. Publish
+## 8. Publish
 
 ```bash
 git add week.json && git commit -m "Homework, week of <date>" && git push
@@ -148,7 +170,7 @@ git add week.json && git commit -m "Homework, week of <date>" && git push
 GitHub Pages picks it up within a minute. Cruz's phone gets it the next time he
 opens the app with any signal.
 
-## 8. Report back
+## 9. Report back
 
 Short and scannable:
 

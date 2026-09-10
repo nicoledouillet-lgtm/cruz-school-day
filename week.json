@@ -12,8 +12,16 @@
       "text": "Summer Reading Slides", "dueDate": "2026-09-10",
       "submit": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx/a/ODc2NzE1MjcwODYy/details" },
 
+    { "id": "spanish-flashcards", "date": "2026-09-08", "cls": "Spanish", "teacher": "Profe Zeiner", "period": 1,
+      "text": "Finish making your vocab flashcards", "dueDate": "2026-09-10", "link": "https://docs.google.com/document/d/1j4JjixzQ5uaRaY28UG02gZ3TPCuFAlJDEalJ4ND7qMo/edit",
+      "note": "Instructions and examples are in the linked doc. They're for the quiz on 9/15." },
+
     { "id": "math6h-p15", "date": "2026-09-09", "cls": "Math 6H", "teacher": "Ms. Rivera", "period": 4,
       "text": "Math book p.15, 16, 17" },
+
+    { "id": "spanish-flashcards", "date": "2026-09-09", "cls": "Spanish", "teacher": "Profe Zeiner", "period": 1,
+      "text": "Finish making your vocab flashcards", "dueDate": "2026-09-10", "link": "https://docs.google.com/document/d/1j4JjixzQ5uaRaY28UG02gZ3TPCuFAlJDEalJ4ND7qMo/edit",
+      "note": "Instructions and examples are in the linked doc. They're for the quiz on 9/15." },
 
     { "id": "ela-summer-reading", "date": "2026-09-09", "cls": "ELA", "teacher": "Ms. Metsack", "period": 7,
       "text": "Summer Reading Slides", "dueDate": "2026-09-10",
@@ -44,6 +52,14 @@
 
     { "id": "ss-5branches", "date": "2026-09-11", "cls": "Social Studies", "teacher": "Mr. Fleming", "period": 5,
       "text": "5 Branches of Social Studies check", "dueDate": "2026-09-11" },
+
+    { "id": "spanish-quiz-prep", "date": "2026-09-10", "cls": "Spanish", "teacher": "Profe Zeiner", "period": 1,
+      "text": "Study for the Spanish vocab quiz", "dueDate": "2026-09-15", "link": "https://docs.google.com/document/d/1y_yS5xVjA7ZYjJdjkvI0raOOrL4MPfthUM54Ie-tAQE/edit",
+      "note": "Profe Zeiner's assessment calendar says what's on it and how to prepare." },
+
+    { "id": "spanish-quiz-prep", "date": "2026-09-11", "cls": "Spanish", "teacher": "Profe Zeiner", "period": 1,
+      "text": "Study for the Spanish vocab quiz", "dueDate": "2026-09-15", "link": "https://docs.google.com/document/d/1y_yS5xVjA7ZYjJdjkvI0raOOrL4MPfthUM54Ie-tAQE/edit",
+      "note": "Profe Zeiner's assessment calendar says what's on it and how to prepare." },
 
     { "id": "choir-polo", "date": "2026-09-25", "cls": "6th Grade Choir", "teacher": null, "period": null,
       "text": "Music polo shirts", "dueDate": "2026-09-25", "link": "https://classroom.google.com/u/3/c/ODc1MDY0MDAwMzkw" },
@@ -87,6 +103,8 @@
   "sources": [
     { "tag": "HW",  "name": "Diamond HW Calendar, this week", "url": "https://docs.google.com/presentation/d/1Bv8gZcw51HIKOUsrCkm9AnSQdyGcGVT7H5152WDWzzc/edit" },
     { "tag": "ALL", "name": "Weekly calendar archive",        "url": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit" },
+    { "tag": "WL",  "name": "World Language homework calendar", "url": "https://docs.google.com/document/d/1XyZsc2gaUmUgL7UebKo6ro7_ueerCvv1WsX8caqUhzQ/edit" },
+    { "tag": "P1",  "name": "Profe Zeiner's assessment calendar", "url": "https://docs.google.com/document/d/1y_yS5xVjA7ZYjJdjkvI0raOOrL4MPfthUM54Ie-tAQE/edit" },
     { "tag": "P1",  "name": "La Clase de Español (1A)",   "url": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz" },
     { "tag": "P2",  "name": "Science — Mrs. Vocke",       "url": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0" },
     { "tag": "P4",  "name": "Honors Math 6 — Ms. Rivera", "url": "https://classroom.google.com/u/3/c/ODc1MTQ3MTUxNjEw" },
