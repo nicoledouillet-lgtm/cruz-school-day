@@ -118,6 +118,10 @@ Rules that matter:
   it once marks it done everywhere and how overdue detection works.
 - **Keep future weeks.** Don't delete entries for later weeks just because
   they're outside the current one — the "Later on" column reads them.
+- **Keep the past two weeks too.** There is no overdue banner: unticked work
+  stays in its own day column, reached with the `‹` button. Delete those rows
+  and anything Cruz didn't finish silently disappears. Rows older than two
+  weeks before the published week can go, so the file stays small.
 - **Keep `open` entries** until they're actually done.
 - Dates are `YYYY-MM-DD`. `running[].weekOf` and `weekOf` must be Mondays.
 - **Walk every weekday slide and every class row before you finish.** Five

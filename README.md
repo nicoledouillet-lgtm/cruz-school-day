@@ -113,7 +113,13 @@ python3 validate.py
   to point Claude at the extended list.
 - **Ticks don't sync.** Each device keeps its own, in that browser's storage.
   They're gone if he clears site data. This was a deliberate choice: the app is
-  his to manage, not a monitor.
+  his to manage, not a monitor. The consequence is that **a phone that didn't
+  do the ticking shows everything as untouched** — a parent's device can't tell
+  you what he's done, only what was set.
+- **There is no overdue banner.** Unfinished work stays in its own day column
+  in the week view, marked with a red edge and a "was due" label, rather than
+  being piled at the top of the page. So `week.json` must keep recent past
+  weeks — see REFRESH.md.
 - **The packing list lives in `index.html`, not `week.json`** — deliberately,
   so a homework refresh can never wipe the list Cruz has customised. He edits
   it in the page itself under *Edit list*.

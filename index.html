@@ -329,19 +329,6 @@
   .box:checked::after { transform: rotate(-45deg) translate(1px, -1px) scale(1); }
   .box:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-  /* ---------- banner ---------- */
-
-  .banner {
-    border: 1px solid var(--overdue); background: var(--overdue-soft);
-    border-radius: 8px; padding: .8rem .9rem;
-    display: flex; flex-direction: column; gap: .55rem;
-  }
-  .banner h3 {
-    margin: 0; font-size: var(--step--1); font-weight: 700;
-    letter-spacing: .1em; text-transform: uppercase; color: var(--overdue);
-  }
-  .banner .card { background: var(--surface); }
-
   /* ---------- bag chips ---------- */
 
   .chips { list-style: none; margin: 0; padding: .85rem 1rem; display: flex; flex-wrap: wrap; gap: .55rem; }
@@ -551,8 +538,6 @@
     <button class="mode" id="modeToday" type="button" aria-pressed="true">Just today</button>
     <button class="mode" id="modeWeek" type="button" aria-pressed="false">Whole week</button>
   </div>
-
-  <div id="overdueHost"></div>
 
   <!-- ---------------- today pane ---------------- -->
   <div class="stack" id="todayPane">
@@ -1024,30 +1009,18 @@
     document.querySelector(".tally .hot, .tally .clear").className = left ? "hot" : "clear";
   }
 
-  /* ---------------- overdue ---------------- */
+  /* There was a "N things slipped past" banner here that hoisted every
+     unticked past item to the top of the page. It's gone on purpose.
 
-  function renderOverdue() {
-    var host = document.getElementById("overdueHost");
-    host.textContent = "";
+     Past days now work the way future days do: the work stays in its own
+     column in the week view, where it was set. Two reasons. A list of
+     failures that only ever grows stops being information and turns into
+     background guilt a kid learns to scroll past. And ticks are per-device,
+     so on a phone that didn't do the ticking the banner listed everything
+     ever assigned and was simply wrong.
 
-    var seen = {}, late = [];
-    ITEMS.forEach(function (it) {
-      if (isDone(it) || seen[it.id]) return;
-      if (fromKey(it.date) < TODAY) { seen[it.id] = true; late.push(it); }
-    });
-    late = late.filter(function (it) {
-      return !ITEMS.some(function (o) { return o.id === it.id && fromKey(o.date) >= TODAY; });
-    });
-    if (!late.length) return;
-
-    var box = document.createElement("div");
-    box.className = "banner";
-    var h = document.createElement("h3");
-    h.textContent = late.length === 1 ? "1 thing slipped past" : late.length + " things slipped past";
-    box.appendChild(h);
-    late.forEach(function (it) { box.appendChild(hwCard(it, "is-late")); });
-    host.appendChild(box);
-  }
+     Unticked past work is still marked — a red edge on the card and a "was
+     due" label — just in the day it belongs to, not shouted from the top. */
 
   /* ---------------- week grid ---------------- */
 
@@ -1417,7 +1390,6 @@
 
   function renderAll() {
     renderMast();
-    renderOverdue();
     renderToday();
     renderPack();
     renderDone();
