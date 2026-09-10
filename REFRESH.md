@@ -31,8 +31,8 @@ stops at the last week listed.
 
 **Each weekday slide is the homework given that day, to do that night.** The
 Wednesday slide's Science row says *"due Friday"*; the Thursday slide's says
-*"due tomorrow"*. So `date` is **the night Cruz does the work**, and `due` is
-the deadline as stated relative to that night.
+*"due tomorrow"*. So `date` is **the night Cruz does the work**. Record the
+deadline itself as an absolute `dueDate`, not as the deck's relative wording.
 
 Getting this backwards is how the first version lost a whole night of math.
 Read every weekday slide, and put each row on the day whose slide it came from.
@@ -86,7 +86,7 @@ the week being published.
       "teacher": "Ms. Rivera",     // or null
       "period":  4,                // or null
       "text":    "Math book p.20 #1–6",
-      "due":     "due Thu",        // optional, shown as a badge
+      "dueDate": "2026-09-17",     // optional; the real deadline, absolute
       "adult":   true,             // optional, flags 'needs a grown-up'
       "note":    "…",              // optional italic line
       "submit":  "https://…",      // optional; makes the title a link
@@ -96,7 +96,7 @@ the week being published.
 
   "quizzes":  [ { "date": "2026-09-16", "text": "Spanish — greetings quiz", "note": "optional" } ],
   "running":  [ { "id": "…", "cls": "…", "teacher": "…", "period": 7,
-                  "text": "…", "due": "finish by Sunday night",
+                  "text": "…", "due": "finish by Sunday night",  // free text: no single date
                   "weekOf": "2026-09-14" } ],   // must be a Monday
   "noSchool": { "2026-09-21": "Yom Kippur" },
   "open":     [ ],                 // no deadline given; keep entries until done
@@ -106,8 +106,15 @@ the week being published.
 
 Rules that matter:
 
+- **Write deadlines as `dueDate`, never as words.** The page turns one date
+  into "due Thu 9/17", "DUE TODAY" or "was due Thu 9/17" depending on when the
+  card is read, so it stays right in every view. Writing `"due": "due
+  tomorrow"` breaks the moment that card is seen on another day. Use the
+  free-text `due` only where the deck gives no single date, like "finish by
+  Sunday night". An item with neither is labelled with the night it was set —
+  don't invent a deadline the deck doesn't state.
 - **Reuse ids across days.** The same assignment on Mon/Tue/Wed is three
-  entries sharing one `id`, with different `date` and `due`. That's how ticking
+  entries sharing one `id` and one `dueDate`, differing only in `date`. That's how ticking
   it once marks it done everywhere and how overdue detection works.
 - **Keep future weeks.** Don't delete entries for later weeks just because
   they're outside the current one — the "Later on" column reads them.

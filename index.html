@@ -304,6 +304,8 @@
     color: var(--urgent); background: var(--urgent-soft);
   }
   .badge.grown { color: var(--quiz); background: var(--quiz-soft); }
+  .badge.soft { color: var(--ink-soft); background: var(--surface-sunk); }
+  .badge.late { color: var(--overdue); background: var(--overdue-soft); }
   .badge.qz { color: var(--quiz); background: var(--surface); border: 1px solid var(--quiz); }
 
   .cnote { margin-top: .25rem; font-size: .75rem; color: var(--muted); font-style: italic; }
@@ -762,6 +764,34 @@
 
   /* ---------------- card builders ---------------- */
 
+  function shortDay(d) {
+    return DAY_SHORT[d.getDay()] + " " + (d.getMonth() + 1) + "/" + d.getDate();
+  }
+
+  /* Every deadline label is derived here from one real date, so the same
+     assignment can't read "due tomorrow" on one card and "due Thu" on another
+     — that drift is what made it hard to tell which day you were looking at.
+
+     Always measured against the actual today, never the card's own day: a
+     Thursday card seen on Wednesday says "due Fri 9/11", not "due tomorrow".
+     Colour carries the urgency so the text can stay factual. */
+  function dueLabel(it) {
+    if (it.dueDate) {
+      var d = fromKey(it.dueDate);
+      var days = Math.round((d - TODAY) / 86400000);
+      if (days < 0)   return { text: "was due " + shortDay(d), cls: "badge late" };
+      if (days === 0) return { text: "DUE TODAY",              cls: "badge" };
+      if (days === 1) return { text: "due " + shortDay(d),     cls: "badge" };
+      return { text: "due " + shortDay(d), cls: "badge soft" };
+    }
+    /* Free text for things with no single date, e.g. "finish by Sunday night". */
+    if (it.due) return { text: it.due, cls: "badge" };
+    /* No deadline stated in the deck. Naming the night it was set still
+       answers "am I looking at the right day?" without inventing a due date. */
+    if (it.date) return { text: "· set " + shortDay(fromKey(it.date)), plain: true };
+    return null;
+  }
+
   function metaFor(it) {
     var meta = document.createElement("div");
     meta.className = "cmeta";
@@ -773,9 +803,11 @@
     var c = document.createElement("span");
     c.textContent = it.teacher ? it.cls + " · " + it.teacher : it.cls;
     meta.appendChild(c);
-    if (it.due) {
+    var lab = dueLabel(it);
+    if (lab) {
       var d = document.createElement("span");
-      d.className = "badge"; d.textContent = it.due;
+      if (!lab.plain) d.className = lab.cls;
+      d.textContent = lab.text;
       meta.appendChild(d);
     }
     if (it.adult) {

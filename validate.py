@@ -46,6 +46,16 @@ for n, it in enumerate(data.get("items", [])):
         check_date(it["date"], where)
     if it.get("period") is not None and not isinstance(it["period"], int):
         problems.append(f"{where}: period should be a number or null")
+    if it.get("due") and it.get("dueDate"):
+        problems.append(f"{where}: has both 'due' and 'dueDate' — dueDate wins, so drop 'due'")
+    if it.get("dueDate"):
+        due = check_date(it["dueDate"], f"{where}.dueDate")
+        set_on = datetime.date.fromisoformat(it["date"]) if DATE.match(str(it.get("date", ""))) else None
+        if due and set_on and due < set_on:
+            problems.append(f"{where}: due {it['dueDate']} is before it was set on {it['date']}")
+    # A relative word in a hand-written 'due' can't stay true across days.
+    if it.get("due") and re.search(r"\b(today|tomorrow|tonight)\b", it["due"], re.I):
+        warnings.append(f"{where}: 'due' says {it['due']!r} — use dueDate so the label stays right")
 
 for n, q in enumerate(data.get("quizzes", [])):
     where = f"quizzes[{n}]"

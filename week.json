@@ -9,47 +9,48 @@
       "text": "Math book p.12 #6–8, p.13 #1–2, p.14 #3 & 5" },
 
     { "id": "ela-summer-reading", "date": "2026-09-08", "cls": "ELA", "teacher": "Ms. Metsack", "period": 7,
-      "text": "Summer Reading Slides", "due": "due Thu",
+      "text": "Summer Reading Slides", "dueDate": "2026-09-10",
       "submit": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx/a/ODc2NzE1MjcwODYy/details" },
 
     { "id": "math6h-p15", "date": "2026-09-09", "cls": "Math 6H", "teacher": "Ms. Rivera", "period": 4,
       "text": "Math book p.15, 16, 17" },
 
     { "id": "ela-summer-reading", "date": "2026-09-09", "cls": "ELA", "teacher": "Ms. Metsack", "period": 7,
-      "text": "Summer Reading Slides", "due": "due tomorrow",
+      "text": "Summer Reading Slides", "dueDate": "2026-09-10",
       "submit": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx/a/ODc2NzE1MjcwODYy/details" },
 
     { "id": "sci-policies", "date": "2026-09-09", "cls": "Science", "teacher": "Mrs. Vocke", "period": 2,
-      "text": "Policies Google form — fill it in with a grown-up", "due": "due Fri", "adult": true,
+      "text": "Policies Google form — fill it in with a grown-up", "dueDate": "2026-09-11", "adult": true,
       "note": "A signed blue policies sheet works too." },
 
     { "id": "sci-stations", "date": "2026-09-09", "cls": "Science", "teacher": "Mrs. Vocke", "period": 2,
-      "text": "Last call to check in the green \u201cback to school stations\u201d notebook", "due": "due Fri",
+      "text": "Last call to check in the green \u201cback to school stations\u201d notebook", "dueDate": "2026-09-11",
       "note": "Mrs. Vocke scores it Friday whether or not you've checked in." },
 
     { "id": "ela-summer-reading", "date": "2026-09-10", "cls": "ELA", "teacher": "Ms. Metsack", "period": 7,
-      "text": "Summer Reading Slides", "due": "DUE TODAY",
+      "text": "Summer Reading Slides", "dueDate": "2026-09-10",
       "submit": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx/a/ODc2NzE1MjcwODYy/details" },
 
     { "id": "sci-policies", "date": "2026-09-10", "cls": "Science", "teacher": "Mrs. Vocke", "period": 2,
-      "text": "Policies Google form — fill it in with a grown-up", "due": "due tomorrow", "adult": true,
+      "text": "Policies Google form — fill it in with a grown-up", "dueDate": "2026-09-11", "adult": true,
       "note": "A signed blue policies sheet works too." },
 
     { "id": "sci-stations", "date": "2026-09-10", "cls": "Science", "teacher": "Mrs. Vocke", "period": 2,
-      "text": "Last call to check in the green \u201cback to school stations\u201d notebook", "due": "due tomorrow",
+      "text": "Last call to check in the green \u201cback to school stations\u201d notebook", "dueDate": "2026-09-11",
       "note": "Mrs. Vocke scores it Friday whether or not you've checked in." },
 
     { "id": "ss-5branches", "date": "2026-09-10", "cls": "Social Studies", "teacher": "Mr. Fleming", "period": 5,
-      "text": "5 Branches of Social Studies check", "due": "due Fri" },
+      "text": "5 Branches of Social Studies check", "dueDate": "2026-09-11" },
 
     { "id": "ss-5branches", "date": "2026-09-11", "cls": "Social Studies", "teacher": "Mr. Fleming", "period": 5,
-      "text": "5 Branches of Social Studies check", "due": "DUE TODAY" },
+      "text": "5 Branches of Social Studies check", "dueDate": "2026-09-11" },
 
     { "id": "choir-polo", "date": "2026-09-25", "cls": "6th Grade Choir", "teacher": null, "period": null,
-      "text": "Music polo shirts", "link": "https://classroom.google.com/u/3/c/ODc1MDY0MDAwMzkw" },
+      "text": "Music polo shirts", "dueDate": "2026-09-25", "link": "https://classroom.google.com/u/3/c/ODc1MDY0MDAwMzkw" },
 
     { "id": "math-summer-pkt", "date": "2026-09-30", "cls": "Math 6H", "teacher": "Ms. Rivera", "period": 4,
-      "text": "Summer Math Packet due", "note": "6H answer key is linked in the HW calendar." }
+      "text": "Summer Math Packet", "dueDate": "2026-09-30",
+      "note": "6H answer key is linked in the HW calendar." }
   ],
 
   "quizzes": [
