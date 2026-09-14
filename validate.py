@@ -29,6 +29,7 @@ try:
 except Exception as e:                                    # noqa: BLE001
     sys.exit(f"week.json is not valid JSON: {e}")
 
+week_of = data.get("weekOf")
 updated = check_date(data.get("updated", ""), "updated")
 if updated:
     age = (datetime.date.today() - updated).days
@@ -78,6 +79,25 @@ for n, r in enumerate(data.get("running", [])):
 for dk in data.get("noSchool", {}):
     check_date(dk, "noSchool")
 
+# Per-day links into the deck. Optional — without them the cards simply carry
+# no "see the deck" link — so a missing one is a warning, never a blocker.
+slides = data.get("deckSlides", {})
+for dk, url in slides.items():
+    check_date(dk, "deckSlides")
+    if not str(url).startswith("https://docs.google.com/presentation/"):
+        problems.append(f"deckSlides[{dk}]: {url!r} is not a Google Slides link")
+    elif "slide=id." not in str(url):
+        warnings.append(f"deckSlides[{dk}]: no slide anchor, so it opens on the deck's first slide")
+
+if week_of and DATE.match(str(week_of)):
+    monday = datetime.date.fromisoformat(week_of)
+    missing = [str(monday + datetime.timedelta(days=i)) for i in range(5)
+               if str(monday + datetime.timedelta(days=i)) not in slides]
+    if missing:
+        warnings.append(
+            "no deckSlides for " + ", ".join(missing)
+            + " — those cards get no 'see the deck' link (REFRESH.md step 6)")
+
 # Both sources list several sections and only one is Cruz's. Picking up a
 # neighbouring column is the likeliest way a refresh goes wrong: Ms. Rivera's
 # rows carry 6S/6H/7H, and the World Language calendar has six teachers.
@@ -91,7 +111,6 @@ for it in data.get("items", []) + data.get("running", []):
 
 # Spanish only ever comes from the World Language calendar, so a week with
 # none at all usually means that second document went unread.
-week_of = data.get("weekOf")
 if week_of and DATE.match(str(week_of)):
     monday = datetime.date.fromisoformat(week_of)
     this_week = [i for i in data.get("items", [])

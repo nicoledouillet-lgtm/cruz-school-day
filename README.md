@@ -117,6 +117,10 @@ python3 validate.py
   silently pick one.
 - **The archive doc stops at the week of 10/26.** When it runs out, someone has
   to point Claude at the extended list.
+- **The "see the deck" links need docs.google.com reachable.** If Cruz's phone
+  is on a Screen Time allow-list, add `docs.google.com` (and
+  `classroom.google.com` for the submit links) alongside the site itself, or
+  the links go nowhere.
 - **Ticks don't sync.** Each device keeps its own, in that browser's storage.
   They're gone if he clears site data. This was a deliberate choice: the app is
   his to manage, not a monitor. The consequence is that **a phone that didn't

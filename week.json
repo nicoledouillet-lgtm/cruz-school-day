@@ -4,6 +4,20 @@
   "deck": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
 
+  "deckSlides": {
+    "2026-09-07": "https://docs.google.com/presentation/d/1Bv8gZcw51HIKOUsrCkm9AnSQdyGcGVT7H5152WDWzzc/preview?slide=id.g3e8c1ab2883_0_12",
+    "2026-09-08": "https://docs.google.com/presentation/d/1Bv8gZcw51HIKOUsrCkm9AnSQdyGcGVT7H5152WDWzzc/preview?slide=id.g3fa20e92b2e_0_131",
+    "2026-09-09": "https://docs.google.com/presentation/d/1Bv8gZcw51HIKOUsrCkm9AnSQdyGcGVT7H5152WDWzzc/preview?slide=id.g3fa20e92b2e_0_145",
+    "2026-09-10": "https://docs.google.com/presentation/d/1Bv8gZcw51HIKOUsrCkm9AnSQdyGcGVT7H5152WDWzzc/preview?slide=id.g3fa20e92b2e_0_158",
+    "2026-09-11": "https://docs.google.com/presentation/d/1Bv8gZcw51HIKOUsrCkm9AnSQdyGcGVT7H5152WDWzzc/preview?slide=id.g3fa20e92b2e_0_118",
+
+    "2026-09-14": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/preview?slide=id.g3fa22a9ce76_0_6",
+    "2026-09-15": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/preview?slide=id.g3fa22a9ce76_0_18",
+    "2026-09-16": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/preview?slide=id.g3fa22a9ce76_0_31",
+    "2026-09-17": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/preview?slide=id.g3fa22a9ce76_0_44",
+    "2026-09-18": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/preview?slide=id.g3fa22a9ce76_0_57"
+  },
+
   "items": [
     { "id": "math6h-p12", "date": "2026-09-08", "cls": "Math 6H", "teacher": "Ms. Rivera", "period": 4,
       "text": "Math book p.12 #6–8, p.13 #1–2, p.14 #3 & 5" },

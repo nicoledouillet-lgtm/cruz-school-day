@@ -97,7 +97,26 @@ assessment reading "Area of      and      " has drawings in the gaps. Open the
 deck's `/preview` in a browser and read the slide to get them, rather than
 guessing or publishing the blanks.
 
-## 6. Write week.json
+## 6. Harvest this week's slide links (optional but worth it)
+
+Each card carries a **see the deck ↗** link that opens the teacher's own row
+for that day — what Cruz taps when he remembers there was maths but not which
+pages. It needs one slide id per weekday, and they aren't in the extracted
+text.
+
+Open `https://docs.google.com/presentation/d/<deck id>/preview` in the browser,
+click past the three lead-in slides (title, Learning Lab, assessment calendar),
+then read `location.search` at each of the five weekday slides. It rewrites
+itself to `?slide=id.gXXXXX` as you go.
+
+Put the full preview URL in `deckSlides`, keyed by date. **Spot-check at least
+one** — slide ids are not in document order, so a wrong guess sends him to the
+wrong day. Keep last week's entries; those cards are still reachable.
+
+If you skip this, nothing breaks — those cards just carry no link, and
+`validate.py` says which days are missing.
+
+## 7. Write week.json
 
 Edit **only** `week.json`. Set `updated` to today and `weekOf` to the Monday of
 the week being published.
@@ -132,6 +151,9 @@ the week being published.
                   "text": "…", "due": "finish by Sunday night",  // free text: no single date
                   "weekOf": "2026-09-14" } ],   // must be a Monday
   "noSchool": { "2026-09-21": "Yom Kippur" },
+  "deckSlides": {                  // date -> that weekday's slide, see step 6
+    "2026-09-14": "https://docs.google.com/presentation/d/<deck>/preview?slide=id.gXXX"
+  },
   "open":     [ ],                 // no deadline given; keep entries until done
   "sources":  [ ]                  // class links; rarely changes
 }
@@ -162,7 +184,7 @@ Rules that matter:
   how homework goes missing. Science and Social Studies rows also carry
   starred "last call" notes and checks that are real homework.
 
-## 7. Validate, then show the diff
+## 8. Validate, then show the diff
 
 ```bash
 python3 validate.py
@@ -172,7 +194,7 @@ git diff week.json
 Fix anything the validator flags. Do **not** push without showing the diff
 first.
 
-## 8. Publish
+## 9. Publish
 
 ```bash
 git add week.json && git commit -m "Homework, week of <date>" && git push
@@ -181,7 +203,7 @@ git add week.json && git commit -m "Homework, week of <date>" && git push
 GitHub Pages picks it up within a minute. Cruz's phone gets it the next time he
 opens the app with any signal.
 
-## 9. Report back
+## 10. Report back
 
 Short and scannable:
 
