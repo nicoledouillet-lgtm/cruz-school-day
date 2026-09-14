@@ -6,7 +6,7 @@
    week.json: try the network first so a Sunday refresh lands immediately,
    fall back to the last saved copy when there's nothing to reach. */
 
-var CACHE = "cruz-school-day-v12";
+var CACHE = "cruz-school-day-v13";
 var SHELL = [
   "./",
   "./index.html",
@@ -18,10 +18,25 @@ var SHELL = [
 ];
 
 self.addEventListener("install", function (e) {
+  /* Deliberately not cache.addAll(SHELL). That goes through the HTTP cache and
+     the CDN edge, and GitHub Pages serves HTML with a ten-minute max-age — so
+     an install moments after a deploy could bake the PREVIOUS app into the new
+     cache, and it would stay there until something else evicted it. Observed,
+     not theoretical: v12 installed with v11's index.html.
+
+     cache:"reload" bypasses the browser's HTTP cache; the ?v= query makes it a
+     different URL to the CDN, forcing a trip to the origin. The response is
+     stored under the clean URL so lookups still match. */
   e.waitUntil(
-    caches.open(CACHE)
-      .then(function (c) { return c.addAll(SHELL); })
-      .then(function () { return self.skipWaiting(); })
+    caches.open(CACHE).then(function (c) {
+      return Promise.all(SHELL.map(function (url) {
+        return fetch(url + "?v=" + CACHE, { cache: "reload" })
+          .then(function (res) {
+            if (!res || !res.ok) throw new Error("precache failed: " + url);
+            return c.put(url, res);
+          });
+      }));
+    }).then(function () { return self.skipWaiting(); })
   );
 });
 
