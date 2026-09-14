@@ -142,6 +142,11 @@ python3 validate.py
   his to manage, not a monitor. The consequence is that **a phone that didn't
   do the ticking shows everything as untouched** — a parent's device can't tell
   you what he's done, only what was set.
+- **A red edge means one specific thing:** unticked work whose last listed day
+  has passed — exactly what the catch-up line at the foot of "Just today"
+  counts. Tapping that line opens the week those items are in, which may not
+  be this week. Work that's still listed today shows its own "was due"
+  label but is not red and is not counted; it's current, not missed.
 - **There is no overdue banner.** Unfinished work stays in its own day column
   in the week view, marked with a red edge and a "was due" label, rather than
   being piled at the top of the page. So `week.json` must keep recent past

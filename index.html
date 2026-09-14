@@ -1208,18 +1208,26 @@
 
   /* ---------------- unfinished work from earlier ---------------- */
 
+  /* Unticked work whose last listed day has already passed. An assignment
+     still listed today or later isn't "from earlier" — it's current, and it's
+     already on the screen above.
+
+     The red edge in the week grid hangs off this too, so a red card always
+     means "one of the things the catch-up line is counting". It used to mark
+     any unticked past day, which put a red edge on work that was still live
+     today — tick it and the count wouldn't move, for no visible reason. */
+  function isStale(it) {
+    if (isDone(it) || fromKey(it.date) >= HW) return false;
+    return !ITEMS.some(function (o) { return o.id === it.id && fromKey(o.date) >= HW; });
+  }
+
   function staleItems() {
-    /* Unticked work whose last listed day has already passed. An assignment
-       still listed today or later isn't "from earlier" — it's current, and
-       it's already on the screen above. */
     var seen = {}, out = [];
     ITEMS.forEach(function (it) {
-      if (isDone(it) || seen[it.id]) return;
-      if (fromKey(it.date) < HW) { seen[it.id] = true; out.push(it); }
+      if (seen[it.id] || !isStale(it)) return;
+      seen[it.id] = true; out.push(it);
     });
-    return out.filter(function (it) {
-      return !ITEMS.some(function (o) { return o.id === it.id && fromKey(o.date) >= HW; });
-    });
+    return out;
   }
 
   function renderCatchUp() {
@@ -1229,21 +1237,34 @@
     var late = staleItems();
     if (!late.length) return;
 
-    var sameWeek = late.every(function (it) {
-      return mondayOf(fromKey(it.date)).getTime() === mondayOf(HW).getTime();
+    /* The oldest one decides where tapping this lands, and what it's called.
+       Saying "from earlier" and then opening THIS week was the worst of both:
+       the things it counted weren't on the screen it opened, so ticking the
+       nearest red-looking card changed nothing. */
+    var oldest = late.reduce(function (a, b2) {
+      return fromKey(b2.date) < fromKey(a.date) ? b2 : a;
     });
+    var oldestMon = mondayOf(fromKey(oldest.date));
+    var thisMon = mondayOf(HW);
+    var weeksBack = Math.round((thisMon - oldestMon) / 604800000);
+
+    var when = weeksBack === 0 ? " from earlier this week"
+             : weeksBack === 1 ? " from last week"
+             : " from " + weeksBack + " weeks ago";
     var one = late.length === 1;
 
     var b = document.createElement("button");
     b.type = "button"; b.className = "catchup";
     var label = document.createElement("span");
-    label.textContent = (one ? "1 thing" : late.length + " things") +
-      " from earlier" + (sameWeek ? " this week" : "") +
+    label.textContent = (one ? "1 thing" : late.length + " things") + when +
       (one ? " isn't" : " aren't") + " ticked";
     var arrow = document.createElement("span");
     arrow.className = "arrow"; arrow.textContent = "→";
     b.appendChild(label); b.appendChild(arrow);
     b.addEventListener("click", function () {
+      /* Open the week the oldest one is actually in, not whichever week the
+         grid happened to be showing. "Back to this week" gets him home. */
+      viewMon = new Date(oldestMon.getTime());
       setMode("week");
       window.scrollTo(0, 0);
     });
@@ -1374,7 +1395,7 @@
             var flav = "";
             if (!isDone(it)) {
               if (dk === TODAY_KEY) flav = "is-now";
-              else if (day < TODAY) flav = "is-late";
+              else if (day < TODAY && isStale(it)) flav = "is-late";
             }
             body.appendChild(hwCard(it, flav));
           });
