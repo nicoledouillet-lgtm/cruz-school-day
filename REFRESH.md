@@ -79,12 +79,23 @@ P2), Mr. Fleming (social studies, P5), Profe Zeiner (Spanish, P1 — she also
 owns the deck archive). **Not** Luzusky, Gallagher, Yao or Li: those are other
 sections in the World Language calendar.
 
-## 5. Cross-check the assessments
+## 5. Re-read last week's deck — it will have changed
 
-Each deck carries its own copy of the month's assessment calendar, and they
-drift. **Read the previous week's deck too and compare.** Where they disagree,
-keep the entry and add a `note` saying the decks disagree. Never silently pick
-one.
+**Teachers back-fill the deck after the week has happened.** Re-reading the
+week-of-9/7 deck on 9/14 turned up two 6H assignments Ms. Rivera had added
+since 9/9. So this is not only an assessment cross-check:
+
+1. **Homework.** Walk last week's weekday slides again and add anything that
+   wasn't there before. Those rows are still live in the app — unfinished work
+   sits in its own day column, and the back arrow reaches it.
+2. **Assessments.** Each deck carries its own copy of the month's calendar and
+   they drift. Where two decks disagree, keep the entry and add a `note` saying
+   so. Never silently pick one.
+
+Shapes and symbols drawn on a slide do not survive text extraction — an
+assessment reading "Area of      and      " has drawings in the gaps. Open the
+deck's `/preview` in a browser and read the slide to get them, rather than
+guessing or publishing the blanks.
 
 ## 6. Write week.json
 
