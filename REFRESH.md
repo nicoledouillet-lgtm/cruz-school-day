@@ -61,10 +61,14 @@ Calendar: **`thedouzmans@gmail.com`**. (The "DG Extended Family Calendar" was
 checked and carries nothing but a duplicate bin reminder — ignore it.)
 
 Take only what Cruz would act on: **his** activities, and family events that
-change his day. His sibling Luca's field hockey, soccer, swimming and school
-nights are not his, and neither are parent appointments, travel, social plans
-or household reminders. This page lives on a school-issued phone behind a
-public URL — when in doubt, leave it out and mention it in the report instead.
+change his day. Confirmed by Nicole, leave out:
+
+- anything of his sibling Luca's — field hockey, soccer, swim, school nights
+- Nicole's and Liana's travel and appointments
+- trash night; that's Nicole's
+
+The page is served from a public URL, so when in doubt leave it out and
+mention it in the report instead.
 
 Drop the "Cruz" prefix from titles: the whole page is his.
 
@@ -88,6 +92,17 @@ count toward "to do". An activity happens whether or not it gets ticked.
     "note":  "optional" }
 ]
 ```
+
+Kit belongs in `gear`, keyed by the event's **exact** title, and the page
+folds it into that day's bag:
+
+```jsonc
+"gear": { "Squash": ["Squash racquet", "Goggles"], "Pickleball": ["Paddle"] }
+```
+
+Rename an activity and its kit silently stops reaching the bag, so
+`validate.py` warns when a gear key matches no event in the window. Add new
+activities here as they appear.
 
 The section heading names itself: "After school" when everything is at 2pm or
 later, "What's on" otherwise, so a morning field trip isn't mislabelled.

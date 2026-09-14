@@ -79,6 +79,18 @@ for n, r in enumerate(data.get("running", [])):
 for dk in data.get("noSchool", {}):
     check_date(dk, "noSchool")
 
+# Gear is matched to events by exact title, so a renamed activity silently
+# drops its kit from the bag. Catch that here rather than at 7am.
+gear = data.get("gear", {})
+titles = {e.get("text") for e in data.get("events", [])}
+for activity, kit in gear.items():
+    if not isinstance(kit, list) or not all(isinstance(x, str) and x for x in kit):
+        problems.append(f"gear[{activity!r}]: must be a list of item names")
+    if activity not in titles:
+        warnings.append(
+            f"gear[{activity!r}] matches no event this window — renamed activity? "
+            "its kit won't reach the bag")
+
 TIME = re.compile(r"^([01]\d|2[0-3]):[0-5]\d$")
 for n, e in enumerate(data.get("events", [])):
     where = f"events[{n}]"

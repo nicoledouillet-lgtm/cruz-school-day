@@ -12,11 +12,12 @@ accounts, no npm install. Open `index.html` and it works.
 
 Three constraints drove every decision:
 
-**His phone may be locked to an allow-list of websites.** Under iOS Screen
-Time's *Allowed Websites Only*, anything not on the list is blocked — including
-a Google Fonts stylesheet. So the page makes **zero external requests**. System
-fonts, hand-generated icons, everything self-contained. One URL on the
-allow-list is enough.
+**His phone may be locked to an allow-list of websites.** The phone is the
+family's, not the school's — he has no school-issued devices at all — but
+under iOS Screen Time's *Allowed Websites Only*, anything not on the list is
+blocked, including a Google Fonts stylesheet. So the page makes **zero
+external requests**. System fonts, hand-generated icons, everything
+self-contained. One URL on the allow-list is enough.
 
 **He often has no signal.** A service worker (`sw.js`) caches the whole app.
 After the first visit it opens instantly with the plane in airplane mode, and
@@ -121,10 +122,14 @@ python3 validate.py
   silently pick one.
 - **The archive doc stops at the week of 10/26.** When it runs out, someone has
   to point Claude at the extended list.
-- **The "see the deck" links need docs.google.com reachable.** If Cruz's phone
-  is on a Screen Time allow-list, add `docs.google.com` (and
+- **The "see the deck" links need docs.google.com reachable.** If the phone is
+  on a Screen Time allow-list, add `docs.google.com` (and
   `classroom.google.com` for the submit links) alongside the site itself, or
   the links go nowhere.
+- **Nothing here is school-issued.** Cruz has no school tablet, phone or
+  laptop; every device is the family's. That's why there's no Chromebook on
+  the packing list, and why "submit on Google Classroom" means doing it at
+  home.
 - **Ticks don't sync.** Each device keeps its own, in that browser's storage.
   They're gone if he clears site data. This was a deliberate choice: the app is
   his to manage, not a monitor. The consequence is that **a phone that didn't
@@ -134,6 +139,12 @@ python3 validate.py
   in the week view, marked with a red edge and a "was due" label, rather than
   being piled at the top of the page. So `week.json` must keep recent past
   weeks — see REFRESH.md.
+- **The bag changes through the day.** It shows today's list until school ends
+  at 3pm, then switches to the next school day. Between 8am and 3pm it
+  collapses to one line, because a list he can't act on is just something to
+  scroll past. Activity kit (racquet, goggles, paddle) is folded in from
+  `gear` in `week.json`, so it lands on the right mornings — the night before
+  the activity, not on the way to it.
 - **The packing list lives in `index.html`, not `week.json`** — deliberately,
   so a homework refresh can never wipe the list Cruz has customised. He edits
   it in the page itself under *Edit list*.

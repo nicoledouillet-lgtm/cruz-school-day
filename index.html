@@ -389,12 +389,15 @@
   .chips .box:checked ~ label { text-decoration: line-through; color: var(--muted); }
   .chips li.unset { border-style: dashed; border-color: var(--urgent); }
   .chips li.maybe { border-style: dashed; border-color: var(--accent); }
+  .chips li.gear { border-color: var(--quiz); background: var(--quiz-soft); }
+  .chips li.collapsed { border: none; background: none; padding: .2rem .1rem; }
   .chips label { cursor: pointer; font-weight: 500; }
   .chips .tag {
     font-family: var(--mono); font-size: .6875rem;
     letter-spacing: .04em; color: var(--urgent); font-weight: 700; text-transform: uppercase;
   }
   .chips .tag.soft { color: var(--accent); }
+  .chips .tag.gear { color: var(--quiz); }
 
   button.link {
     appearance: none; background: none; border: none; padding: .2rem 0;
@@ -699,7 +702,7 @@
 
   /* Filled in from week.json before the first render. */
   var ITEMS = [], QUIZZES = [], RUNNING = [], OPEN = [], SOURCES = [];
-  var NO_SCHOOL = {}, DECK_SLIDES = {}, EVENTS = [];
+  var NO_SCHOOL = {}, DECK_SLIDES = {}, EVENTS = [], GEAR = {};
   var META = { updated: null, deck: null, archive: null };
 
   /* ---------------- dates ---------------- */
@@ -709,7 +712,9 @@
   var DAY_SHORT  = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
   var MONTHS     = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   var DAY_LETTERS = ["M","T","W","T","F"];
-  var EVENING_FROM = 18;   /* 6pm — after this the page looks ahead to the next school day */
+  var EVENING_FROM = 18;   /* 6pm — after this the homework headline says "Tonight" */
+  var SCHOOL_IN    = 8;    /* roughly out of the house */
+  var SCHOOL_OUT   = 15;   /* school's out; the bag's next job is tomorrow morning */
   var NOW_HHMM = String(NOW.getHours()).padStart(2, "0") + ":" +
                  String(NOW.getMinutes()).padStart(2, "0");
 
@@ -750,13 +755,17 @@
 
   function pickFocus() {
     var schoolToday = isSchoolDay(TODAY);
-    var evening = NOW.getHours() >= EVENING_FROM;
+    /* The bag used to roll over at 6pm. It now rolls at the end of the school
+       day: from mid-afternoon the only useful question is what he needs
+       tomorrow, and waiting until 6 left three dead hours showing a list he
+       could no longer act on. */
+    var stillPacking = schoolToday && NOW.getHours() < SCHOOL_OUT;
 
     HW  = schoolToday ? TODAY : nextSchoolDay(TODAY);
-    BAG = (schoolToday && !evening) ? TODAY : nextSchoolDay(TODAY);
+    BAG = stillPacking ? TODAY : nextSchoolDay(TODAY);
 
     HW_AHEAD  = !schoolToday;
-    BAG_AHEAD = !(schoolToday && !evening);
+    BAG_AHEAD = !stillPacking;
 
     HW_KEY  = key(HW);  HW_WD  = HW.getDay();
     BAG_KEY = key(BAG); BAG_WD = BAG.getDay();
@@ -1026,6 +1035,24 @@
     list.forEach(function (e) { host.appendChild(eventCard(e)); });
   }
 
+  /* Kit for the day's activities, folded into the bag rather than shown
+     separately. A racquet has to be in the bag when he leaves the house at
+     half seven, not surfaced at 3pm when he's already at the court — so it
+     belongs on the same list as the water bottle, on the right mornings. */
+  function slug(t) {
+    return String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  }
+
+  function gearFor(dk) {
+    var out = [];
+    eventsOn(dk).forEach(function (e) {
+      (GEAR[e.text] || []).forEach(function (label) {
+        out.push({ id: "gear-" + slug(e.text) + "-" + slug(label), label: label, why: e.text });
+      });
+    });
+    return out;
+  }
+
   /* ---------------- what's on for the focus day ---------------- */
 
   function itemsOn(dk) { return ITEMS.filter(function (i) { return i.date === dk; }); }
@@ -1038,6 +1065,11 @@
   function focusHomework() { return itemsOn(HW_KEY).concat(runningFor(HW)); }
   function packItems()  { return store.pack.filter(function (i) { return i.days.indexOf(BAG_WD) !== -1; }); }
   function packMaybes() { return store.pack.filter(function (i) { return i.maybe.indexOf(BAG_WD) !== -1; }); }
+
+  /* Open by default, except during the school day. Not persisted: the right
+     answer depends on the time, not on what he tapped yesterday. */
+  var packOpen = !(isSchoolDay(TODAY) &&
+                   NOW.getHours() >= SCHOOL_IN && NOW.getHours() < SCHOOL_OUT);
 
   /* ---------------- today pane ---------------- */
 
@@ -1062,11 +1094,11 @@
       hw.length ? (left ? left + " still to do" : "all done") : "";
   }
 
-  function packChip(i, soft) {
+  function packChip(i, kind) {
     var k = BAG_KEY + "|" + i.id;
     var on = !!store.packed[k];
     var li = document.createElement("li");
-    if (soft) li.className = "maybe";
+    if (kind) li.className = kind;
     var cb = document.createElement("input");
     cb.type = "checkbox"; cb.className = "box"; cb.id = "pk-" + i.id; cb.checked = on;
     cb.addEventListener("change", function () {
@@ -1077,9 +1109,10 @@
     lb.setAttribute("for", "pk-" + i.id);
     lb.textContent = i.label;
     li.appendChild(cb); li.appendChild(lb);
-    if (soft) {
+    if (kind === "maybe" || kind === "gear") {
       var tag = document.createElement("span");
-      tag.className = "tag soft"; tag.textContent = "some weeks";
+      tag.className = kind === "gear" ? "tag gear" : "tag soft";
+      tag.textContent = kind === "gear" ? i.why.toLowerCase() : "some weeks";
       li.appendChild(tag);
     }
     return li;
@@ -1095,15 +1128,35 @@
       BAG_KEY === HW_KEY ? DAY_NAMES[BAG_WD] : "Packing for " + DAY_NAMES[BAG_WD];
 
     var items = packItems();
+    var gear = gearFor(BAG_KEY);
     var maybes = packMaybes();
     var unset = store.pack.filter(function (i) { return !i.days.length && !i.maybe.length; });
-    var done = 0;
+    var needed = items.concat(gear);
+    var done = needed.filter(function (i) { return store.packed[BAG_KEY + "|" + i.id]; }).length;
 
-    items.forEach(function (i) {
-      if (store.packed[BAG_KEY + "|" + i.id]) done++;
-      ul.appendChild(packChip(i, false));
-    });
-    maybes.forEach(function (i) { ul.appendChild(packChip(i, true)); });
+    /* While he's at school the bag is a list of things he can't do anything
+       about, which for Cruz is just noise to scroll past. Collapsed to one
+       line he can open if he wants to check. */
+    if (!packOpen) {
+      var li = document.createElement("li");
+      li.className = "collapsed";
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "link";
+      b.textContent = done === needed.length && needed.length
+        ? "All packed — show the list"
+        : "Packed this morning — show the list";
+      b.addEventListener("click", function () { packOpen = true; renderPack(); });
+      li.appendChild(b);
+      ul.appendChild(li);
+      document.getElementById("packProgress").textContent = done + " / " + needed.length;
+      document.getElementById("packNote").textContent = "";
+      document.getElementById("cPack").textContent = Math.max(needed.length - done, 0);
+      return;
+    }
+
+    items.forEach(function (i) { ul.appendChild(packChip(i, "")); });
+    gear.forEach(function (i) { ul.appendChild(packChip(i, "gear")); });
+    maybes.forEach(function (i) { ul.appendChild(packChip(i, "maybe")); });
 
     unset.forEach(function (i) {
       var li = document.createElement("li");
@@ -1117,10 +1170,10 @@
       ul.appendChild(li);
     });
 
-    document.getElementById("packProgress").textContent = done + " / " + items.length;
+    document.getElementById("packProgress").textContent = done + " / " + needed.length;
     document.getElementById("packNote").textContent =
-      items.length && done === items.length ? "all in" : "";
-    document.getElementById("cPack").textContent = Math.max(items.length - done, 0);
+      needed.length && done === needed.length ? "all in" : "";
+    document.getElementById("cPack").textContent = Math.max(needed.length - done, 0);
   }
 
   /* ---------------- unfinished work from earlier ---------------- */
@@ -1174,7 +1227,7 @@
     host.textContent = "";
 
     var hw = focusHomework();
-    var items = packItems();
+    var items = packItems().concat(gearFor(BAG_KEY));
     var hwLeft = hw.filter(function (it) { return !isDone(it); }).length;
     var packLeft = items.filter(function (i) { return !store.packed[BAG_KEY + "|" + i.id]; }).length;
 
@@ -1618,6 +1671,7 @@
     NO_SCHOOL = d.noSchool || {};
     DECK_SLIDES = d.deckSlides || {};
     EVENTS    = d.events    || [];
+    GEAR      = d.gear      || {};
     META = { updated: d.updated || null, deck: d.deck || null, archive: d.archive || null };
 
     pickFocus();
