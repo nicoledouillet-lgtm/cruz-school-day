@@ -595,6 +595,7 @@
     <section id="evtSection" aria-labelledby="evtHead" hidden>
       <div class="sec-head">
         <h2 id="evtHead">After school</h2>
+        <span class="note" id="evtNote"></span>
       </div>
       <div class="bigcard">
         <div class="evlist" id="todayEvents"></div>
@@ -709,6 +710,8 @@
   var MONTHS     = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   var DAY_LETTERS = ["M","T","W","T","F"];
   var EVENING_FROM = 18;   /* 6pm — after this the page looks ahead to the next school day */
+  var NOW_HHMM = String(NOW.getHours()).padStart(2, "0") + ":" +
+                 String(NOW.getMinutes()).padStart(2, "0");
 
   function startOfDay(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
   function mondayOf(d) { var s = startOfDay(d); s.setDate(s.getDate() - ((s.getDay() + 6) % 7)); return s; }
@@ -984,12 +987,32 @@
     return el;
   }
 
+  /* Which day's events to show. Homework and the bag roll forward to the next
+     *school* day; activities don't follow either — squash still happens on a
+     day off, and a Saturday match matters on Saturday.
+
+     So: today, while anything today is still ahead. Once the day is spent,
+     tomorrow — and only tomorrow. Following the bag day instead skipped a
+     holiday Monday's squash to land on Tuesday, and looking further than one
+     day turns this into a calendar nobody asked for. */
+  function eventDay() {
+    var stillToCome = eventsOn(TODAY_KEY).some(function (e) {
+      if (!e.time) return true;                       /* all-day counts all day */
+      return (e.until || e.time) > NOW_HHMM;
+    });
+    if (stillToCome) return TODAY;
+    var tomorrow = addDays(TODAY, 1);
+    return eventsOn(key(tomorrow)).length ? tomorrow : null;
+  }
+
   function renderEvents() {
     var section = document.getElementById("evtSection");
     var host = document.getElementById("todayEvents");
-    host.textContent = "";
+    var note = document.getElementById("evtNote");
+    host.textContent = ""; note.textContent = "";
 
-    var list = eventsOn(HW_KEY);
+    var day = eventDay();
+    var list = day ? eventsOn(key(day)) : [];
     section.hidden = !list.length;
     if (!list.length) return;
 
@@ -998,6 +1021,7 @@
       return e.time && parseInt(String(e.time).split(":")[0], 10) >= 14;
     });
     document.getElementById("evtHead").textContent = afterSchool ? "After school" : "What's on";
+    if (key(day) !== TODAY_KEY) note.textContent = "Tomorrow · " + DAY_NAMES[day.getDay()];
 
     list.forEach(function (e) { host.appendChild(eventCard(e)); });
   }
@@ -1256,6 +1280,8 @@
         o.className = "offday";
         o.textContent = off + " — no school";
         body.appendChild(o);
+        /* Still show the day's activities: no school doesn't cancel squash. */
+        eventsOn(dk).forEach(function (e) { body.appendChild(eventCard(e)); });
       } else {
         eventsOn(dk).forEach(function (e) { body.appendChild(eventCard(e)); });
         quizzesOn(dk).forEach(function (q) { body.appendChild(quizCard(q)); });

@@ -17,17 +17,76 @@
   },
   "events": [
     {
+      "date": "2026-09-07",
+      "time": "15:15",
+      "until": "16:00",
+      "text": "Squash"
+    },
+    {
+      "date": "2026-09-08",
+      "time": "16:00",
+      "until": "17:00",
+      "text": "Pickleball"
+    },
+    {
+      "date": "2026-09-10",
+      "time": "15:15",
+      "until": "16:00",
+      "text": "Squash"
+    },
+    {
       "date": "2026-09-14",
       "time": "16:00",
+      "until": "16:45",
       "text": "Squash",
-      "note": "Placeholder from Nicole — the family calendar hasn't been read yet."
+      "note": "Later than usual this week — squash is normally 3:15."
     },
     {
       "date": "2026-09-14",
       "time": "18:00",
-      "text": "Open House at school",
+      "until": "19:00",
+      "text": "6th Grade Back to School Curriculum Night",
       "adult": true,
-      "note": "From the deck's Important dates."
+      "note": "The homework deck calls this Open House — same evening."
+    },
+    {
+      "date": "2026-09-17",
+      "time": "15:15",
+      "until": "16:00",
+      "text": "Squash"
+    },
+    {
+      "date": "2026-09-21",
+      "time": "15:15",
+      "until": "16:00",
+      "text": "Squash",
+      "note": "No school that day, but squash is still on the calendar."
+    },
+    {
+      "date": "2026-09-22",
+      "time": "10:30",
+      "until": "11:30",
+      "text": "Annual check-up, with Luca",
+      "adult": true
+    },
+    {
+      "date": "2026-09-22",
+      "time": "15:05",
+      "text": "Choir audition",
+      "where": "6th Grade Music, Room 200",
+      "note": "Your sign-up slot is 3:05pm."
+    },
+    {
+      "date": "2026-09-24",
+      "time": "15:15",
+      "until": "16:00",
+      "text": "Squash"
+    },
+    {
+      "date": "2026-09-28",
+      "time": "15:15",
+      "until": "16:00",
+      "text": "Squash"
     }
   ],
   "items": [

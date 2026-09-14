@@ -57,9 +57,22 @@ Pull the published week plus the two weeks kept behind it. **Expand recurring
 events into one dated entry each**; the page has no notion of recurrence, and
 that keeps it working offline with no clock arithmetic.
 
-Take only what Cruz would act on: his activities, and family events that
-change his day. Leave the rest of the family's calendar out of it — this page
-lives on a school-issued phone.
+Calendar: **`thedouzmans@gmail.com`**. (The "DG Extended Family Calendar" was
+checked and carries nothing but a duplicate bin reminder — ignore it.)
+
+Take only what Cruz would act on: **his** activities, and family events that
+change his day. His sibling Luca's field hockey, soccer, swimming and school
+nights are not his, and neither are parent appointments, travel, social plans
+or household reminders. This page lives on a school-issued phone behind a
+public URL — when in doubt, leave it out and mention it in the report instead.
+
+Drop the "Cruz" prefix from titles: the whole page is his.
+
+Watch for the same thing under two names. The deck's "Open House" and the
+calendar's "6th Grade Back to School Curriculum Night" were one 6pm evening,
+and a moved occurrence can differ from its series — squash is normally 3:15
+but was 4:00 the week of 9/14. Take each occurrence's own time, never the
+series'.
 
 Events are **not tasks.** No `id`, no `dueDate`, no checkbox, and they never
 count toward "to do". An activity happens whether or not it gets ticked.
