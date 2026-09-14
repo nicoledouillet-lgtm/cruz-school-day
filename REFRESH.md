@@ -93,8 +93,10 @@ count toward "to do". An activity happens whether or not it gets ticked.
 ]
 ```
 
-Kit belongs in `gear`, keyed by the event's **exact** title, and the page
-folds it into that day's bag:
+Kit belongs in `gear`, keyed by the event's **exact** title. It appears on the
+activity's own card under "Take with you", not in the school bag — Cruz comes
+home before squash and pickleball and picks it up on the way back out, so it
+never goes to school:
 
 ```jsonc
 "gear": { "Squash": ["Squash racquet", "Goggles"], "Pickleball": ["Paddle"] }

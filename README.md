@@ -142,9 +142,12 @@ python3 validate.py
 - **The bag changes through the day.** It shows today's list until school ends
   at 3pm, then switches to the next school day. Between 8am and 3pm it
   collapses to one line, because a list he can't act on is just something to
-  scroll past. Activity kit (racquet, goggles, paddle) is folded in from
-  `gear` in `week.json`, so it lands on the right mornings — the night before
-  the activity, not on the way to it.
+  scroll past.
+- **Activity kit is not in the school bag.** Cruz comes home before squash and
+  pickleball, so the racquet, goggles and paddle are picked up on the way back
+  out. They're tick-off items on the activity's own card, from `gear` in
+  `week.json`, and they're keyed by the activity's date so they don't move
+  when the bag rolls over at 3pm.
 - **The packing list lives in `index.html`, not `week.json`** — deliberately,
   so a homework refresh can never wipe the list Cruz has customised. He edits
   it in the page itself under *Edit list*.

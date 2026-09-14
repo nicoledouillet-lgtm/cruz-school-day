@@ -373,6 +373,20 @@
   .evt .ctitle { font-size: var(--step-0); }
   .evwhere { margin-top: .2rem; font-size: .75rem; color: var(--muted); }
 
+  .kitlbl {
+    margin-top: .6rem; font-family: var(--mono); font-size: .6875rem;
+    font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+  }
+  ul.kit { list-style: none; margin: .4rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+  ul.kit li {
+    display: flex; align-items: center; gap: .5rem;
+    padding: .5rem .8rem; border: 1px solid var(--quiz);
+    border-radius: 999px; background: var(--surface);
+  }
+  ul.kit li:has(.box:checked) { background: var(--surface-sunk); border-color: var(--rule); }
+  ul.kit .box:checked ~ label { text-decoration: line-through; color: var(--muted); }
+  ul.kit label { cursor: pointer; font-weight: 500; font-size: var(--step--1); }
+
   /* compact form, for the week grid */
   .daycol .evt { padding: .45rem .5rem; gap: .45rem; font-size: var(--step--1); }
   .daycol .evt .ctitle { font-size: var(--step--1); }
@@ -389,7 +403,6 @@
   .chips .box:checked ~ label { text-decoration: line-through; color: var(--muted); }
   .chips li.unset { border-style: dashed; border-color: var(--urgent); }
   .chips li.maybe { border-style: dashed; border-color: var(--accent); }
-  .chips li.gear { border-color: var(--quiz); background: var(--quiz-soft); }
   .chips li.collapsed { border: none; background: none; padding: .2rem .1rem; }
   .chips label { cursor: pointer; font-weight: 500; }
   .chips .tag {
@@ -397,7 +410,6 @@
     letter-spacing: .04em; color: var(--urgent); font-weight: 700; text-transform: uppercase;
   }
   .chips .tag.soft { color: var(--accent); }
-  .chips .tag.gear { color: var(--quiz); }
 
   button.link {
     appearance: none; background: none; border: none; padding: .2rem 0;
@@ -773,7 +785,7 @@
 
   /* ---------------- storage (this device only) ---------------- */
 
-  var store = { pack: null, ticked: {}, packed: {} };
+  var store = { pack: null, ticked: {}, packed: {}, kit: {} };
 
   function lsGet(k, fb) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; } catch (e) { return fb; } }
   function lsSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
@@ -781,12 +793,16 @@
   function savePack()   { lsSet("pack", store.pack); }
   function saveTicked() { lsSet("ticked", store.ticked); }
   function savePacked() { lsSet("packed:" + BAG_KEY, store.packed); }
+  /* Kit is keyed by the activity's own date, so it doesn't move when the bag
+     rolls over to tomorrow at 3pm. */
+  function saveKit() { lsSet("kit", store.kit); }
 
   store.pack = lsGet("pack", null) || DEFAULT_PACK.map(function (i) {
     return { id: i.id, label: i.label, days: i.days.slice(), maybe: (i.maybe || []).slice() };
   });
   normalisePack();
   store.ticked = lsGet("ticked", {}) || {};
+  store.kit = lsGet("kit", {}) || {};
 
   function normalisePack() {
     /* No school Chromebook — drop it from lists saved before that was known. */
@@ -958,7 +974,7 @@
       .sort(function (a, b) { return String(a.time || "").localeCompare(String(b.time || "")); });
   }
 
-  function eventCard(e) {
+  function eventCard(e, withKit) {
     var el = document.createElement("div");
     el.className = "evt";
 
@@ -990,6 +1006,33 @@
       var nEl = document.createElement("div");
       nEl.className = "cnote"; nEl.textContent = e.note;
       body.appendChild(nEl);
+    }
+
+    /* Only in the today pane — in the week grid these would be five columns
+       of checkboxes for days that haven't happened. */
+    var kit = withKit ? (GEAR[e.text] || []) : [];
+    if (kit.length) {
+      var lbl = document.createElement("div");
+      lbl.className = "kitlbl"; lbl.textContent = "Take with you";
+      var list = document.createElement("ul");
+      list.className = "kit";
+      kit.forEach(function (label) {
+        var id = e.date + "|" + slug(e.text) + "-" + slug(label);
+        var li = document.createElement("li");
+        var cb = document.createElement("input");
+        cb.type = "checkbox"; cb.className = "box"; cb.id = "kit-" + id;
+        cb.checked = !!store.kit[id];
+        cb.addEventListener("change", function () {
+          if (cb.checked) store.kit[id] = true; else delete store.kit[id];
+          saveKit(); renderAll();
+        });
+        var lb = document.createElement("label");
+        lb.setAttribute("for", "kit-" + id);
+        lb.textContent = label;
+        li.appendChild(cb); li.appendChild(lb);
+        list.appendChild(li);
+      });
+      body.appendChild(lbl); body.appendChild(list);
     }
 
     el.appendChild(when); el.appendChild(body);
@@ -1032,25 +1075,15 @@
     document.getElementById("evtHead").textContent = afterSchool ? "After school" : "What's on";
     if (key(day) !== TODAY_KEY) note.textContent = "Tomorrow · " + DAY_NAMES[day.getDay()];
 
-    list.forEach(function (e) { host.appendChild(eventCard(e)); });
+    list.forEach(function (e) { host.appendChild(eventCard(e, true)); });
   }
 
-  /* Kit for the day's activities, folded into the bag rather than shown
-     separately. A racquet has to be in the bag when he leaves the house at
-     half seven, not surfaced at 3pm when he's already at the court — so it
-     belongs on the same list as the water bottle, on the right mornings. */
+  /* Kit hangs off the activity, not the school bag. He comes home before
+     squash and pickleball, so the racquet is picked up on the way back out —
+     it never goes to school, and putting it on the morning list would just be
+     one more thing to carry all day and bring home again. */
   function slug(t) {
     return String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-  }
-
-  function gearFor(dk) {
-    var out = [];
-    eventsOn(dk).forEach(function (e) {
-      (GEAR[e.text] || []).forEach(function (label) {
-        out.push({ id: "gear-" + slug(e.text) + "-" + slug(label), label: label, why: e.text });
-      });
-    });
-    return out;
   }
 
   /* ---------------- what's on for the focus day ---------------- */
@@ -1109,10 +1142,9 @@
     lb.setAttribute("for", "pk-" + i.id);
     lb.textContent = i.label;
     li.appendChild(cb); li.appendChild(lb);
-    if (kind === "maybe" || kind === "gear") {
+    if (kind === "maybe") {
       var tag = document.createElement("span");
-      tag.className = kind === "gear" ? "tag gear" : "tag soft";
-      tag.textContent = kind === "gear" ? i.why.toLowerCase() : "some weeks";
+      tag.className = "tag soft"; tag.textContent = "some weeks";
       li.appendChild(tag);
     }
     return li;
@@ -1128,10 +1160,9 @@
       BAG_KEY === HW_KEY ? DAY_NAMES[BAG_WD] : "Packing for " + DAY_NAMES[BAG_WD];
 
     var items = packItems();
-    var gear = gearFor(BAG_KEY);
     var maybes = packMaybes();
     var unset = store.pack.filter(function (i) { return !i.days.length && !i.maybe.length; });
-    var needed = items.concat(gear);
+    var needed = items;
     var done = needed.filter(function (i) { return store.packed[BAG_KEY + "|" + i.id]; }).length;
 
     /* While he's at school the bag is a list of things he can't do anything
@@ -1155,7 +1186,6 @@
     }
 
     items.forEach(function (i) { ul.appendChild(packChip(i, "")); });
-    gear.forEach(function (i) { ul.appendChild(packChip(i, "gear")); });
     maybes.forEach(function (i) { ul.appendChild(packChip(i, "maybe")); });
 
     unset.forEach(function (i) {
@@ -1227,7 +1257,7 @@
     host.textContent = "";
 
     var hw = focusHomework();
-    var items = packItems().concat(gearFor(BAG_KEY));
+    var items = packItems();
     var hwLeft = hw.filter(function (it) { return !isDone(it); }).length;
     var packLeft = items.filter(function (i) { return !store.packed[BAG_KEY + "|" + i.id]; }).length;
 
