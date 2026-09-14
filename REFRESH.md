@@ -47,7 +47,39 @@ because both mention flashcards and a 9/15 quiz.
 Note the newest week is at the TOP of this document and older weeks follow
 below, which is the opposite of the deck archive's ordering.
 
-## 3. What a date means
+## 3. Read the family calendar for activities
+
+After-school activities and family events come from the **family Google
+Calendar (thedouzmans@gmail.com)**, via the Google Calendar connector — not
+from either homework document.
+
+Pull the published week plus the two weeks kept behind it. **Expand recurring
+events into one dated entry each**; the page has no notion of recurrence, and
+that keeps it working offline with no clock arithmetic.
+
+Take only what Cruz would act on: his activities, and family events that
+change his day. Leave the rest of the family's calendar out of it — this page
+lives on a school-issued phone.
+
+Events are **not tasks.** No `id`, no `dueDate`, no checkbox, and they never
+count toward "to do". An activity happens whether or not it gets ticked.
+
+```jsonc
+"events": [
+  { "date":  "2026-09-14",
+    "time":  "16:00",        // 24-hour HH:MM; omit entirely for an all-day event
+    "until": "17:30",        // optional end time
+    "text":  "Squash",
+    "where": "optional",
+    "adult": true,           // optional; flags 'needs a grown-up'
+    "note":  "optional" }
+]
+```
+
+The section heading names itself: "After school" when everything is at 2pm or
+later, "What's on" otherwise, so a morning field trip isn't mislabelled.
+
+## 4. What a date means
 
 **Each weekday slide is the homework given that day, to do that night.** The
 Wednesday slide's Science row says *"due Friday"*; the Thursday slide's says
@@ -57,7 +89,7 @@ deadline itself as an absolute `dueDate`, not as the deck's relative wording.
 Getting this backwards is how the first version lost a whole night of math.
 Read every weekday slide, and put each row on the day whose slide it came from.
 
-## 4. Pull from the deck
+## 5. Pull from the deck
 
 - Homework per weekday, by class — **from both documents**. Spanish comes only
   from the World Language calendar; everything else from the deck.
@@ -79,7 +111,7 @@ P2), Mr. Fleming (social studies, P5), Profe Zeiner (Spanish, P1 — she also
 owns the deck archive). **Not** Luzusky, Gallagher, Yao or Li: those are other
 sections in the World Language calendar.
 
-## 5. Re-read last week's deck — it will have changed
+## 6. Re-read last week's deck — it will have changed
 
 **Teachers back-fill the deck after the week has happened.** Re-reading the
 week-of-9/7 deck on 9/14 turned up two 6H assignments Ms. Rivera had added
@@ -97,7 +129,7 @@ assessment reading "Area of      and      " has drawings in the gaps. Open the
 deck's `/preview` in a browser and read the slide to get them, rather than
 guessing or publishing the blanks.
 
-## 6. Harvest this week's slide links (optional but worth it)
+## 7. Harvest this week's slide links (optional but worth it)
 
 Each card carries a **see the deck ↗** link that opens the teacher's own row
 for that day — what Cruz taps when he remembers there was maths but not which
@@ -116,7 +148,7 @@ wrong day. Keep last week's entries; those cards are still reachable.
 If you skip this, nothing breaks — those cards just carry no link, and
 `validate.py` says which days are missing.
 
-## 7. Write week.json
+## 8. Write week.json
 
 Edit **only** `week.json`. Set `updated` to today and `weekOf` to the Monday of
 the week being published.
@@ -184,7 +216,7 @@ Rules that matter:
   how homework goes missing. Science and Social Studies rows also carry
   starred "last call" notes and checks that are real homework.
 
-## 8. Validate, then show the diff
+## 9. Validate, then show the diff
 
 ```bash
 python3 validate.py
@@ -194,7 +226,7 @@ git diff week.json
 Fix anything the validator flags. Do **not** push without showing the diff
 first.
 
-## 9. Publish
+## 10. Publish
 
 ```bash
 git add week.json && git commit -m "Homework, week of <date>" && git push
@@ -203,11 +235,12 @@ git add week.json && git commit -m "Homework, week of <date>" && git push
 GitHub Pages picks it up within a minute. Cruz's phone gets it the next time he
 opens the app with any signal.
 
-## 10. Report back
+## 11. Report back
 
 Short and scannable:
 
 - homework night by night
+- after-school activities and anything needing a grown-up
 - assessments coming up
 - anything needing a grown-up
 - anything the decks disagreed about

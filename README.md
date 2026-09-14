@@ -101,7 +101,11 @@ python3 validate.py
 
 ## Things that will bite you
 
-- **There are two sources, not one.** The Diamond deck carries ELA, math,
+- **There are three sources.** Homework from the Diamond deck, Spanish from the
+  World Language calendar, after-school activities from the family Google
+  Calendar. Each is easy to forget, and forgetting one loses a whole category
+  of Cruz's day silently.
+- **The deck and the World Language calendar are separate.** The Diamond deck carries ELA, math,
   science and social studies. **Spanish is not on it** — the slides link out to
   a separate World Language calendar, which the refresh must read as well. A
   whole class was missing from this app until Sep 9 because of that.

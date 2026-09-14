@@ -79,6 +79,21 @@ for n, r in enumerate(data.get("running", [])):
 for dk in data.get("noSchool", {}):
     check_date(dk, "noSchool")
 
+TIME = re.compile(r"^([01]\d|2[0-3]):[0-5]\d$")
+for n, e in enumerate(data.get("events", [])):
+    where = f"events[{n}]"
+    if not e.get("text"):
+        problems.append(f"{where}: missing text")
+    check_date(e.get("date", ""), where)
+    for field in ("time", "until"):
+        if e.get(field) and not TIME.match(str(e[field])):
+            problems.append(f"{where}: {field} {e[field]!r} must be 24-hour HH:MM (an empty time means all-day)")
+    if e.get("until") and e.get("time") and str(e["until"]) < str(e["time"]):
+        problems.append(f"{where}: ends {e['until']} before it starts {e['time']}")
+    # Events are not tasks; a stray id suggests someone pasted a homework row.
+    if e.get("id") or e.get("dueDate"):
+        warnings.append(f"{where}: events don't take id/dueDate — they aren't tickable")
+
 # Per-day links into the deck. Optional — without them the cards simply carry
 # no "see the deck" link — so a missing one is a warning, never a blocker.
 slides = data.get("deckSlides", {})

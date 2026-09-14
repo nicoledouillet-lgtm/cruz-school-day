@@ -354,6 +354,29 @@
   .box:checked::after { transform: rotate(-45deg) translate(1px, -1px) scale(1); }
   .box:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
+  /* ---------- events ----------
+     Deliberately not checkboxes. An activity isn't a task you complete; it
+     happens whether or not it gets ticked, and putting it in the "to do"
+     count would make the number mean two different things. */
+
+  .evlist { padding: .6rem; display: flex; flex-direction: column; gap: .5rem; }
+  .evt {
+    display: grid; grid-template-columns: auto 1fr; gap: .7rem; align-items: baseline;
+    padding: .75rem .85rem; background: var(--paper);
+    border: 1px solid var(--rule); border-left: 3px solid var(--quiz);
+    border-radius: 6px;
+  }
+  .evtime {
+    font-family: var(--mono); font-size: var(--step--1); font-weight: 700;
+    color: var(--quiz); font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+  .evt .ctitle { font-size: var(--step-0); }
+  .evwhere { margin-top: .2rem; font-size: .75rem; color: var(--muted); }
+
+  /* compact form, for the week grid */
+  .daycol .evt { padding: .45rem .5rem; gap: .45rem; font-size: var(--step--1); }
+  .daycol .evt .ctitle { font-size: var(--step--1); }
+
   /* ---------- bag chips ---------- */
 
   .chips { list-style: none; margin: 0; padding: .85rem 1rem; display: flex; flex-wrap: wrap; gap: .55rem; }
@@ -569,6 +592,15 @@
 
     <div id="doneHost"></div>
 
+    <section id="evtSection" aria-labelledby="evtHead" hidden>
+      <div class="sec-head">
+        <h2 id="evtHead">After school</h2>
+      </div>
+      <div class="bigcard">
+        <div class="evlist" id="todayEvents"></div>
+      </div>
+    </section>
+
     <section aria-labelledby="hwHead">
       <div class="sec-head">
         <h2 id="hwHead">Homework</h2>
@@ -666,7 +698,7 @@
 
   /* Filled in from week.json before the first render. */
   var ITEMS = [], QUIZZES = [], RUNNING = [], OPEN = [], SOURCES = [];
-  var NO_SCHOOL = {}, DECK_SLIDES = {};
+  var NO_SCHOOL = {}, DECK_SLIDES = {}, EVENTS = [];
   var META = { updated: null, deck: null, archive: null };
 
   /* ---------------- dates ---------------- */
@@ -896,6 +928,78 @@
     }
     el.appendChild(body);
     return el;
+  }
+
+  /* ---------------- events ---------------- */
+
+  function fmtTime(t) {
+    if (!t) return "all day";
+    var parts = String(t).split(":");
+    var h = parseInt(parts[0], 10), m = parts[1] || "00";
+    var suffix = h >= 12 ? "pm" : "am";
+    var h12 = h % 12 || 12;
+    return h12 + (m === "00" ? "" : ":" + m) + suffix;
+  }
+
+  function eventsOn(dk) {
+    return EVENTS.filter(function (e) { return e.date === dk; })
+      .sort(function (a, b) { return String(a.time || "").localeCompare(String(b.time || "")); });
+  }
+
+  function eventCard(e) {
+    var el = document.createElement("div");
+    el.className = "evt";
+
+    var when = document.createElement("span");
+    when.className = "evtime";
+    when.textContent = fmtTime(e.time) + (e.until ? "–" + fmtTime(e.until) : "");
+
+    var body = document.createElement("div");
+    var t = document.createElement("div");
+    t.className = "ctitle"; t.textContent = e.text;
+    body.appendChild(t);
+
+    if (e.where || e.adult) {
+      var meta = document.createElement("div");
+      meta.className = "cmeta";
+      if (e.where) {
+        var w = document.createElement("span");
+        w.textContent = e.where;
+        meta.appendChild(w);
+      }
+      if (e.adult) {
+        var g = document.createElement("span");
+        g.className = "badge grown"; g.textContent = "needs a grown-up";
+        meta.appendChild(g);
+      }
+      body.appendChild(meta);
+    }
+    if (e.note) {
+      var nEl = document.createElement("div");
+      nEl.className = "cnote"; nEl.textContent = e.note;
+      body.appendChild(nEl);
+    }
+
+    el.appendChild(when); el.appendChild(body);
+    return el;
+  }
+
+  function renderEvents() {
+    var section = document.getElementById("evtSection");
+    var host = document.getElementById("todayEvents");
+    host.textContent = "";
+
+    var list = eventsOn(HW_KEY);
+    section.hidden = !list.length;
+    if (!list.length) return;
+
+    /* "After school" would be a lie about a 9am field trip. */
+    var afterSchool = list.every(function (e) {
+      return e.time && parseInt(String(e.time).split(":")[0], 10) >= 14;
+    });
+    document.getElementById("evtHead").textContent = afterSchool ? "After school" : "What's on";
+
+    list.forEach(function (e) { host.appendChild(eventCard(e)); });
   }
 
   /* ---------------- what's on for the focus day ---------------- */
@@ -1153,6 +1257,7 @@
         o.textContent = off + " — no school";
         body.appendChild(o);
       } else {
+        eventsOn(dk).forEach(function (e) { body.appendChild(eventCard(e)); });
         quizzesOn(dk).forEach(function (q) { body.appendChild(quizCard(q)); });
         var hw = itemsOn(dk);
         (function (dk, day) {
@@ -1165,7 +1270,7 @@
             body.appendChild(hwCard(it, flav));
           });
         })(dk, day);
-        if (!hw.length && !quizzesOn(dk).length) {
+        if (!hw.length && !quizzesOn(dk).length && !eventsOn(dk).length) {
           var none = document.createElement("div");
           none.className = "none"; none.textContent = "nothing set";
           body.appendChild(none);
@@ -1470,6 +1575,7 @@
 
   function renderAll() {
     renderMast();
+    renderEvents();
     renderToday();
     renderPack();
     renderDone();
@@ -1485,6 +1591,7 @@
     SOURCES   = d.sources  || [];
     NO_SCHOOL = d.noSchool || {};
     DECK_SLIDES = d.deckSlides || {};
+    EVENTS    = d.events    || [];
     META = { updated: d.updated || null, deck: d.deck || null, archive: d.archive || null };
 
     pickFocus();
