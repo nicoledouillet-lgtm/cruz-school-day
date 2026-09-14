@@ -1733,6 +1733,24 @@
     });
 
   if ("serviceWorker" in navigator) {
+    /* The worker serves the cached app instantly, which is the whole point on
+       a phone with no signal — but it also meant a new version of the app
+       itself only appeared on the SECOND open, because the first one merely
+       fetched it into the cache. Homework and events were always current
+       (week.json is fetched fresh); it was app changes that lagged, and
+       "open it twice" is not an instruction a twelve-year-old should need.
+
+       So: when a newly installed worker takes over, reload once and pick it
+       up straight away. */
+    var hadWorker = !!navigator.serviceWorker.controller;
+    var reloading = false;
+    navigator.serviceWorker.addEventListener("controllerchange", function () {
+      /* A first-ever visit fires this too, from clients.claim(). Reloading
+         then would just be a flash of nothing for no reason. */
+      if (!hadWorker || reloading) return;
+      reloading = true;
+      location.reload();
+    });
     window.addEventListener("load", function () {
       navigator.serviceWorker.register("sw.js").catch(function () {});
     });

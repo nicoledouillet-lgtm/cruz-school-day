@@ -24,6 +24,13 @@ After the first visit it opens instantly with the plane in airplane mode, and
 still shows the right week. When a refresh has landed it picks that up; when
 there's nothing to reach it shows the last saved copy and says so.
 
+**Updates land by themselves.** The worker serves the cached app instantly,
+which is the point on a phone with no signal — but it used to mean a new
+version of the app only appeared on the *second* open, because the first
+merely fetched it into the cache. The page now reloads once when a new worker
+takes over, so one open is enough. Homework and events were never affected:
+`week.json` is fetched fresh every time.
+
 **It has to survive without Claude running.** The page is plain files on a
 plain host. The weekly homework update writes one data file. If nobody updates
 it for two weeks, the page says "last updated 16 days ago — check with a
