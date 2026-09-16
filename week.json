@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-09-16",
   "weekOf": "2026-09-14",
   "deck": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -100,6 +100,16 @@
   ],
   "items": [
     {
+      "id": "ela-summer-reading",
+      "date": "2026-09-08",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Summer Reading Slides",
+      "dueDate": "2026-09-10",
+      "submit": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx/a/ODc2NzE1MjcwODYy/details"
+    },
+    {
       "id": "math6h-p12",
       "date": "2026-09-08",
       "cls": "Math 6H",
@@ -120,7 +130,7 @@
     },
     {
       "id": "ela-summer-reading",
-      "date": "2026-09-08",
+      "date": "2026-09-09",
       "cls": "ELA",
       "teacher": "Ms. Metsack",
       "period": 7,
@@ -135,27 +145,6 @@
       "teacher": "Ms. Rivera",
       "period": 4,
       "text": "Math book p.15, 16, 17"
-    },
-    {
-      "id": "spanish-flashcards",
-      "date": "2026-09-09",
-      "cls": "Spanish",
-      "teacher": "Profe Zeiner",
-      "period": 1,
-      "text": "Finish making your vocab flashcards",
-      "dueDate": "2026-09-10",
-      "link": "https://docs.google.com/document/d/1j4JjixzQ5uaRaY28UG02gZ3TPCuFAlJDEalJ4ND7qMo/edit",
-      "note": "Instructions and examples are in the linked doc. They're for the quiz on 9/15."
-    },
-    {
-      "id": "ela-summer-reading",
-      "date": "2026-09-09",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Summer Reading Slides",
-      "dueDate": "2026-09-10",
-      "submit": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx/a/ODc2NzE1MjcwODYy/details"
     },
     {
       "id": "sci-policies",
@@ -177,6 +166,17 @@
       "text": "Last call to check in the green “back to school stations” notebook",
       "dueDate": "2026-09-11",
       "note": "Mrs. Vocke scores it Friday whether or not you've checked in."
+    },
+    {
+      "id": "spanish-flashcards",
+      "date": "2026-09-09",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Finish making your vocab flashcards",
+      "dueDate": "2026-09-10",
+      "link": "https://docs.google.com/document/d/1j4JjixzQ5uaRaY28UG02gZ3TPCuFAlJDEalJ4ND7qMo/edit",
+      "note": "Instructions and examples are in the linked doc. They're for the quiz on 9/15."
     },
     {
       "id": "ela-summer-reading",
@@ -268,14 +268,6 @@
       "note": "Profe Zeiner's assessment calendar says what's on it and how to prepare."
     },
     {
-      "id": "math6h-p29",
-      "date": "2026-09-14",
-      "cls": "Math 6H",
-      "teacher": "Ms. Rivera",
-      "period": 4,
-      "text": "Math book p.29 #2, p.34 #8, p.35 #1"
-    },
-    {
       "id": "ela-jacket",
       "date": "2026-09-14",
       "cls": "ELA",
@@ -295,6 +287,14 @@
       "note": "Ms. Metsack flagged this Monday as already late. Skip it if it's done."
     },
     {
+      "id": "math6h-p29",
+      "date": "2026-09-14",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Math book p.29 #2, p.34 #8, p.35 #1"
+    },
+    {
       "id": "spanish-quiz-prep",
       "date": "2026-09-14",
       "cls": "Spanish",
@@ -304,6 +304,76 @@
       "dueDate": "2026-09-15",
       "link": "https://docs.google.com/document/d/1y_yS5xVjA7ZYjJdjkvI0raOOrL4MPfthUM54Ie-tAQE/edit",
       "note": "Profe Zeiner's assessment calendar says what's on it and how to prepare."
+    },
+    {
+      "id": "ela-noredink",
+      "date": "2026-09-15",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish any missing NoRedInk from last week",
+      "dueDate": "2026-09-13"
+    },
+    {
+      "id": "ela-irb-0915",
+      "date": "2026-09-15",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Read your independent reading book for 20 minutes"
+    },
+    {
+      "id": "math6h-ireadyl2",
+      "date": "2026-09-15",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Finish classwork, and the iReady Lesson 2 Check"
+    },
+    {
+      "id": "ela-noredink",
+      "date": "2026-09-16",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish any missing NoRedInk from last week",
+      "dueDate": "2026-09-13"
+    },
+    {
+      "id": "ela-irb-0916",
+      "date": "2026-09-16",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Read your independent reading book for 20 minutes"
+    },
+    {
+      "id": "math6h-review",
+      "date": "2026-09-16",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Complete and correct the review",
+      "note": "For tomorrow's Lesson 1 & 2 quiz. The answer key is linked in the deck."
+    },
+    {
+      "id": "ela-noredink",
+      "date": "2026-09-17",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish any missing NoRedInk from last week",
+      "dueDate": "2026-09-13"
+    },
+    {
+      "id": "ela-favsongs",
+      "date": "2026-09-17",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish “My Favorite Songs” if you didn't finish it in class",
+      "dueDate": "2026-09-21",
+      "note": "Ms. Metsack says by Monday — but Monday 9/21 is Yom Kippur, so check whether she means Tuesday."
     },
     {
       "id": "choir-polo",

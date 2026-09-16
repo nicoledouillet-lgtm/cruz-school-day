@@ -87,9 +87,17 @@ screen app, so the app doesn't pretend to. Set two repeating alarms in his
 Clock app instead — one after school, one at bedtime — and let the app be what
 he opens when they go off.
 
-## The weekly homework refresh
+## The homework refresh — run it daily
 
-Sunday evening, in Claude Code, from this folder:
+**The deck is filled in day by day.** Teachers add each day's homework as it
+arrives, so a Monday refresh is genuinely incomplete by Tuesday and an empty
+Wednesday means "not written yet", not "no homework". Run this every school
+day, not once a week.
+
+The page states when it was last checked whenever that isn't today, so a
+missed day shows up as a line rather than as an empty homework list.
+
+In Claude Code, from this folder:
 
 > Refresh Cruz's homework from the Diamond Team calendar. Follow REFRESH.md.
 

@@ -1669,13 +1669,24 @@
     var host = document.getElementById("noticeHost");
     host.textContent = "";
 
-    /* If the weekly refresh stops happening, say so rather than quietly
-       showing a stale week as if it were current. */
+    /* Teachers fill the deck in as each day arrives, so homework read on
+       Monday is genuinely incomplete by Tuesday. Showing yesterday's list in
+       silence made an empty Wednesday look like a free night rather than a
+       list nobody had fetched yet. So: say when it was last checked, from the
+       first day it's behind — quietly, because being a day behind is normal,
+       and loudly only once it's been a week. */
     if (META.updated) {
       var age = Math.round((TODAY - fromKey(META.updated)) / 86400000);
+      var when = fromKey(META.updated);
+      var said = age < 7
+        ? "on " + DAY_NAMES[when.getDay()]
+        : "on " + MONTHS[when.getMonth()] + " " + when.getDate();
       if (age >= 8) {
         host.appendChild(notice("warn",
-          "This homework was last updated <b>" + age + " days ago</b>. It may be out of date — check with a grown-up."));
+          "This homework was last checked <b>" + age + " days ago</b>. It is probably out of date — check with a grown-up."));
+      } else if (age >= 1) {
+        host.appendChild(notice("",
+          "Homework last checked <b>" + said + "</b>. Teachers add more as the week goes on, so this may not be everything."));
       }
     }
     if (offline) {

@@ -132,9 +132,15 @@ Read every weekday slide, and put each row on the day whose slide it came from.
 - The monthly assessment calendar and the "Important dates" note on slide 1.
 - No-school days and holidays.
 
-It is **normal** for homework rows to be empty before or early in the week —
-teachers fill them in as it goes. Write what's there and say the homework isn't
-filled in yet, rather than reporting a free week.
+**Teachers fill the deck in day by day, so this needs running DAILY on school
+days, not weekly.** A Monday read genuinely showed nothing for Tuesday to
+Friday; by Wednesday those days had ELA, maths and reading on them. An empty
+day in the deck means "not written yet", not "no homework" — the two are
+indistinguishable at the time, which is exactly why the page now says when it
+was last checked.
+
+Re-read the current week's days as well as adding the new one: a day already
+published can gain rows later.
 
 Teachers: Ms. Metsack (ELA, P7), Ms. Rivera (math, P4), Mrs. Vocke (science,
 P2), Mr. Fleming (social studies, P5), Profe Zeiner (Spanish, P1 — she also
