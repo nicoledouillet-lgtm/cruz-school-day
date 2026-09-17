@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16",
+  "updated": "2026-09-17",
   "weekOf": "2026-09-14",
   "deck": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -147,6 +147,16 @@
       "text": "Math book p.15, 16, 17"
     },
     {
+      "id": "sci-stations",
+      "date": "2026-09-09",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Last call to check in the green “back to school stations” notebook",
+      "dueDate": "2026-09-11",
+      "note": "Mrs. Vocke scores it Friday whether or not you've checked in."
+    },
+    {
       "id": "sci-policies",
       "date": "2026-09-09",
       "cls": "Science",
@@ -156,16 +166,6 @@
       "dueDate": "2026-09-11",
       "adult": true,
       "note": "A signed blue policies sheet works too."
-    },
-    {
-      "id": "sci-stations",
-      "date": "2026-09-09",
-      "cls": "Science",
-      "teacher": "Mrs. Vocke",
-      "period": 2,
-      "text": "Last call to check in the green “back to school stations” notebook",
-      "dueDate": "2026-09-11",
-      "note": "Mrs. Vocke scores it Friday whether or not you've checked in."
     },
     {
       "id": "spanish-flashcards",
@@ -198,6 +198,16 @@
       "note": "Ms. Rivera added this to the deck after last week's update."
     },
     {
+      "id": "sci-stations",
+      "date": "2026-09-10",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Last call to check in the green “back to school stations” notebook",
+      "dueDate": "2026-09-11",
+      "note": "Mrs. Vocke scores it Friday whether or not you've checked in."
+    },
+    {
       "id": "sci-policies",
       "date": "2026-09-10",
       "cls": "Science",
@@ -207,16 +217,6 @@
       "dueDate": "2026-09-11",
       "adult": true,
       "note": "A signed blue policies sheet works too."
-    },
-    {
-      "id": "sci-stations",
-      "date": "2026-09-10",
-      "cls": "Science",
-      "teacher": "Mrs. Vocke",
-      "period": 2,
-      "text": "Last call to check in the green “back to school stations” notebook",
-      "dueDate": "2026-09-11",
-      "note": "Mrs. Vocke scores it Friday whether or not you've checked in."
     },
     {
       "id": "ss-5branches",
@@ -268,15 +268,6 @@
       "note": "Profe Zeiner's assessment calendar says what's on it and how to prepare."
     },
     {
-      "id": "ela-jacket",
-      "date": "2026-09-14",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Finish the questions on “The Jacket”, if you didn't finish them in class",
-      "dueDate": "2026-09-15"
-    },
-    {
       "id": "ela-noredink",
       "date": "2026-09-14",
       "cls": "ELA",
@@ -285,6 +276,15 @@
       "text": "Finish Capitalization Practice on NoRedInk, if you haven't",
       "dueDate": "2026-09-13",
       "note": "Ms. Metsack flagged this Monday as already late. Skip it if it's done."
+    },
+    {
+      "id": "ela-jacket",
+      "date": "2026-09-14",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish the questions on “The Jacket”, if you didn't finish them in class",
+      "dueDate": "2026-09-15"
     },
     {
       "id": "math6h-p29",
@@ -366,14 +366,63 @@
       "dueDate": "2026-09-13"
     },
     {
-      "id": "ela-favsongs",
+      "id": "ela-figlang",
       "date": "2026-09-17",
       "cls": "ELA",
       "teacher": "Ms. Metsack",
       "period": 7,
-      "text": "Finish “My Favorite Songs” if you didn't finish it in class",
-      "dueDate": "2026-09-21",
-      "note": "Ms. Metsack says by Monday — but Monday 9/21 is Yom Kippur, so check whether she means Tuesday."
+      "text": "Read the Figurative Language slides — only if you were away or want a review"
+    },
+    {
+      "id": "math6h-review-0917",
+      "date": "2026-09-17",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Catch up any missing work, and review the concepts and skills"
+    },
+    {
+      "id": "ss-unit1vocab",
+      "date": "2026-09-17",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Finish the purple Unit 1 vocab page",
+      "dueDate": "2026-09-18",
+      "note": "Mr. Fleming wrote “Friday, 10/18”, but 10/18 is a Sunday — almost certainly this Friday. Worth checking."
+    },
+    {
+      "id": "ela-noredink",
+      "date": "2026-09-18",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish any missing NoRedInk from last week",
+      "dueDate": "2026-09-13"
+    },
+    {
+      "id": "ela-eleven",
+      "date": "2026-09-18",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish the “Eleven” highlights, if you didn't finish in class"
+    },
+    {
+      "id": "ela-figlang",
+      "date": "2026-09-18",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Read the Figurative Language slides — only if you were away or want a review"
+    },
+    {
+      "id": "math6h-classwork-0918",
+      "date": "2026-09-18",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Finish your classwork"
     },
     {
       "id": "choir-polo",
