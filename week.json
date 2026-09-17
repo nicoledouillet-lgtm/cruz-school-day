@@ -73,13 +73,6 @@
     },
     {
       "date": "2026-09-22",
-      "time": "10:30",
-      "until": "11:30",
-      "text": "Annual check-up, with Luca",
-      "adult": true
-    },
-    {
-      "date": "2026-09-22",
       "time": "15:05",
       "text": "Choir audition",
       "where": "6th Grade Music, Room 200",
@@ -90,6 +83,14 @@
       "time": "15:15",
       "until": "16:00",
       "text": "Squash"
+    },
+    {
+      "date": "2026-09-28",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "Annual wellness check-up",
+      "adult": true,
+      "note": "This overlaps squash at 3:15 — check which one you're actually doing."
     },
     {
       "date": "2026-09-28",
