@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "weekOf": "2026-09-21",
   "deck": "https://docs.google.com/presentation/d/1vzAYekq-UfZUA9mEe9ppIk9NY76oqlrj_5BEm0qSiqA/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -515,6 +515,32 @@
       "link": "https://docs.google.com/document/d/1y_yS5xVjA7ZYjJdjkvI0raOOrL4MPfthUM54Ie-tAQE/edit"
     },
     {
+      "id": "math6h-p57",
+      "date": "2026-09-23",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Math book p.57 & 58"
+    },
+    {
+      "id": "sci-notecards",
+      "date": "2026-09-23",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Put blank notecards in your bag for science, if you have them",
+      "note": "Only if you have some at home — Mrs. Vocke said “if you have them”."
+    },
+    {
+      "id": "ss-unit1quiz-study",
+      "date": "2026-09-23",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Study for the Unit 1 vocab quiz — the study tools (Flippity) are linked in the deck",
+      "dueDate": "2026-09-29"
+    },
+    {
       "id": "spanish-speaking-prep",
       "date": "2026-09-24",
       "cls": "Spanish",
@@ -524,6 +550,15 @@
       "dueDate": "2026-09-29",
       "note": "Profe Zeiner's assessment calendar has ideas for how to prepare.",
       "link": "https://docs.google.com/document/d/1y_yS5xVjA7ZYjJdjkvI0raOOrL4MPfthUM54Ie-tAQE/edit"
+    },
+    {
+      "id": "math6h-midunit-study",
+      "date": "2026-09-24",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Get ready for Monday's Mid Unit Test on Lessons 1–3",
+      "dueDate": "2026-09-28"
     },
     {
       "id": "choir-polo",
@@ -545,6 +580,15 @@
       "dueDate": "2026-09-29",
       "note": "Profe Zeiner's assessment calendar has ideas for how to prepare.",
       "link": "https://docs.google.com/document/d/1y_yS5xVjA7ZYjJdjkvI0raOOrL4MPfthUM54Ie-tAQE/edit"
+    },
+    {
+      "id": "math6h-missing-0925",
+      "date": "2026-09-25",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Finish any missing or incomplete math work",
+      "dueDate": "2026-09-28"
     },
     {
       "id": "math-summer-pkt",
@@ -586,7 +630,7 @@
     },
     {
       "date": "2026-09-28",
-      "text": "Math 6H — Mid Unit Test",
+      "text": "Math 6H — Mid Unit Test (Lessons 1–3)",
       "note": "New on this week's assessment calendar; last week's copy didn't list it."
     },
     {
