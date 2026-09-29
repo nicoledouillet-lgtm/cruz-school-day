@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28",
+  "updated": "2026-09-29",
   "weekOf": "2026-09-28",
   "deck": "https://docs.google.com/presentation/d/1yl0x0QlnVIgAp0rfi-PPzhKT_j84HtXR59R2lUQTt_A/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -84,6 +84,12 @@
       "text": "Annual wellness check-up",
       "adult": true,
       "note": "No squash this Monday — it's come off the calendar for the check-up."
+    },
+    {
+      "date": "2026-09-29",
+      "time": "16:30",
+      "until": "17:30",
+      "text": "Pickleball"
     },
     {
       "date": "2026-10-01",
@@ -588,6 +594,33 @@
       "note": "Due by Sunday evening."
     },
     {
+      "id": "ela-plot-diagram",
+      "date": "2026-09-29",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish the Plot Diagram in Google Classroom",
+      "link": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx"
+    },
+    {
+      "id": "math6h-p67",
+      "date": "2026-09-29",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Math book p.67 & 68"
+    },
+    {
+      "id": "math-summer-pkt",
+      "date": "2026-09-29",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Summer Math Packet",
+      "dueDate": "2026-09-30",
+      "note": "6H answer key is linked in the HW calendar."
+    },
+    {
       "id": "math-summer-pkt",
       "date": "2026-09-30",
       "cls": "Math 6H",
@@ -608,6 +641,15 @@
       "note": "Due by Sunday evening."
     },
     {
+      "id": "spanish-flashcards-1001",
+      "date": "2026-09-30",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Put your flashcards in your bag — Profe Zeiner wants them in class tomorrow",
+      "dueDate": "2026-10-01"
+    },
+    {
       "id": "ela-noredink-quotes",
       "date": "2026-10-01",
       "cls": "ELA",
@@ -626,6 +668,17 @@
       "text": "NoRedInk: Capitalization Quiz and How to Use Quotes",
       "dueDate": "2026-10-04",
       "note": "Due by Sunday evening."
+    },
+    {
+      "id": "spanish-locotubre",
+      "date": "2026-10-02",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Locotubre bracket",
+      "dueDate": "2026-10-09",
+      "note": "Profe Zeiner didn't say more — check La Clase de Español on Google Classroom for what it is.",
+      "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz"
     }
   ],
   "quizzes": [
@@ -669,6 +722,10 @@
     {
       "date": "2026-10-22",
       "text": "Social Studies — Unit 1 Summative"
+    },
+    {
+      "date": "2026-10-23",
+      "text": "Science — Unit 1 Summative"
     }
   ],
   "running": [],
