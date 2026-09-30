@@ -72,6 +72,10 @@ mention it in the report instead.
 
 Drop the "Cruz" prefix from titles: the whole page is his.
 
+"Cruz 6th Dimension" (Mon/Thu 3:00–4:00, from 10/1) is **6th Dimension, the
+6th grade choir** he auditioned for on 9/22 and got into. Keep the title
+"6th Dimension" and a short note saying it's choir.
+
 Watch for the same thing under two names. The deck's "Open House" and the
 calendar's "6th Grade Back to School Curriculum Night" were one 6pm evening,
 and a moved occurrence can differ from its series — squash is normally 3:15

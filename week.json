@@ -95,19 +95,22 @@
       "date": "2026-10-01",
       "time": "15:00",
       "until": "16:00",
-      "text": "6th Dimension"
+      "text": "6th Dimension",
+      "note": "6th grade choir — you got in!"
     },
     {
       "date": "2026-10-05",
       "time": "15:00",
       "until": "16:00",
-      "text": "6th Dimension"
+      "text": "6th Dimension",
+      "note": "6th grade choir."
     },
     {
       "date": "2026-10-08",
       "time": "15:00",
       "until": "16:00",
-      "text": "6th Dimension"
+      "text": "6th Dimension",
+      "note": "6th grade choir."
     }
   ],
   "items": [
