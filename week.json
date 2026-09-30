@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29",
+  "updated": "2026-09-30",
   "weekOf": "2026-09-28",
   "deck": "https://docs.google.com/presentation/d/1yl0x0QlnVIgAp0rfi-PPzhKT_j84HtXR59R2lUQTt_A/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -93,21 +93,21 @@
     },
     {
       "date": "2026-10-01",
-      "time": "15:15",
+      "time": "15:00",
       "until": "16:00",
-      "text": "Squash"
+      "text": "6th Dimension"
     },
     {
       "date": "2026-10-05",
-      "time": "15:15",
+      "time": "15:00",
       "until": "16:00",
-      "text": "Squash"
+      "text": "6th Dimension"
     },
     {
       "date": "2026-10-08",
-      "time": "15:15",
+      "time": "15:00",
       "until": "16:00",
-      "text": "Squash"
+      "text": "6th Dimension"
     }
   ],
   "items": [
@@ -650,6 +650,33 @@
       "dueDate": "2026-10-01"
     },
     {
+      "id": "ela-for-the-birds",
+      "date": "2026-09-30",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Story Elements Chart for “For the Birds” in Google Classroom",
+      "dueDate": "2026-10-01",
+      "link": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx"
+    },
+    {
+      "id": "math6h-p73",
+      "date": "2026-09-30",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Math book p.73 & 74"
+    },
+    {
+      "id": "sci-notecards-1001",
+      "date": "2026-09-30",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Put blank notecards in your bag for science",
+      "note": "Mrs. Vocke has this on Wednesday, Thursday and Friday. This week it doesn't say “if you have them”."
+    },
+    {
       "id": "ela-noredink-quotes",
       "date": "2026-10-01",
       "cls": "ELA",
@@ -658,6 +685,15 @@
       "text": "NoRedInk: Capitalization Quiz and How to Use Quotes",
       "dueDate": "2026-10-04",
       "note": "Due by Sunday evening."
+    },
+    {
+      "id": "sci-notecards-1001",
+      "date": "2026-10-01",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Put blank notecards in your bag for science",
+      "note": "Mrs. Vocke has this on Wednesday, Thursday and Friday. This week it doesn't say “if you have them”."
     },
     {
       "id": "ela-noredink-quotes",
@@ -679,6 +715,15 @@
       "dueDate": "2026-10-09",
       "note": "Profe Zeiner didn't say more — check La Clase de Español on Google Classroom for what it is.",
       "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz"
+    },
+    {
+      "id": "sci-notecards-1001",
+      "date": "2026-10-02",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Put blank notecards in your bag for science",
+      "note": "Mrs. Vocke has this on Wednesday, Thursday and Friday. This week it doesn't say “if you have them”."
     }
   ],
   "quizzes": [
