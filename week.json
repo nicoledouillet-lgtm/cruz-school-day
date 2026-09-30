@@ -86,6 +86,13 @@
       "note": "No squash this Monday — it's come off the calendar for the check-up."
     },
     {
+      "date": "2026-09-28",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "6th Dimension",
+      "note": "6th grade choir — first rehearsal."
+    },
+    {
       "date": "2026-09-29",
       "time": "16:30",
       "until": "17:30",
@@ -96,7 +103,7 @@
       "time": "15:00",
       "until": "16:00",
       "text": "6th Dimension",
-      "note": "6th grade choir — you got in!"
+      "note": "6th grade choir."
     },
     {
       "date": "2026-10-05",
