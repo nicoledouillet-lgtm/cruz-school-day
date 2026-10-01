@@ -52,6 +52,12 @@
       "text": "Squash"
     },
     {
+      "date": "2026-09-17",
+      "time": "17:00",
+      "until": "18:00",
+      "text": "Piano"
+    },
+    {
       "date": "2026-09-21",
       "time": "15:15",
       "until": "16:00",
@@ -76,6 +82,12 @@
       "time": "15:15",
       "until": "16:00",
       "text": "Squash"
+    },
+    {
+      "date": "2026-09-24",
+      "time": "17:00",
+      "until": "18:00",
+      "text": "Piano"
     },
     {
       "date": "2026-09-28",
@@ -113,6 +125,13 @@
       "note": "After 6th Dimension. Earlier than the usual Thursday 5:30 this week."
     },
     {
+      "date": "2026-10-02",
+      "time": "07:00",
+      "until": "17:00",
+      "text": "Water's off at home",
+      "note": "The water is shut off from 7am to 5pm. Fill your water bottle before school."
+    },
+    {
       "date": "2026-10-05",
       "time": "15:00",
       "until": "16:00",
@@ -125,6 +144,14 @@
       "until": "16:00",
       "text": "6th Dimension",
       "note": "6th grade choir."
+    },
+    {
+      "date": "2026-10-08",
+      "time": "17:00",
+      "until": "18:00",
+      "text": "Piano",
+      "note": "Squash is at 5:30 the same evening — check with a grown-up which one is on.",
+      "adult": true
     },
     {
       "date": "2026-10-08",

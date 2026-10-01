@@ -66,6 +66,15 @@ change his day. Confirmed by Nicole, leave out:
 - anything of his sibling Luca's — field hockey, soccer, swim, school nights
 - Nicole's and Liana's travel and appointments
 - trash night; that's Nicole's
+- "Girl Scouts" — not Cruz's
+
+Some unprefixed events **are** his, confirmed by Nicole:
+
+- "Piano" (Thursdays 5:00–6:00) is Cruz's piano lesson, even though the
+  title has no "Cruz".
+- Household disruptions that hit his afternoon belong on the page, e.g. "No
+  water from 7a-5p" (Fri 10/2) means the water at home is shut off. Say so
+  plainly and tell him what to do about it.
 
 The page is served from a public URL, so when in doubt leave it out and
 mention it in the report instead.
