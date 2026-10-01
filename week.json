@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "weekOf": "2026-09-28",
   "deck": "https://docs.google.com/presentation/d/1yl0x0QlnVIgAp0rfi-PPzhKT_j84HtXR59R2lUQTt_A/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -106,6 +106,13 @@
       "note": "6th grade choir."
     },
     {
+      "date": "2026-10-01",
+      "time": "16:30",
+      "until": "17:30",
+      "text": "Squash",
+      "note": "After 6th Dimension. Earlier than the usual Thursday 5:30 this week."
+    },
+    {
       "date": "2026-10-05",
       "time": "15:00",
       "until": "16:00",
@@ -118,6 +125,12 @@
       "until": "16:00",
       "text": "6th Dimension",
       "note": "6th grade choir."
+    },
+    {
+      "date": "2026-10-08",
+      "time": "17:30",
+      "until": "18:30",
+      "text": "Squash"
     }
   ],
   "items": [
@@ -706,6 +719,14 @@
       "note": "Mrs. Vocke has this on Wednesday, Thursday and Friday. This week it doesn't say “if you have them”."
     },
     {
+      "id": "math6h-iready-algexpr",
+      "date": "2026-10-01",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Check your answers from classwork, then complete the GRADED iReady Digital Practice: Writing and Interpreting Algebraic Expressions"
+    },
+    {
       "id": "ela-noredink-quotes",
       "date": "2026-10-02",
       "cls": "ELA",
@@ -734,6 +755,16 @@
       "period": 2,
       "text": "Put blank notecards in your bag for science",
       "note": "Mrs. Vocke has this on Wednesday, Thursday and Friday. This week it doesn't say “if you have them”."
+    },
+    {
+      "id": "spanish-penpal-letter",
+      "date": "2026-10-02",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "If you didn't finish your letter in class, finish it, self-assess with the rubric, and turn it in",
+      "dueDate": "2026-10-05",
+      "note": "Only if it isn't finished. The final draft of the Pen Pal letter is due Tue 10/13."
     }
   ],
   "quizzes": [
@@ -775,12 +806,38 @@
       "note": "Last week's deck called this a Characterization Quiz; the October calendar says Story Elements. Same Friday either way."
     },
     {
+      "date": "2026-10-13",
+      "text": "Math 6H — End of Unit 1 Test"
+    },
+    {
+      "date": "2026-10-13",
+      "text": "Spanish — final draft of Pen Pal letter due"
+    },
+    {
       "date": "2026-10-22",
       "text": "Social Studies — Unit 1 Summative"
     },
     {
+      "date": "2026-10-22",
+      "text": "Spanish — Interpretive IPA"
+    },
+    {
       "date": "2026-10-23",
       "text": "Science — Unit 1 Summative"
+    },
+    {
+      "date": "2026-10-27",
+      "text": "Spanish — Presentational IPA"
+    },
+    {
+      "date": "2026-10-29",
+      "text": "Spanish — Interpersonal IPA",
+      "note": "The October calendar lists it on both Thu 10/29 and Fri 10/30 — probably split across the two days."
+    },
+    {
+      "date": "2026-10-30",
+      "text": "Spanish — Interpersonal IPA",
+      "note": "The October calendar lists it on both Thu 10/29 and Fri 10/30 — probably split across the two days."
     }
   ],
   "running": [],
