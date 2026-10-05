@@ -1,14 +1,9 @@
 {
-  "updated": "2026-10-01",
-  "weekOf": "2026-09-28",
-  "deck": "https://docs.google.com/presentation/d/1yl0x0QlnVIgAp0rfi-PPzhKT_j84HtXR59R2lUQTt_A/edit",
+  "updated": "2026-10-05",
+  "weekOf": "2026-10-05",
+  "deck": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
   "deckSlides": {
-    "2026-09-14": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/preview?slide=id.g3fa22a9ce76_0_6",
-    "2026-09-15": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/preview?slide=id.g3fa22a9ce76_0_18",
-    "2026-09-16": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/preview?slide=id.g3fa22a9ce76_0_31",
-    "2026-09-17": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/preview?slide=id.g3fa22a9ce76_0_44",
-    "2026-09-18": "https://docs.google.com/presentation/d/1P1EN0HIanvJIVtEjjj5inzdYhEuz47tjL3C01hRDjkw/preview?slide=id.g3fa22a9ce76_0_57",
     "2026-09-21": "https://docs.google.com/presentation/d/1vzAYekq-UfZUA9mEe9ppIk9NY76oqlrj_5BEm0qSiqA/preview?slide=id.g3fa20da4644_0_6",
     "2026-09-22": "https://docs.google.com/presentation/d/1vzAYekq-UfZUA9mEe9ppIk9NY76oqlrj_5BEm0qSiqA/preview?slide=id.g3fa20da4644_0_18",
     "2026-09-23": "https://docs.google.com/presentation/d/1vzAYekq-UfZUA9mEe9ppIk9NY76oqlrj_5BEm0qSiqA/preview?slide=id.g3fa20da4644_0_31",
@@ -18,7 +13,12 @@
     "2026-09-29": "https://docs.google.com/presentation/d/1yl0x0QlnVIgAp0rfi-PPzhKT_j84HtXR59R2lUQTt_A/preview?slide=id.g3fa22df6715_0_18",
     "2026-09-30": "https://docs.google.com/presentation/d/1yl0x0QlnVIgAp0rfi-PPzhKT_j84HtXR59R2lUQTt_A/preview?slide=id.g3fa22df6715_0_31",
     "2026-10-01": "https://docs.google.com/presentation/d/1yl0x0QlnVIgAp0rfi-PPzhKT_j84HtXR59R2lUQTt_A/preview?slide=id.g3fa22df6715_0_44",
-    "2026-10-02": "https://docs.google.com/presentation/d/1yl0x0QlnVIgAp0rfi-PPzhKT_j84HtXR59R2lUQTt_A/preview?slide=id.g3fa22df6715_0_57"
+    "2026-10-02": "https://docs.google.com/presentation/d/1yl0x0QlnVIgAp0rfi-PPzhKT_j84HtXR59R2lUQTt_A/preview?slide=id.g3fa22df6715_0_57",
+    "2026-10-05": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/preview?slide=id.g3e8c1ab2883_0_12",
+    "2026-10-06": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/preview?slide=id.g3e8c1ab2883_0_0",
+    "2026-10-07": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/preview?slide=id.g3e5b9d71f71_0_15",
+    "2026-10-08": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/preview?slide=id.g3e5b9d71f71_0_27",
+    "2026-10-09": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/preview?slide=id.g3e5b9d71f71_0_39"
   },
   "gear": {
     "Squash": [
@@ -30,33 +30,6 @@
     ]
   },
   "events": [
-    {
-      "date": "2026-09-14",
-      "time": "16:00",
-      "until": "16:45",
-      "text": "Squash",
-      "note": "Later than usual this week — squash is normally 3:15."
-    },
-    {
-      "date": "2026-09-14",
-      "time": "18:00",
-      "until": "19:00",
-      "text": "6th Grade Back to School Curriculum Night",
-      "adult": true,
-      "note": "The homework deck calls this Open House — same evening."
-    },
-    {
-      "date": "2026-09-17",
-      "time": "15:15",
-      "until": "16:00",
-      "text": "Squash"
-    },
-    {
-      "date": "2026-09-17",
-      "time": "17:00",
-      "until": "18:00",
-      "text": "Piano"
-    },
     {
       "date": "2026-09-21",
       "time": "15:15",
@@ -139,6 +112,19 @@
       "note": "6th grade choir."
     },
     {
+      "date": "2026-10-05",
+      "time": "18:00",
+      "until": "19:00",
+      "text": "Piano",
+      "note": "Piano is on Monday evening this week."
+    },
+    {
+      "date": "2026-10-06",
+      "time": "17:00",
+      "until": "18:00",
+      "text": "Pickleball"
+    },
+    {
       "date": "2026-10-08",
       "time": "15:00",
       "until": "16:00",
@@ -147,186 +133,47 @@
     },
     {
       "date": "2026-10-08",
-      "time": "17:00",
-      "until": "18:00",
-      "text": "Piano",
-      "note": "Squash is at 5:30 the same evening — check with a grown-up which one is on.",
-      "adult": true
-    },
-    {
-      "date": "2026-10-08",
       "time": "17:30",
       "until": "18:30",
       "text": "Squash"
+    },
+    {
+      "date": "2026-10-13",
+      "time": "17:00",
+      "until": "18:00",
+      "text": "Pickleball"
+    },
+    {
+      "date": "2026-10-14",
+      "time": "14:30",
+      "until": "15:30",
+      "text": "Piano",
+      "note": "Piano has moved to Wednesday afternoons."
+    },
+    {
+      "date": "2026-10-14",
+      "time": "16:20",
+      "until": "17:20",
+      "text": "Orthodontist",
+      "adult": true,
+      "note": "A grown-up is taking you."
+    },
+    {
+      "date": "2026-10-15",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "6th Dimension",
+      "note": "6th grade choir."
+    },
+    {
+      "date": "2026-10-15",
+      "time": "17:30",
+      "until": "18:30",
+      "text": "Squash",
+      "note": "After 6th Dimension."
     }
   ],
   "items": [
-    {
-      "id": "ela-noredink",
-      "date": "2026-09-14",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Finish Capitalization Practice on NoRedInk, if you haven't",
-      "dueDate": "2026-09-13",
-      "note": "Ms. Metsack flagged this Monday as already late. Skip it if it's done."
-    },
-    {
-      "id": "ela-jacket",
-      "date": "2026-09-14",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Finish the questions on “The Jacket”, if you didn't finish them in class",
-      "dueDate": "2026-09-15"
-    },
-    {
-      "id": "math6h-p29",
-      "date": "2026-09-14",
-      "cls": "Math 6H",
-      "teacher": "Ms. Rivera",
-      "period": 4,
-      "text": "Math book p.29 #2, p.34 #8, p.35 #1"
-    },
-    {
-      "id": "spanish-quiz-prep",
-      "date": "2026-09-14",
-      "cls": "Spanish",
-      "teacher": "Profe Zeiner",
-      "period": 1,
-      "text": "Study for the Spanish vocab quiz",
-      "dueDate": "2026-09-15",
-      "link": "https://docs.google.com/document/d/1y_yS5xVjA7ZYjJdjkvI0raOOrL4MPfthUM54Ie-tAQE/edit",
-      "note": "Profe Zeiner's assessment calendar says what's on it and how to prepare."
-    },
-    {
-      "id": "ela-noredink",
-      "date": "2026-09-15",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Finish any missing NoRedInk from last week",
-      "dueDate": "2026-09-13"
-    },
-    {
-      "id": "ela-irb-0915",
-      "date": "2026-09-15",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Read your independent reading book for 20 minutes"
-    },
-    {
-      "id": "math6h-ireadyl2",
-      "date": "2026-09-15",
-      "cls": "Math 6H",
-      "teacher": "Ms. Rivera",
-      "period": 4,
-      "text": "Finish classwork, and the iReady Lesson 2 Check"
-    },
-    {
-      "id": "ela-noredink",
-      "date": "2026-09-16",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Finish any missing NoRedInk from last week",
-      "dueDate": "2026-09-13"
-    },
-    {
-      "id": "ela-irb-0916",
-      "date": "2026-09-16",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Read your independent reading book for 20 minutes"
-    },
-    {
-      "id": "math6h-review",
-      "date": "2026-09-16",
-      "cls": "Math 6H",
-      "teacher": "Ms. Rivera",
-      "period": 4,
-      "text": "Complete and correct the review",
-      "note": "For tomorrow's Lesson 1 & 2 quiz. The answer key is linked in the deck."
-    },
-    {
-      "id": "ela-noredink",
-      "date": "2026-09-17",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Finish any missing NoRedInk from last week",
-      "dueDate": "2026-09-13"
-    },
-    {
-      "id": "ela-figlang",
-      "date": "2026-09-17",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Read the Figurative Language slides — only if you were away or want a review"
-    },
-    {
-      "id": "math6h-review-0917",
-      "date": "2026-09-17",
-      "cls": "Math 6H",
-      "teacher": "Ms. Rivera",
-      "period": 4,
-      "text": "Catch up any missing work, and review the concepts and skills"
-    },
-    {
-      "id": "ss-unit1vocab",
-      "date": "2026-09-17",
-      "cls": "Social Studies",
-      "teacher": "Mr. Fleming",
-      "period": 5,
-      "text": "Finish the purple Unit 1 vocab page",
-      "dueDate": "2026-09-18",
-      "note": "Mr. Fleming wrote “Friday, 10/18”, but 10/18 is a Sunday — almost certainly this Friday. Worth checking."
-    },
-    {
-      "id": "ela-noredink",
-      "date": "2026-09-18",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Finish any missing NoRedInk from last week",
-      "dueDate": "2026-09-13"
-    },
-    {
-      "id": "ela-eleven",
-      "date": "2026-09-18",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Finish the “Eleven” highlights, if you didn't finish in class"
-    },
-    {
-      "id": "ela-figlang",
-      "date": "2026-09-18",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "Read the Figurative Language slides — only if you were away or want a review"
-    },
-    {
-      "id": "math6h-classwork-0918",
-      "date": "2026-09-18",
-      "cls": "Math 6H",
-      "teacher": "Ms. Rivera",
-      "period": 4,
-      "text": "Finish your classwork"
-    },
-    {
-      "id": "ss-unit1quiz-study",
-      "date": "2026-09-18",
-      "cls": "Social Studies",
-      "teacher": "Mr. Fleming",
-      "period": 5,
-      "text": "Study for the Unit 1 vocab quiz — the study tools are linked in the deck",
-      "dueDate": "2026-09-29"
-    },
     {
       "id": "ela-figlang-quiz-study",
       "date": "2026-09-22",
@@ -792,22 +639,157 @@
       "text": "If you didn't finish your letter in class, finish it, self-assess with the rubric, and turn it in",
       "dueDate": "2026-10-05",
       "note": "Only if it isn't finished. The final draft of the Pen Pal letter is due Tue 10/13."
+    },
+    {
+      "id": "ela-irb-scavenger",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "IRB Scavenger Hunt",
+      "dueDate": "2026-10-08",
+      "date": "2026-10-02"
+    },
+    {
+      "id": "math6h-missing-1013",
+      "date": "2026-10-02",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Finish your classwork and catch up on any missing math work",
+      "dueDate": "2026-10-13"
+    },
+    {
+      "id": "ela-review-packet",
+      "date": "2026-10-05",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish the review packet from class",
+      "dueDate": "2026-10-06"
+    },
+    {
+      "id": "ela-irb-scavenger",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "IRB Scavenger Hunt",
+      "dueDate": "2026-10-08",
+      "date": "2026-10-05"
+    },
+    {
+      "id": "ela-noredink-quotes",
+      "date": "2026-10-05",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk: Capitalization Quiz and How to Use Quotes",
+      "dueDate": "2026-10-04",
+      "note": "Still on Monday's slide. Skip it if it's done; if not, do it tonight."
+    },
+    {
+      "id": "math6h-p82",
+      "date": "2026-10-05",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Math book p.82 #2, p.83 #5 & #7, p.84 #8",
+      "note": "End of Unit 1 Test is Tue 10/13."
+    },
+    {
+      "id": "sci-stations-lastcall",
+      "date": "2026-10-05",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Last call: finish any missing station work",
+      "dueDate": "2026-10-06",
+      "note": "Only if you have station work missing. The station models are in Google Classroom.",
+      "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0"
+    },
+    {
+      "id": "ss-learningcheck-cvs",
+      "date": "2026-10-05",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Learning Check: Compelling vs Supporting Questions",
+      "note": "Only if you didn't finish it in class."
+    },
+    {
+      "id": "spanish-penpal-letter",
+      "date": "2026-10-05",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Did you turn in your Pen Pal letter? If not, turn it in",
+      "dueDate": "2026-10-05"
+    },
+    {
+      "id": "spanish-locotubre",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Locotubre bracket",
+      "dueDate": "2026-10-09",
+      "note": "Profe Zeiner didn't say more — check La Clase de Español on Google Classroom for what it is.",
+      "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz",
+      "date": "2026-10-05"
+    },
+    {
+      "id": "spanish-locotubre",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Locotubre bracket",
+      "dueDate": "2026-10-09",
+      "note": "Profe Zeiner didn't say more — check La Clase de Español on Google Classroom for what it is.",
+      "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz",
+      "date": "2026-10-06"
+    },
+    {
+      "id": "spanish-locotubre",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Locotubre bracket",
+      "dueDate": "2026-10-09",
+      "note": "Profe Zeiner didn't say more — check La Clase de Español on Google Classroom for what it is.",
+      "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz",
+      "date": "2026-10-07"
+    },
+    {
+      "id": "spanish-locotubre",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Locotubre bracket",
+      "dueDate": "2026-10-09",
+      "note": "Profe Zeiner didn't say more — check La Clase de Español on Google Classroom for what it is.",
+      "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz",
+      "date": "2026-10-08"
+    },
+    {
+      "id": "spanish-penpal-final",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Final copy of your Pen Pal letter — staple it on top of your draft",
+      "dueDate": "2026-10-13",
+      "note": "Profe Zeiner's homework note says “due Wednesday” (10/14), but her assessment calendar says Tue 10/13. Have it ready by Tuesday to be safe.",
+      "date": "2026-10-08"
+    },
+    {
+      "id": "spanish-penpal-final",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Final copy of your Pen Pal letter — staple it on top of your draft",
+      "dueDate": "2026-10-13",
+      "note": "Profe Zeiner's homework note says “due Wednesday” (10/14), but her assessment calendar says Tue 10/13. Have it ready by Tuesday to be safe.",
+      "date": "2026-10-09"
     }
   ],
   "quizzes": [
-    {
-      "date": "2026-09-14",
-      "text": "Science — lab safety quiz (open notes)",
-      "note": "Confirmed: Mrs. Vocke is running it in class today."
-    },
-    {
-      "date": "2026-09-15",
-      "text": "Spanish — matching quiz on greetings vocab"
-    },
-    {
-      "date": "2026-09-17",
-      "text": "Math 6H — Lesson 1 & 2 quiz: area of a parallelogram and a triangle"
-    },
     {
       "date": "2026-09-25",
       "text": "ELA — Figurative Language quiz",
@@ -838,7 +820,18 @@
     },
     {
       "date": "2026-10-13",
-      "text": "Spanish — final draft of Pen Pal letter due"
+      "text": "Spanish — final draft of Pen Pal letter due",
+      "note": "Profe Zeiner's homework note says the final copy is due Wednesday 10/14; her assessment calendar says Tue 10/13."
+    },
+    {
+      "date": "2026-10-20",
+      "text": "ELA — Writing Assessment",
+      "note": "On the assessment calendar for both Tue 10/20 and Wed 10/21."
+    },
+    {
+      "date": "2026-10-21",
+      "text": "ELA — Writing Assessment",
+      "note": "On the assessment calendar for both Tue 10/20 and Wed 10/21."
     },
     {
       "date": "2026-10-22",
@@ -905,7 +898,7 @@
     {
       "tag": "HW",
       "name": "Diamond HW Calendar, this week",
-      "url": "https://docs.google.com/presentation/d/1yl0x0QlnVIgAp0rfi-PPzhKT_j84HtXR59R2lUQTt_A/edit"
+      "url": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/edit"
     },
     {
       "tag": "ALL",
