@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05",
+  "updated": "2026-10-06",
   "weekOf": "2026-10-05",
   "deck": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -723,6 +723,53 @@
       "period": 1,
       "text": "Did you turn in your Pen Pal letter? If not, turn it in",
       "dueDate": "2026-10-05"
+    },
+    {
+      "id": "ela-irb-scavenger",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "IRB Scavenger Hunt",
+      "dueDate": "2026-10-08",
+      "date": "2026-10-06"
+    },
+    {
+      "id": "ela-noredink-quotes-quiz",
+      "date": "2026-10-06",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk: Quiz on Quotes",
+      "dueDate": "2026-10-11",
+      "note": "Due by Sunday."
+    },
+    {
+      "id": "math6h-iready-exponents",
+      "date": "2026-10-06",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "iReady practice: Write & Evaluate Expressions with Exponents",
+      "note": "End of Unit 1 Test is Tue 10/13."
+    },
+    {
+      "id": "sci-vocab-flashcards",
+      "date": "2026-10-06",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Make flashcards — the vocabulary slides are in the Classwork tab on Google Classroom",
+      "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0",
+      "note": "Mrs. Vocke also wrote “Last chance for tickets is Friday” — ask her if you're not sure what that means."
+    },
+    {
+      "id": "sci-calculator-1007",
+      "date": "2026-10-06",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Put a calculator in your bag — Mrs. Vocke wants it in class tomorrow",
+      "dueDate": "2026-10-07"
     },
     {
       "id": "spanish-locotubre",
