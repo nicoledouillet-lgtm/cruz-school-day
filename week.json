@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "weekOf": "2026-10-05",
   "deck": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -803,6 +803,72 @@
       "note": "Profe Zeiner didn't say more — check La Clase de Español on Google Classroom for what it is.",
       "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz",
       "date": "2026-10-07"
+    },
+    {
+      "id": "ela-characterization-slides",
+      "date": "2026-10-07",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish the Characterization Slides from class"
+    },
+    {
+      "id": "ela-irb-scavenger",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "IRB Scavenger Hunt",
+      "dueDate": "2026-10-08",
+      "date": "2026-10-07"
+    },
+    {
+      "id": "ela-noredink-quotes-quiz",
+      "date": "2026-10-07",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk: Quiz on Quotes — get 70% or higher",
+      "dueDate": "2026-10-11",
+      "note": "Due by Sunday evening."
+    },
+    {
+      "id": "sci-vocab-flashcards",
+      "date": "2026-10-07",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Make flashcards — the vocabulary slides are in the Classwork tab on Google Classroom",
+      "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0",
+      "note": "Mrs. Vocke also wrote “Last chance for tickets is Friday” — ask her if you're not sure what that means."
+    },
+    {
+      "id": "sci-calculator-1008",
+      "date": "2026-10-07",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Put a calculator in your bag — Mrs. Vocke wants it in class tomorrow",
+      "dueDate": "2026-10-08"
+    },
+    {
+      "id": "spanish-missing-1009",
+      "date": "2026-10-07",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Turn in any missing Spanish work",
+      "dueDate": "2026-10-09",
+      "note": "Only if you owe Profe Zeiner something."
+    },
+    {
+      "id": "spanish-missing-1009",
+      "date": "2026-10-08",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Turn in any missing Spanish work",
+      "dueDate": "2026-10-09",
+      "note": "Only if you owe Profe Zeiner something."
     },
     {
       "id": "spanish-locotubre",
