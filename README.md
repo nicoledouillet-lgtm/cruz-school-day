@@ -117,7 +117,15 @@ python3 validate.py
 
 ## Things that will bite you
 
-- **There are three sources.** Homework from the Diamond deck, Spanish from the
+- **The trumpet is decided by the timetable, not by the packing list.** Period
+  9 is band on Tuesday and Friday, choir on Monday and Thursday, and on the
+  short Wednesday it alternates. Where `schedule` in week.json covers a date
+  it decides whether the trumpet appears; elsewhere the configured days apply.
+  That data comes from PowerSchool by hand — no connector reaches it — so
+  `validate.py` warns a week before it runs out.
+- **The school day is only mentioned when it differs** — a band day, the short
+  Wednesday, the week the specials rotate. Ordinary days say nothing.
+- **There are three automated sources.** Homework from the Diamond deck, Spanish from the
   World Language calendar, after-school activities from the family Google
   Calendar. Each is easy to forget, and forgetting one loses a whole category
   of Cruz's day silently.

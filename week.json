@@ -29,6 +29,53 @@
       "Paddle"
     ]
   },
+  "schedule": {
+    "2026-10-06": {
+      "music": "Band",
+      "period": 9,
+      "time": "14:08",
+      "until": "14:50"
+    },
+    "2026-10-07": {
+      "music": "Band",
+      "period": 9,
+      "time": "13:00",
+      "until": "13:30",
+      "note": "Short day — every class runs earlier than usual."
+    },
+    "2026-10-09": {
+      "music": "Band",
+      "period": 9,
+      "time": "14:08",
+      "until": "14:50"
+    },
+    "2026-10-13": {
+      "music": "Band",
+      "period": 9,
+      "time": "14:08",
+      "until": "14:50"
+    },
+    "2026-10-14": {
+      "music": "Choir",
+      "period": 9,
+      "time": "13:00",
+      "until": "13:30",
+      "note": "Short day — every class runs earlier than usual. Choir this Wednesday, not band — no trumpet."
+    },
+    "2026-10-16": {
+      "music": "Band",
+      "period": 9,
+      "time": "14:08",
+      "until": "14:50"
+    },
+    "2026-10-20": {
+      "music": "Band",
+      "period": 9,
+      "time": "14:08",
+      "until": "14:50",
+      "note": "New specials from today: period 3 becomes Technology & Engineering (Mrs. Anstett, room 203) and period 8 becomes Health (Mr. Lillie, room 19)."
+    }
+  },
   "events": [
     {
       "date": "2026-09-21",
@@ -813,6 +860,15 @@
       "text": "Finish the Characterization Slides from class"
     },
     {
+      "id": "math6h-eou1-review",
+      "date": "2026-10-07",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "End of Unit 1 Review",
+      "note": "End of Unit 1 Test is Tue 10/13."
+    },
+    {
       "id": "ela-irb-scavenger",
       "cls": "ELA",
       "teacher": "Ms. Metsack",
@@ -925,7 +981,7 @@
     {
       "date": "2026-10-09",
       "text": "ELA — Story Elements Quiz",
-      "note": "Last week's deck called this a Characterization Quiz; the October calendar says Story Elements. Same Friday either way."
+      "note": "Might have moved: last week's deck has a Story Elements Quiz today, but this week's deck now shows a Characterization Quiz on Fri 10/16 instead. Check with Ms. Metsack."
     },
     {
       "date": "2026-10-13",
@@ -935,6 +991,11 @@
       "date": "2026-10-13",
       "text": "Spanish — final draft of Pen Pal letter due",
       "note": "Profe Zeiner's homework note says the final copy is due Wednesday 10/14; her assessment calendar says Tue 10/13."
+    },
+    {
+      "date": "2026-10-16",
+      "text": "ELA — Characterization Quiz",
+      "note": "New on this week's assessment calendar. Last week's deck had an ELA quiz on Fri 10/9 instead — it may have moved here."
     },
     {
       "date": "2026-10-20",

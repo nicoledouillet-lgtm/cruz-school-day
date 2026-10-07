@@ -122,6 +122,48 @@ activities here as they appear.
 The section heading names itself: "After school" when everything is at 2pm or
 later, "What's on" otherwise, so a morning field trip isn't mislabelled.
 
+## 3b. The school timetable (PowerSchool — hand-maintained)
+
+**No connector can reach PowerSchool.** The schedule block in week.json is
+topped up by hand from Nicole's signed-in browser, at
+`https://whps.powerschool.com/guardian/myschedule_bellsched.html` (the Weekly
+Schedule view; `?startdate=MM/DD/YYYY&enddate=MM/DD/YYYY` steps through weeks).
+Do not attempt it in a scheduled run — it needs her browser.
+
+What the timetable actually says, as of October 2026:
+
+- Periods 1–8 are fixed: Spanish (Zeiner, 6), Science (Vocke, 9), a rotating
+  special, Math Honors (Rivera, 8), Social Studies (Fleming, 10), lunch,
+  Language Arts (Metsack, 12), a second rotating special.
+- **Period 9 is Band on Tuesday and Friday, Choir on Monday and Thursday.**
+  On the short Wednesday it alternates: band one week, choir the next.
+- Wednesday is a short day — everything runs earlier, period 9 is 1:00–1:30
+  rather than 2:08–2:50.
+- The two specials rotate by term. From 10/20 period 3 becomes Technology &
+  Engineering and period 8 becomes Health.
+
+**This is what decides the trumpet.** Where a date has a schedule entry it
+overrides the packing list's configured days, so the Wednesday "some weeks"
+never reaches Cruz as a guess. Where there's no entry the old configuration
+applies, which is why `validate.py` warns when the data is within a week of
+running out.
+
+Only record days that depart from the ordinary — band days, short Wednesdays,
+the week the specials change. A plain Monday gets no entry and the page shows
+nothing.
+
+```jsonc
+"schedule": {
+  "2026-10-07": { "music": "Band",  // or "Choir"; omit for a note-only day
+                  "period": 9, "time": "13:00", "until": "13:30",
+                  "note": "Short day — every class runs earlier than usual." }
+}
+```
+
+**Band lessons are a different thing.** Mr. Edwards's small-group pull-outs
+rotate through periods 1–3 on Thursday and Friday and are announced weekly in
+the band Google Classroom. They are not in PowerSchool and not in this block.
+
 ## 4. What a date means
 
 **Each weekday slide is the homework given that day, to do that night.** The

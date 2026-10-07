@@ -391,6 +391,22 @@
   .daycol .evt { padding: .45rem .5rem; gap: .45rem; font-size: var(--step--1); }
   .daycol .evt .ctitle { font-size: var(--step--1); }
 
+  /* The school day only gets a mention when it departs from the ordinary:
+     a band day (so the trumpet goes in), the short Wednesday, the week the
+     specials rotate. On a plain Monday it says nothing at all. */
+  .sched {
+    border: 1px solid var(--rule); border-left: 3px solid var(--quiz);
+    background: var(--surface); border-radius: 6px;
+    padding: .75rem .9rem; display: flex; flex-direction: column; gap: .3rem;
+  }
+  .sched .line { display: flex; align-items: baseline; gap: .55rem; flex-wrap: wrap; }
+  .sched .what { font-weight: 600; }
+  .sched .when {
+    font-family: var(--mono); font-size: var(--step--1);
+    color: var(--quiz); font-variant-numeric: tabular-nums;
+  }
+  .sched .cnote { margin-top: 0; }
+
   /* ---------- bag chips ---------- */
 
   .chips { list-style: none; margin: 0; padding: .85rem 1rem; display: flex; flex-wrap: wrap; gap: .55rem; }
@@ -627,6 +643,8 @@
       </div>
     </section>
 
+    <div id="schedHost"></div>
+
     <section aria-labelledby="packHead">
       <div class="sec-head">
         <h2 id="packHead">In the bag</h2>
@@ -714,7 +732,7 @@
 
   /* Filled in from week.json before the first render. */
   var ITEMS = [], QUIZZES = [], RUNNING = [], OPEN = [], SOURCES = [];
-  var NO_SCHOOL = {}, DECK_SLIDES = {}, EVENTS = [], GEAR = {};
+  var NO_SCHOOL = {}, DECK_SLIDES = {}, EVENTS = [], GEAR = {}, SCHEDULE = {};
   var META = { updated: null, deck: null, archive: null };
 
   /* ---------------- dates ---------------- */
@@ -1096,8 +1114,34 @@
   }
 
   function focusHomework() { return itemsOn(HW_KEY).concat(runningFor(HW)); }
-  function packItems()  { return store.pack.filter(function (i) { return i.days.indexOf(BAG_WD) !== -1; }); }
-  function packMaybes() { return store.pack.filter(function (i) { return i.maybe.indexOf(BAG_WD) !== -1; }); }
+
+  /* Whether the trumpet goes in the bag. The packing list has carried
+     "Tuesday and Friday, Wednesday some weeks" since the first version — a
+     guess that turned out to be right, but "some weeks" is not something a
+     twelve-year-old can act on at seven in the morning. The timetable knows:
+     period 9 alternates band and choir on Wednesdays. Where there's schedule
+     data for the day it decides; where there isn't, the configured days
+     still apply. */
+  function bandOn(dk) {
+    var e = SCHEDULE[dk];
+    if (!e) return null;                       /* no data — fall back */
+    return e.music === "Band";
+  }
+  function packItems() {
+    var band = bandOn(BAG_KEY);
+    return store.pack.filter(function (i) {
+      if (i.id === "trumpet" && band !== null) return band;
+      return i.days.indexOf(BAG_WD) !== -1;
+    });
+  }
+  function packMaybes() {
+    var band = bandOn(BAG_KEY);
+    return store.pack.filter(function (i) {
+      /* Never leave the trumpet on "some weeks" when the timetable is known. */
+      if (i.id === "trumpet" && band !== null) return false;
+      return i.maybe.indexOf(BAG_WD) !== -1;
+    });
+  }
 
   /* Open by default, except during the school day. Not persisted: the right
      answer depends on the time, not on what he tapped yesterday. */
@@ -1269,6 +1313,39 @@
       window.scrollTo(0, 0);
     });
     host.appendChild(b);
+  }
+
+  function renderSchedule() {
+    var host = document.getElementById("schedHost");
+    host.textContent = "";
+
+    var e = SCHEDULE[BAG_KEY];
+    if (!e) return;                            /* an ordinary day says nothing */
+
+    var box = document.createElement("div");
+    box.className = "sched";
+
+    if (e.music) {
+      var line = document.createElement("div");
+      line.className = "line";
+      var what = document.createElement("span");
+      what.className = "what";
+      what.textContent = e.music + (e.period ? " — period " + e.period : "");
+      line.appendChild(what);
+      if (e.time) {
+        var when = document.createElement("span");
+        when.className = "when";
+        when.textContent = fmtTime(e.time) + (e.until ? "–" + fmtTime(e.until) : "");
+        line.appendChild(when);
+      }
+      box.appendChild(line);
+    }
+    if (e.note) {
+      var nEl = document.createElement("div");
+      nEl.className = "cnote"; nEl.textContent = e.note;
+      box.appendChild(nEl);
+    }
+    host.appendChild(box);
   }
 
   /* ---------------- the all-clear ---------------- */
@@ -1718,6 +1795,7 @@
     renderMast();
     renderEvents();
     renderToday();
+    renderSchedule();
     renderPack();
     renderDone();
     renderCatchUp();
@@ -1734,6 +1812,7 @@
     DECK_SLIDES = d.deckSlides || {};
     EVENTS    = d.events    || [];
     GEAR      = d.gear      || {};
+    SCHEDULE  = d.schedule  || {};
     META = { updated: d.updated || null, deck: d.deck || null, archive: d.archive || null };
 
     pickFocus();

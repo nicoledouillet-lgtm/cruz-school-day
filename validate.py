@@ -92,6 +92,25 @@ for activity, kit in gear.items():
             "its kit won't reach the bag")
 
 TIME = re.compile(r"^([01]\d|2[0-3]):[0-5]\d$")
+
+# The schedule decides whether the trumpet goes in the bag, so a typo here
+# means he turns up to band without it — or lugs it in for nothing.
+for dk, e in data.get("schedule", {}).items():
+    where = f"schedule[{dk}]"
+    check_date(dk, "schedule")
+    if not isinstance(e, dict):
+        problems.append(f"{where}: must be an object"); continue
+    if e.get("music") not in (None, "Band", "Choir"):
+        problems.append(f"{where}: music {e['music']!r} must be \"Band\" or \"Choir\"")
+    for field in ("time", "until"):
+        if e.get(field) and not TIME.match(str(e[field])):
+            problems.append(f"{where}: {field} {e[field]!r} must be 24-hour HH:MM")
+    if e.get("until") and e.get("time") and str(e["until"]) < str(e["time"]):
+        problems.append(f"{where}: ends {e['until']} before it starts {e['time']}")
+    if not e.get("music") and not e.get("note"):
+        warnings.append(f"{where}: no music and no note — it would render an empty box")
+    if DATE.match(dk) and dk in data.get("noSchool", {}):
+        warnings.append(f"{where}: there is no school that day ({data['noSchool'][dk]})")
 for n, e in enumerate(data.get("events", [])):
     where = f"events[{n}]"
     if not e.get("text"):
@@ -115,6 +134,20 @@ for dk, url in slides.items():
         problems.append(f"deckSlides[{dk}]: {url!r} is not a Google Slides link")
     elif "slide=id." not in str(url):
         warnings.append(f"deckSlides[{dk}]: no slide anchor, so it opens on the deck's first slide")
+
+# Schedule data is hand-maintained from PowerSchool, which no connector can
+# reach. When it runs out the trumpet silently falls back to the old guess, so
+# say so while there is still time to top it up.
+sched_dates = sorted(d for d in data.get("schedule", {}) if DATE.match(d))
+if sched_dates and updated:
+    last = datetime.date.fromisoformat(sched_dates[-1])
+    days_left = (last - updated).days
+    if days_left < 7:
+        warnings.append(
+            f"schedule data only runs to {sched_dates[-1]} ({days_left} days out) — "
+            "top it up from PowerSchool or the trumpet goes back to guessing")
+elif not sched_dates:
+    warnings.append("no schedule data at all — the trumpet falls back to Tue/Fri plus a vague Wednesday")
 
 if week_of and DATE.match(str(week_of)):
     monday = datetime.date.fromisoformat(week_of)
