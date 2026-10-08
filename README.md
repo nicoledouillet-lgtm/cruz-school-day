@@ -123,6 +123,12 @@ python3 validate.py
   it decides whether the trumpet appears; elsewhere the configured days apply.
   That data comes from PowerSchool by hand — no connector reaches it — so
   `validate.py` warns a week before it runs out.
+- **The screen reorders itself by the hour.** Before school the bag comes
+  first — it's the only thing he can still act on with his coat on. From 8am
+  the bag drops below activities and homework, which is what matters once
+  he's there. The sections move, they aren't rebuilt, so ticks survive it.
+- **The band line lives inside the bag card**, under the header that names the
+  day. On its own it never said which day it meant.
 - **The school day is only mentioned when it differs** — a band day, the short
   Wednesday, the week the specials rotate. Ordinary days say nothing.
 - **There are three automated sources.** Homework from the Diamond deck, Spanish from the

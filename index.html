@@ -395,9 +395,9 @@
      a band day (so the trumpet goes in), the short Wednesday, the week the
      specials rotate. On a plain Monday it says nothing at all. */
   .sched {
-    border: 1px solid var(--rule); border-left: 3px solid var(--quiz);
-    background: var(--surface); border-radius: 6px;
-    padding: .75rem .9rem; display: flex; flex-direction: column; gap: .3rem;
+    padding: .7rem 1.1rem; border-bottom: 1px solid var(--rule);
+    background: var(--quiz-soft);
+    display: flex; flex-direction: column; gap: .25rem;
   }
   .sched .line { display: flex; align-items: baseline; gap: .55rem; flex-wrap: wrap; }
   .sched .what { font-weight: 600; }
@@ -633,7 +633,7 @@
       </div>
     </section>
 
-    <section aria-labelledby="hwHead">
+    <section id="hwSection" aria-labelledby="hwHead">
       <div class="sec-head">
         <h2 id="hwHead">Homework</h2>
         <span class="note" id="hwNote"></span>
@@ -643,9 +643,7 @@
       </div>
     </section>
 
-    <div id="schedHost"></div>
-
-    <section aria-labelledby="packHead">
+    <section id="packSection" aria-labelledby="packHead">
       <div class="sec-head">
         <h2 id="packHead">In the bag</h2>
         <span class="note" id="packNote"></span>
@@ -658,6 +656,7 @@
             <button class="link" id="editBtn" aria-expanded="false">Edit list</button>
           </span>
         </header>
+        <div id="schedHost"></div>
         <ul class="chips" id="packList"></ul>
         <div class="editor" id="editor" hidden>
           <p class="hint">Tap a day letter to cycle it: solid = always bring it, dashed = some weeks, blank = never. M T W T F.</p>
@@ -1699,6 +1698,24 @@
     if (opening) renderEditor();
   });
 
+  /* The order of the screen follows the hour, because what matters changes.
+     Before school the bag is the only thing he can still act on — homework is
+     either done or it isn't, and he's about to walk out of the door. Once he's
+     gone, activities and homework matter and the bag is tomorrow's problem. */
+  function orderPanes() {
+    var pane = document.getElementById("todayPane");
+    var parts = ["doneHost", "evtSection", "hwSection", "packSection", "catchupHost"]
+      .map(function (id) { return document.getElementById(id); });
+    var done = parts[0], evt = parts[1], hw = parts[2], bag = parts[3], catchup = parts[4];
+
+    var beforeSchool = isSchoolDay(TODAY) && NOW.getHours() < SCHOOL_IN;
+    var order = beforeSchool ? [done, bag, evt, hw, catchup]
+                             : [done, evt, hw, bag, catchup];
+    /* appendChild moves a node that's already in the DOM, so this is a
+       reorder rather than a rebuild — checkbox state survives it. */
+    order.forEach(function (el) { if (el) pane.appendChild(el); });
+  }
+
   /* ---------------- mode switch ---------------- */
 
   var mode = lsGet("mode", "today");
@@ -1799,6 +1816,7 @@
     renderPack();
     renderDone();
     renderCatchUp();
+    orderPanes();
     if (mode === "week") { renderWeek(); renderOpen(); }
   }
 
