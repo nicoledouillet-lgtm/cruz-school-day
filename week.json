@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-08",
   "weekOf": "2026-10-05",
   "deck": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -956,6 +956,44 @@
       "dueDate": "2026-10-13",
       "note": "Profe Zeiner's homework note says “due Wednesday” (10/14), but her assessment calendar says Tue 10/13. Have it ready by Tuesday to be safe.",
       "date": "2026-10-09"
+    },
+    {
+      "id": "ela-noredink-quotes-quiz",
+      "date": "2026-10-08",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk: Quiz on Quotes — get 70% or higher",
+      "dueDate": "2026-10-11",
+      "note": "Due by Sunday evening."
+    },
+    {
+      "id": "math6h-eou1-review",
+      "date": "2026-10-08",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Complete and correct the End of Unit 1 Review",
+      "note": "End of Unit 1 Test is Tue 10/13. Any late math work is due 10/13 too."
+    },
+    {
+      "id": "sci-vocab-flashcards",
+      "date": "2026-10-08",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Make flashcards — the vocabulary slides are in the Classwork tab on Google Classroom",
+      "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0",
+      "note": "Mrs. Vocke also wrote “Last chance for tickets is tomorrow” — ask her if you're not sure what that means."
+    },
+    {
+      "id": "sci-calculator-1009",
+      "date": "2026-10-08",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Put a calculator in your bag — Mrs. Vocke wants it in class tomorrow",
+      "dueDate": "2026-10-09"
     }
   ],
   "quizzes": [
