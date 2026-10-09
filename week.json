@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "weekOf": "2026-10-05",
   "deck": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -994,6 +994,44 @@
       "period": 2,
       "text": "Put a calculator in your bag — Mrs. Vocke wants it in class tomorrow",
       "dueDate": "2026-10-09"
+    },
+    {
+      "id": "ela-exit-ticket-1008",
+      "date": "2026-10-08",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish the Google Form exit ticket for 3:15 Stories",
+      "note": "Ms. Metsack added this to Thursday's slide after the last update."
+    },
+    {
+      "id": "ela-exit-ticket-1008",
+      "date": "2026-10-09",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish the Inferences exit ticket (Google Form) from Thursday",
+      "note": "Only if you didn't submit it yesterday."
+    },
+    {
+      "id": "ela-noredink-quotes-quiz",
+      "date": "2026-10-09",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk: Quiz on Quotes — get 70% or higher",
+      "dueDate": "2026-10-11",
+      "note": "Ms. Metsack reset the quizzes during period 3 today, so check NoRedInk — if yours was reset, take it again. Due by Sunday evening."
+    },
+    {
+      "id": "math6h-eou1-study",
+      "date": "2026-10-09",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Actively study for the End of Unit 1 Test",
+      "dueDate": "2026-10-13",
+      "note": "The test is Tue 10/13 — Monday is a day off, so study over the weekend. Any late Unit 1 math work is due 10/13 too."
     }
   ],
   "quizzes": [
