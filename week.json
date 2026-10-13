@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "weekOf": "2026-10-12",
   "deck": "https://docs.google.com/presentation/d/1qlfVDxPymofPwuPPOAaqDkbz7mrvPMKfXmxfAxqPGYs/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -1032,6 +1032,43 @@
       "text": "Actively study for the End of Unit 1 Test",
       "dueDate": "2026-10-13",
       "note": "The test is Tue 10/13 — Monday is a day off, so study over the weekend. Any late Unit 1 math work is due 10/13 too."
+    },
+    {
+      "id": "ela-noredink-diagnostic",
+      "date": "2026-10-13",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk Diagnostic",
+      "note": "Only if you didn't finish it in class."
+    },
+    {
+      "id": "math6h-binder-cleanout",
+      "date": "2026-10-13",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Clean out your binder/folder — take out the old math papers",
+      "note": "The next unit is no calculators."
+    },
+    {
+      "id": "sci-casper-p9-10",
+      "date": "2026-10-13",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Purple notebook pages 9 & 10 (Casper's experiment)",
+      "note": "Only if you didn't finish them in class."
+    },
+    {
+      "id": "spanish-penpal-final",
+      "date": "2026-10-13",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Final copy of your Pen Pal letter — staple your rough draft to the back of it",
+      "dueDate": "2026-10-14",
+      "note": "Due tomorrow. Put it in your bag tonight."
     }
   ],
   "quizzes": [
@@ -1071,7 +1108,7 @@
     {
       "date": "2026-10-16",
       "text": "ELA — Characterization Quiz",
-      "note": "New on this week's assessment calendar. Last week's deck had an ELA quiz on Fri 10/9 instead — it may have moved here."
+      "note": "Might be off: last week's deck lists it today, but this week's deck no longer shows any ELA quiz on 10/16. Check with Ms. Metsack."
     },
     {
       "date": "2026-10-20",
