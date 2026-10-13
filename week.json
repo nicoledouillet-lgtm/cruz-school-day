@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-09",
-  "weekOf": "2026-10-05",
-  "deck": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/edit",
+  "updated": "2026-10-12",
+  "weekOf": "2026-10-12",
+  "deck": "https://docs.google.com/presentation/d/1qlfVDxPymofPwuPPOAaqDkbz7mrvPMKfXmxfAxqPGYs/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
   "deckSlides": {
     "2026-09-21": "https://docs.google.com/presentation/d/1vzAYekq-UfZUA9mEe9ppIk9NY76oqlrj_5BEm0qSiqA/preview?slide=id.g3fa20da4644_0_6",
@@ -943,8 +943,8 @@
       "teacher": "Profe Zeiner",
       "period": 1,
       "text": "Final copy of your Pen Pal letter — staple it on top of your draft",
-      "dueDate": "2026-10-13",
-      "note": "Profe Zeiner's homework note says “due Wednesday” (10/14), but her assessment calendar says Tue 10/13. Have it ready by Tuesday to be safe.",
+      "dueDate": "2026-10-14",
+      "note": "Due Wednesday 10/14 — Profe Zeiner's homework note and her own assessment calendar now both say Wednesday.",
       "date": "2026-10-08"
     },
     {
@@ -953,8 +953,8 @@
       "teacher": "Profe Zeiner",
       "period": 1,
       "text": "Final copy of your Pen Pal letter — staple it on top of your draft",
-      "dueDate": "2026-10-13",
-      "note": "Profe Zeiner's homework note says “due Wednesday” (10/14), but her assessment calendar says Tue 10/13. Have it ready by Tuesday to be safe.",
+      "dueDate": "2026-10-14",
+      "note": "Due Wednesday 10/14 — Profe Zeiner's homework note and her own assessment calendar now both say Wednesday.",
       "date": "2026-10-09"
     },
     {
@@ -1064,9 +1064,9 @@
       "text": "Math 6H — End of Unit 1 Test"
     },
     {
-      "date": "2026-10-13",
+      "date": "2026-10-14",
       "text": "Spanish — final draft of Pen Pal letter due",
-      "note": "Profe Zeiner's homework note says the final copy is due Wednesday 10/14; her assessment calendar says Tue 10/13."
+      "note": "Profe Zeiner's own calendar and homework note both say Wed 10/14. The team deck's calendar still shows Tue 10/13."
     },
     {
       "date": "2026-10-16",
@@ -1096,18 +1096,24 @@
       "text": "Science — Unit 1 Summative"
     },
     {
-      "date": "2026-10-27",
-      "text": "Spanish — Presentational IPA"
+      "date": "2026-10-26",
+      "text": "Spanish — Presentational IPA",
+      "note": "Moved from Tue 10/27 — Profe Zeiner's calendar and the team deck now both say Mon 10/26."
+    },
+    {
+      "date": "2026-10-28",
+      "text": "Spanish — Interpersonal IPA",
+      "note": "Listed on Wed 10/28, Thu 10/29 and Fri 10/30 — probably split across the three days."
     },
     {
       "date": "2026-10-29",
       "text": "Spanish — Interpersonal IPA",
-      "note": "The October calendar lists it on both Thu 10/29 and Fri 10/30 — probably split across the two days."
+      "note": "Listed on Wed 10/28, Thu 10/29 and Fri 10/30 — probably split across the three days."
     },
     {
       "date": "2026-10-30",
       "text": "Spanish — Interpersonal IPA",
-      "note": "The October calendar lists it on both Thu 10/29 and Fri 10/30 — probably split across the two days."
+      "note": "Listed on Wed 10/28, Thu 10/29 and Fri 10/30 — probably split across the three days."
     }
   ],
   "running": [],
@@ -1148,7 +1154,7 @@
     {
       "tag": "HW",
       "name": "Diamond HW Calendar, this week",
-      "url": "https://docs.google.com/presentation/d/1uNm7rASo-YcnpVM_J0XmGI0qOdKYQNkwmAogN9TwKa0/edit"
+      "url": "https://docs.google.com/presentation/d/1qlfVDxPymofPwuPPOAaqDkbz7mrvPMKfXmxfAxqPGYs/edit"
     },
     {
       "tag": "ALL",
