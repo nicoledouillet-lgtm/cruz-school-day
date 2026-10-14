@@ -246,9 +246,14 @@ click past the three lead-in slides (title, Learning Lab, assessment calendar),
 then read `location.search` at each of the five weekday slides. It rewrites
 itself to `?slide=id.gXXXXX` as you go.
 
-Put the full preview URL in `deckSlides`, keyed by date. **Spot-check at least
-one** — slide ids are not in document order, so a wrong guess sends him to the
-wrong day. Keep last week's entries; those cards are still reachable.
+Put the full preview URL in `deckSlides`, keyed by date.
+
+**Verify every one by loading it and reading the day off the slide.** Do not
+trust click order: clicking faster than the page redraws silently skips
+slides, and on 10/14 that put the whole week two slides out — the ids captured
+as Monday and Tuesday were actually the Learning Lab and assessment-calendar
+slides. Slide ids are also not in document order. A link to the wrong day is
+worse than no link, because he has no way to tell. Keep last week's entries; those cards are still reachable.
 
 If you skip this, nothing breaks — those cards just carry no link, and
 `validate.py` says which days are missing.
