@@ -136,7 +136,9 @@ What the timetable actually says, as of October 2026:
   special, Math Honors (Rivera, 8), Social Studies (Fleming, 10), lunch,
   Language Arts (Metsack, 12), a second rotating special.
 - **Period 9 is Band on Tuesday and Friday, Choir on Monday and Thursday.**
-  On the short Wednesday it alternates: band one week, choir the next.
+  On the short Wednesday it is one or the other, and **it does not alternate**
+  — read October and November: Band, Choir, Choir, Band, Band, Choir, Band,
+  Choir. Never infer a Wednesday; look it up.
 - Wednesday is a short day — everything runs earlier, period 9 is 1:00–1:30
   rather than 2:08–2:50.
 - The two specials rotate by term. From 10/20 period 3 becomes Technology &

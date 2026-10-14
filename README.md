@@ -119,7 +119,7 @@ python3 validate.py
 
 - **The trumpet is decided by the timetable, not by the packing list.** Period
   9 is band on Tuesday and Friday, choir on Monday and Thursday, and on the
-  short Wednesday it alternates. Where `schedule` in week.json covers a date
+  short Wednesday it is one or the other in no discernible pattern. Where `schedule` in week.json covers a date
   it decides whether the trumpet appears; elsewhere the configured days apply.
   That data comes from PowerSchool by hand — no connector reaches it — so
   `validate.py` warns a week before it runs out.
