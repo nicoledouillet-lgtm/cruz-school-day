@@ -161,8 +161,22 @@ nothing.
 ```
 
 **Band lessons are a different thing.** Mr. Edwards's small-group pull-outs
-rotate through periods 1–3 on Thursday and Friday and are announced weekly in
-the band Google Classroom. They are not in PowerSchool and not in this block.
+rotate through periods 1–3 on Thursday and Friday. Cruz plays trumpet, so only
+the Friday rows matter — Thursday is flutes, clarinets and saxophones.
+
+They are announced weekly, usually Wednesday morning, as a plain post in the
+band Google Classroom (`classroom.google.com/u/3/c/MTU4MTU1NDgzNzY1`). There
+is no document, no calendar entry, nothing Drive or any connector can reach,
+and it needs **Cruz's student account** signed in — which expires often. So
+this cannot be automated and must be read by hand from Nicole's browser.
+
+**Do not try to predict it.** The Friday trumpet period has run 3, cancelled,
+2, 3, 1, 2 on consecutive weeks. It is not a rotation, it is an announcement.
+
+Record it as the `note` on that Friday's schedule entry, and say which class
+he'll be missing — period 2 is Science with Mrs. Vocke, period 1 is Spanish
+with Profe Zeiner, period 3 is whichever special is running that term. He has
+to tell that teacher before going down to the band room.
 
 ## 4. What a date means
 
