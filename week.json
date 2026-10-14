@@ -46,7 +46,7 @@
       "period": 9,
       "time": "13:00",
       "until": "13:30",
-      "note": "Short day — every class runs earlier than usual."
+      "note": "Z week — short day — every class runs earlier than usual."
     },
     "2026-10-09": {
       "music": "Band",
@@ -65,7 +65,7 @@
       "period": 9,
       "time": "13:00",
       "until": "13:30",
-      "note": "Short day — every class runs earlier than usual. Choir this Wednesday, not band — no trumpet."
+      "note": "A week — short day — every class runs earlier than usual. Choir this Wednesday, not band — no trumpet."
     },
     "2026-10-16": {
       "music": "Band",
@@ -86,7 +86,7 @@
       "period": 9,
       "time": "13:00",
       "until": "13:30",
-      "note": "Short day — every class runs earlier than usual. Choir this Wednesday, not band — no trumpet."
+      "note": "A week — short day — every class runs earlier than usual. Choir this Wednesday, not band — no trumpet."
     },
     "2026-10-23": {
       "music": "Band",
@@ -105,7 +105,7 @@
       "period": 9,
       "time": "13:00",
       "until": "13:30",
-      "note": "Short day — every class runs earlier than usual."
+      "note": "Z week — short day — every class runs earlier than usual."
     },
     "2026-10-30": {
       "music": "Band",
@@ -118,7 +118,7 @@
       "period": 9,
       "time": "13:00",
       "until": "13:30",
-      "note": "Short day — every class runs earlier than usual."
+      "note": "Z week — short day — every class runs earlier than usual."
     },
     "2026-11-06": {
       "music": "Band",
@@ -137,7 +137,7 @@
       "period": 9,
       "time": "13:00",
       "until": "13:30",
-      "note": "Short day — every class runs earlier than usual. Choir this Wednesday, not band — no trumpet."
+      "note": "A week — short day — every class runs earlier than usual. Choir this Wednesday, not band — no trumpet."
     },
     "2026-11-13": {
       "music": "Band",
@@ -156,7 +156,7 @@
       "period": 9,
       "time": "13:00",
       "until": "13:30",
-      "note": "Short day — every class runs earlier than usual."
+      "note": "Z week — short day — every class runs earlier than usual."
     },
     "2026-11-20": {
       "music": "Band",
@@ -175,7 +175,7 @@
       "period": 9,
       "time": "13:00",
       "until": "13:30",
-      "note": "Short day — every class runs earlier than usual. Choir this Wednesday, not band — no trumpet."
+      "note": "A week — short day — every class runs earlier than usual. Choir this Wednesday, not band — no trumpet."
     }
   },
   "events": [

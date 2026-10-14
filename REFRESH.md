@@ -135,10 +135,24 @@ What the timetable actually says, as of October 2026:
 - Periods 1–8 are fixed: Spanish (Zeiner, 6), Science (Vocke, 9), a rotating
   special, Math Honors (Rivera, 8), Social Studies (Fleming, 10), lunch,
   Language Arts (Metsack, 12), a second rotating special.
-- **Period 9 is Band on Tuesday and Friday, Choir on Monday and Thursday.**
-  On the short Wednesday it is one or the other, and **it does not alternate**
-  — read October and November: Band, Choir, Choir, Band, Band, Choir, Band,
-  Choir. Never infer a Wednesday; look it up.
+- **The cycle has six day-rows, not five.** The Matrix Schedule
+  (`myschedule_matrixsched.html`) lists them as M, Tu, **AW**, Th, F, **ZW** —
+  Wednesday appears twice. Periods 1-8 and Advisory are identical on AW and
+  ZW; **only period 9 differs**:
+  - **AW ("A week") Wednesday → Choir.** No trumpet.
+  - **ZW ("Z week") Wednesday → Band.** Trumpet.
+
+  This is what the course codes mean: `9(M,AW-Th)` is Choir on M, AW and Th;
+  `9(Tu,F-ZW)` is Band on Tu, F and ZW. The `(M-ZW)` on every ordinary class
+  is a range across all six cycle days, which is why a class that meets daily
+  still shows it.
+
+- **Which weeks are A and which are Z does not simply alternate.** Observed
+  Z, A, A, Z, Z, A, Z, A across October and November — holidays and short
+  weeks evidently shift the cycle. **Never infer a Wednesday from the one
+  before it.** Read it off the PowerSchool weekly grid, which is the
+  authority, and label the entry's note "A week" or "Z week" to match the
+  language the school uses.
 - Wednesday is a short day — everything runs earlier, period 9 is 1:00–1:30
   rather than 2:08–2:50.
 - The two specials rotate by term. From 10/20 period 3 becomes Technology &
