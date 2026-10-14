@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "weekOf": "2026-10-12",
   "deck": "https://docs.google.com/presentation/d/1qlfVDxPymofPwuPPOAaqDkbz7mrvPMKfXmxfAxqPGYs/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -1069,6 +1069,87 @@
       "text": "Final copy of your Pen Pal letter — staple your rough draft to the back of it",
       "dueDate": "2026-10-14",
       "note": "Due tomorrow. Put it in your bag tonight."
+    },
+    {
+      "id": "ela-formatting-quotes-p3",
+      "date": "2026-10-14",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish the last slide in “Formatting Quotes” (Part 3) and submit it on Google Classroom",
+      "link": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx"
+    },
+    {
+      "id": "ela-noredink-diagnostic",
+      "date": "2026-10-14",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk Diagnostic",
+      "note": "Only if you didn't finish it in class yesterday."
+    },
+    {
+      "id": "math6h-deltamath-1014",
+      "date": "2026-10-14",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "DeltaMath",
+      "note": "Sign in with your WHPS Google account, or it won't let you in."
+    },
+    {
+      "id": "sci-casper-p9-10",
+      "date": "2026-10-14",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Did you finish purple notebook pages 9 & 10 (Casper's experiment)? If not, finish them",
+      "note": "Mrs. Vocke is checking on these again today."
+    },
+    {
+      "id": "ss-learningcheck-income",
+      "date": "2026-10-14",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Learning Check: Income Levels (Google Form)",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy"
+    },
+    {
+      "id": "ela-elevator-plot",
+      "date": "2026-10-15",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish the plot diagram for “The Elevator” (paper handout)",
+      "note": "Only if you didn't finish it in class."
+    },
+    {
+      "id": "ela-noredink-diagnostic",
+      "date": "2026-10-15",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk Diagnostic",
+      "note": "Only if it isn't finished yet."
+    },
+    {
+      "id": "ela-elevator-sketch",
+      "date": "2026-10-16",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish the character sketch for “The Elevator”",
+      "note": "Only if you didn't finish it in class."
+    },
+    {
+      "id": "ela-noredink-diagnostic",
+      "date": "2026-10-16",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk Diagnostic",
+      "note": "Only if it isn't finished yet."
     }
   ],
   "quizzes": [
