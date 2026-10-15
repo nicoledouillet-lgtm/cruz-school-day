@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "weekOf": "2026-10-12",
   "deck": "https://docs.google.com/presentation/d/1qlfVDxPymofPwuPPOAaqDkbz7mrvPMKfXmxfAxqPGYs/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -316,10 +316,10 @@
     },
     {
       "date": "2026-10-15",
-      "time": "17:30",
-      "until": "18:30",
+      "time": "16:15",
+      "until": "17:15",
       "text": "Squash",
-      "note": "After 6th Dimension."
+      "note": "After 6th Dimension. Earlier than the usual Thursday 5:30 today."
     }
   ],
   "items": [
@@ -1236,6 +1236,51 @@
       "note": "Only if it isn't finished yet."
     },
     {
+      "id": "math6h-p155",
+      "date": "2026-10-15",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Math book p.155 & 156 — review the standard way to multiply whole numbers"
+    },
+    {
+      "id": "sci-powerschool-owe-1015",
+      "date": "2026-10-15",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Check PowerSchool — do you owe Mrs. Vocke any work? If you do, finish it",
+      "note": "Mrs. Vocke added this to Thursday's slide after the last update."
+    },
+    {
+      "id": "ss-unit1test-study",
+      "date": "2026-10-15",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Study for the Unit 1 Test — the study materials are on Google Classroom",
+      "dueDate": "2026-10-22",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy"
+    },
+    {
+      "id": "spanish-peter-gonzalez",
+      "date": "2026-10-15",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Finish the reading activity on Peter González you started in class today"
+    },
+    {
+      "id": "spanish-ipa-review",
+      "date": "2026-10-16",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Read over the IPA info packet you got in class — your end-of-unit assessment starts next week",
+      "dueDate": "2026-10-22",
+      "note": "The first part (reading and listening) is Thursday 10/22."
+    },
+    {
       "id": "ela-elevator-sketch",
       "date": "2026-10-16",
       "cls": "ELA",
@@ -1305,20 +1350,28 @@
     },
     {
       "date": "2026-10-22",
-      "text": "Social Studies — Unit 1 Summative"
+      "text": "Social Studies — Unit 1 Summative",
+      "note": "Mr. Fleming's homework note confirms the Unit 1 Test is Thursday 10/22."
     },
     {
       "date": "2026-10-22",
-      "text": "Spanish — Interpretive IPA"
+      "text": "Spanish — Interpretive IPA",
+      "note": "Reading and listening. Profe Zeiner's homework note confirms Thursday."
     },
     {
       "date": "2026-10-23",
-      "text": "Science — Unit 1 Summative"
+      "text": "Science — Unit 1 Summative",
+      "note": "Might have moved: last week's deck has it on Fri 10/23, but this week's deck now shows Tue 10/27. Check with Mrs. Vocke."
     },
     {
       "date": "2026-10-26",
       "text": "Spanish — Presentational IPA",
       "note": "Moved from Tue 10/27 — Profe Zeiner's calendar and the team deck now both say Mon 10/26."
+    },
+    {
+      "date": "2026-10-27",
+      "text": "Science — Unit 1 Summative",
+      "note": "This week's deck now has it here; last week's deck said Fri 10/23. Check with Mrs. Vocke."
     },
     {
       "date": "2026-10-28",
