@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-15",
-  "weekOf": "2026-10-12",
-  "deck": "https://docs.google.com/presentation/d/1qlfVDxPymofPwuPPOAaqDkbz7mrvPMKfXmxfAxqPGYs/edit",
+  "updated": "2026-10-20",
+  "weekOf": "2026-10-19",
+  "deck": "https://docs.google.com/presentation/d/17A6BfC2L9V73gac4LAMmZF8aXZgEddjuqQ1AzYlT1Pc/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
   "deckSlides": {
     "2026-09-21": "https://docs.google.com/presentation/d/1vzAYekq-UfZUA9mEe9ppIk9NY76oqlrj_5BEm0qSiqA/preview?slide=id.g3fa20da4644_0_6",
@@ -320,6 +320,40 @@
       "until": "17:15",
       "text": "Squash",
       "note": "After 6th Dimension. Earlier than the usual Thursday 5:30 today."
+    },
+    {
+      "date": "2026-10-19",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "6th Dimension",
+      "note": "6th grade choir."
+    },
+    {
+      "date": "2026-10-20",
+      "time": "16:00",
+      "until": "17:00",
+      "text": "Pickleball",
+      "adult": true,
+      "note": "The calendar says 4:00 today, but pickleball is usually 5:00 — check the time with a grown-up."
+    },
+    {
+      "date": "2026-10-21",
+      "time": "14:30",
+      "until": "15:30",
+      "text": "Piano"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "6th Dimension",
+      "note": "6th grade choir."
+    },
+    {
+      "date": "2026-10-22",
+      "time": "17:30",
+      "until": "18:30",
+      "text": "Squash"
     }
   ],
   "items": [
@@ -1286,8 +1320,8 @@
       "cls": "ELA",
       "teacher": "Ms. Metsack",
       "period": 7,
-      "text": "Finish the character sketch for “The Elevator”",
-      "note": "Only if you didn't finish it in class."
+      "text": "Finish the character sketch and plot diagram for “The Elevator”",
+      "note": "Only if you didn't finish them in class."
     },
     {
       "id": "ela-noredink-diagnostic",
@@ -1297,6 +1331,224 @@
       "period": 7,
       "text": "NoRedInk Diagnostic",
       "note": "Only if it isn't finished yet."
+    },
+    {
+      "id": "math6h-missing-1016",
+      "date": "2026-10-16",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Catch up on any missing math work, and review the standard way to multiply whole numbers",
+      "note": "Ms. Rivera added this to Friday's slide after the last update."
+    },
+    {
+      "id": "sci-unit1-study",
+      "date": "2026-10-16",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Start studying for the Science Unit 1 Test — use the study guide on Google Classroom",
+      "dueDate": "2026-10-27",
+      "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0",
+      "note": "Mrs. Vocke added this to Friday's slide after the last update."
+    },
+    {
+      "id": "ss-unit1test-study",
+      "date": "2026-10-16",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Study for the Unit 1 Test — the study materials are on Google Classroom",
+      "dueDate": "2026-10-22",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy"
+    },
+    {
+      "id": "ela-noredink-rwr",
+      "date": "2026-10-19",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk (ReadWriteReason)",
+      "dueDate": "2026-10-25",
+      "note": "Due by Sunday evening."
+    },
+    {
+      "id": "math6h-p165",
+      "date": "2026-10-19",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Finish your classwork, then Math book p.165 & 166, and watch the standard algorithm division video",
+      "note": "The video is linked on the homework deck."
+    },
+    {
+      "id": "sci-unit1-study",
+      "date": "2026-10-19",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Study for the Science Unit 1 Test — use the study guide on Google Classroom",
+      "dueDate": "2026-10-27",
+      "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0"
+    },
+    {
+      "id": "ss-unit1test-study",
+      "date": "2026-10-19",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Study for the Unit 1 Test — the study materials are on Google Classroom",
+      "dueDate": "2026-10-22",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy"
+    },
+    {
+      "id": "spanish-ipa-review",
+      "date": "2026-10-19",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Review the IPA packet and the Slides on Google Classroom — your end-of-unit assessment starts Thursday",
+      "dueDate": "2026-10-22",
+      "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz",
+      "note": "Thursday 10/22 is the reading and listening part."
+    },
+    {
+      "id": "ela-noredink-rwr",
+      "date": "2026-10-20",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk (ReadWriteReason)",
+      "dueDate": "2026-10-25",
+      "note": "Due by Sunday evening."
+    },
+    {
+      "id": "ela-irb-20min-1020",
+      "date": "2026-10-20",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Read your IRB for 20 minutes",
+      "note": "Ms. Metsack's reminder: 20 minutes every night."
+    },
+    {
+      "id": "math6h-l7-quiz-ws",
+      "date": "2026-10-20",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Lesson 7 “Quiz” worksheet"
+    },
+    {
+      "id": "sci-unit1-study",
+      "date": "2026-10-20",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Study for the Science Unit 1 Test — use the study guide on Google Classroom",
+      "dueDate": "2026-10-27",
+      "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0"
+    },
+    {
+      "id": "ss-unit1test-study",
+      "date": "2026-10-20",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Study for the Unit 1 Test — the study materials are on Google Classroom",
+      "dueDate": "2026-10-22",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy"
+    },
+    {
+      "id": "spanish-ipa-review",
+      "date": "2026-10-20",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Review the IPA packet and the Slides on Google Classroom — your end-of-unit assessment starts Thursday",
+      "dueDate": "2026-10-22",
+      "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz",
+      "note": "Thursday 10/22 is the reading and listening part."
+    },
+    {
+      "id": "dt-kindness-day",
+      "date": "2026-10-20",
+      "cls": "Diamond Team",
+      "teacher": null,
+      "period": null,
+      "text": "Put out something orange to wear tomorrow — it's Kindness Day",
+      "dueDate": "2026-10-21"
+    },
+    {
+      "id": "ela-noredink-rwr",
+      "date": "2026-10-21",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk (ReadWriteReason)",
+      "dueDate": "2026-10-25",
+      "note": "Due by Sunday evening."
+    },
+    {
+      "id": "ela-madlibs-1021",
+      "date": "2026-10-21",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Sensory Details Mad Libs (paper copy)",
+      "note": "Only if you didn't hand it in during class."
+    },
+    {
+      "id": "ela-show-dont-tell",
+      "date": "2026-10-21",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "“Show, Don't Tell” on Google Classroom",
+      "link": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx",
+      "note": "Skip it if you already submitted it in class."
+    },
+    {
+      "id": "ss-unit1test-study",
+      "date": "2026-10-21",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Study for the Unit 1 Test — it's tomorrow. The study materials are on Google Classroom",
+      "dueDate": "2026-10-22",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy"
+    },
+    {
+      "id": "spanish-ipa-review",
+      "date": "2026-10-21",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Review the IPA packet and the Slides on Google Classroom — the reading and listening part is tomorrow",
+      "dueDate": "2026-10-22",
+      "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz"
+    },
+    {
+      "id": "spanish-ipa-writing-prep",
+      "date": "2026-10-22",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Review the IPA packet and the Slides on Google Classroom — the writing part is Monday",
+      "dueDate": "2026-10-26",
+      "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz",
+      "note": "Monday 10/26 is Presentational Writing; Wednesday 10/28 is the speaking part."
+    },
+    {
+      "id": "spanish-ipa-writing-prep",
+      "date": "2026-10-23",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Review the IPA packet and the Slides on Google Classroom — the writing part is Monday",
+      "dueDate": "2026-10-26",
+      "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz",
+      "note": "Monday 10/26 is Presentational Writing; Wednesday 10/28 is the speaking part."
     }
   ],
   "quizzes": [
@@ -1341,12 +1593,12 @@
     {
       "date": "2026-10-20",
       "text": "ELA — Writing Assessment",
-      "note": "On the assessment calendar for both Tue 10/20 and Wed 10/21."
+      "note": "Might have moved: last week's deck lists it on Tue 10/20 and Wed 10/21, but this week's deck no longer shows it. Check with Ms. Metsack."
     },
     {
       "date": "2026-10-21",
       "text": "ELA — Writing Assessment",
-      "note": "On the assessment calendar for both Tue 10/20 and Wed 10/21."
+      "note": "Might have moved: last week's deck lists it on Tue 10/20 and Wed 10/21, but this week's deck no longer shows it. Check with Ms. Metsack."
     },
     {
       "date": "2026-10-22",
@@ -1359,11 +1611,6 @@
       "note": "Reading and listening. Profe Zeiner's homework note confirms Thursday."
     },
     {
-      "date": "2026-10-23",
-      "text": "Science — Unit 1 Summative",
-      "note": "Might have moved: last week's deck has it on Fri 10/23, but this week's deck now shows Tue 10/27. Check with Mrs. Vocke."
-    },
-    {
       "date": "2026-10-26",
       "text": "Spanish — Presentational IPA",
       "note": "Moved from Tue 10/27 — Profe Zeiner's calendar and the team deck now both say Mon 10/26."
@@ -1371,22 +1618,22 @@
     {
       "date": "2026-10-27",
       "text": "Science — Unit 1 Summative",
-      "note": "This week's deck now has it here; last week's deck said Fri 10/23. Check with Mrs. Vocke."
+      "note": "Settled on Tue 10/27 — both decks' calendars and Mrs. Vocke's homework note now agree. It had been listed on Fri 10/23 earlier."
     },
     {
       "date": "2026-10-28",
       "text": "Spanish — Interpersonal IPA",
-      "note": "Listed on Wed 10/28, Thu 10/29 and Fri 10/30 — probably split across the three days."
+      "note": "The team deck lists it Wed 10/28, Thu 10/29 and Fri 10/30; Profe Zeiner's homework note says Wednesday 10/28. Probably spread over the three days."
     },
     {
       "date": "2026-10-29",
       "text": "Spanish — Interpersonal IPA",
-      "note": "Listed on Wed 10/28, Thu 10/29 and Fri 10/30 — probably split across the three days."
+      "note": "The team deck lists it Wed 10/28, Thu 10/29 and Fri 10/30; Profe Zeiner's homework note says Wednesday 10/28. Probably spread over the three days."
     },
     {
       "date": "2026-10-30",
       "text": "Spanish — Interpersonal IPA",
-      "note": "Listed on Wed 10/28, Thu 10/29 and Fri 10/30 — probably split across the three days."
+      "note": "The team deck lists it Wed 10/28, Thu 10/29 and Fri 10/30; Profe Zeiner's homework note says Wednesday 10/28. Probably spread over the three days."
     }
   ],
   "running": [],
@@ -1430,7 +1677,7 @@
     {
       "tag": "HW",
       "name": "Diamond HW Calendar, this week",
-      "url": "https://docs.google.com/presentation/d/1qlfVDxPymofPwuPPOAaqDkbz7mrvPMKfXmxfAxqPGYs/edit"
+      "url": "https://docs.google.com/presentation/d/17A6BfC2L9V73gac4LAMmZF8aXZgEddjuqQ1AzYlT1Pc/edit"
     },
     {
       "tag": "ALL",
