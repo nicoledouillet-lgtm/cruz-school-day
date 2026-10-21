@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "weekOf": "2026-10-19",
   "deck": "https://docs.google.com/presentation/d/17A6BfC2L9V73gac4LAMmZF8aXZgEddjuqQ1AzYlT1Pc/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -1499,14 +1499,22 @@
       "note": "Only if you didn't hand it in during class."
     },
     {
-      "id": "ela-show-dont-tell",
+      "id": "math6h-iready-1021",
       "date": "2026-10-21",
-      "cls": "ELA",
-      "teacher": "Ms. Metsack",
-      "period": 7,
-      "text": "“Show, Don't Tell” on Google Classroom",
-      "link": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx",
-      "note": "Skip it if you already submitted it in class."
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "GRADED iReady Digital practice"
+    },
+    {
+      "id": "sci-unit1-study",
+      "date": "2026-10-21",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Study for the Science Unit 1 Test — use the study guide on Google Classroom",
+      "dueDate": "2026-10-27",
+      "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0"
     },
     {
       "id": "ss-unit1test-study",
@@ -1527,6 +1535,53 @@
       "text": "Review the IPA packet and the Slides on Google Classroom — the reading and listening part is tomorrow",
       "dueDate": "2026-10-22",
       "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz"
+    },
+    {
+      "id": "ela-madlibs-1021",
+      "date": "2026-10-22",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Sensory Details Mad Libs (paper copy)",
+      "note": "Only if you haven't handed it in yet."
+    },
+    {
+      "id": "ela-noredink-rwr",
+      "date": "2026-10-22",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk (ReadWriteReason)",
+      "dueDate": "2026-10-25",
+      "note": "Due by Sunday evening."
+    },
+    {
+      "id": "ela-show-dont-tell",
+      "date": "2026-10-23",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "“Show, Don't Tell” handout",
+      "note": "Only if you didn't finish it in class today."
+    },
+    {
+      "id": "ela-elevator-ending",
+      "date": "2026-10-23",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Write an ending for “The Elevator” in your notebook — use characterization, descriptive/sensory details and figurative language",
+      "note": "Only if you didn't finish it in class today."
+    },
+    {
+      "id": "ela-noredink-rwr",
+      "date": "2026-10-23",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk (ReadWriteReason)",
+      "dueDate": "2026-10-25",
+      "note": "Due by Sunday evening."
     },
     {
       "id": "spanish-ipa-writing-prep",
