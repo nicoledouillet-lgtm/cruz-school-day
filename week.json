@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "weekOf": "2026-10-19",
   "deck": "https://docs.google.com/presentation/d/17A6BfC2L9V73gac4LAMmZF8aXZgEddjuqQ1AzYlT1Pc/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -1556,6 +1556,45 @@
       "note": "Due by Sunday evening."
     },
     {
+      "id": "math6h-l7-error-analysis",
+      "date": "2026-10-22",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Lesson 7 Error Analysis",
+      "note": "The Lesson 7 & 8 Quiz is Tue 10/27."
+    },
+    {
+      "id": "sci-unit1-study",
+      "date": "2026-10-22",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Study for the Science Unit 1 Test — use the study guide on Google Classroom",
+      "dueDate": "2026-10-27",
+      "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0"
+    },
+    {
+      "id": "sci-unit1-study",
+      "date": "2026-10-23",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Use your study materials to review for Tuesday's Science Unit 1 Test",
+      "dueDate": "2026-10-27",
+      "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0"
+    },
+    {
+      "id": "dt-diamond-day-nhi",
+      "date": "2026-10-27",
+      "cls": "Diamond Team",
+      "teacher": null,
+      "period": null,
+      "text": "Check PowerSchool for any NHIs (work not handed in) — tomorrow is Diamond Day",
+      "dueDate": "2026-10-28",
+      "note": "From next week's homework deck."
+    },
+    {
       "id": "ela-show-dont-tell",
       "date": "2026-10-23",
       "cls": "ELA",
@@ -1674,6 +1713,11 @@
       "date": "2026-10-27",
       "text": "Science — Unit 1 Summative",
       "note": "Settled on Tue 10/27 — both decks' calendars and Mrs. Vocke's homework note now agree. It had been listed on Fri 10/23 earlier."
+    },
+    {
+      "date": "2026-10-27",
+      "text": "Math 6H — Lesson 7 & 8 Quiz",
+      "note": "New on this week's assessment calendar. Next week's deck doesn't list it yet."
     },
     {
       "date": "2026-10-28",
