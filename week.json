@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "weekOf": "2026-10-19",
   "deck": "https://docs.google.com/presentation/d/17A6BfC2L9V73gac4LAMmZF8aXZgEddjuqQ1AzYlT1Pc/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -1585,6 +1585,16 @@
       "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0"
     },
     {
+      "id": "math6h-l78-quiz-study",
+      "date": "2026-10-23",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Study for the Lesson 7 & 8 Quiz without a calculator, and catch up on any missing math work",
+      "dueDate": "2026-10-27",
+      "note": "The quiz is Tuesday 10/27 — no calculators."
+    },
+    {
       "id": "dt-diamond-day-nhi",
       "date": "2026-10-27",
       "cls": "Diamond Team",
@@ -1717,7 +1727,7 @@
     {
       "date": "2026-10-27",
       "text": "Math 6H — Lesson 7 & 8 Quiz",
-      "note": "New on this week's assessment calendar. Next week's deck doesn't list it yet."
+      "note": "Ms. Rivera's Thursday and Friday homework notes confirm Tuesday 10/27. Next week's deck calendar doesn't list it yet."
     },
     {
       "date": "2026-10-28",
