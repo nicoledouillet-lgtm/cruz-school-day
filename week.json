@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-23",
-  "weekOf": "2026-10-19",
-  "deck": "https://docs.google.com/presentation/d/17A6BfC2L9V73gac4LAMmZF8aXZgEddjuqQ1AzYlT1Pc/edit",
+  "updated": "2026-10-26",
+  "weekOf": "2026-10-26",
+  "deck": "https://docs.google.com/presentation/d/1pvY6QlzI-SxLl8DsgezPQun3dYPzFjoYPv_npCdlIS0/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
   "deckSlides": {
     "2026-09-21": "https://docs.google.com/presentation/d/1vzAYekq-UfZUA9mEe9ppIk9NY76oqlrj_5BEm0qSiqA/preview?slide=id.g3fa20da4644_0_6",
@@ -351,6 +351,32 @@
     },
     {
       "date": "2026-10-22",
+      "time": "17:30",
+      "until": "18:30",
+      "text": "Squash"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "6th Dimension",
+      "note": "6th grade choir."
+    },
+    {
+      "date": "2026-10-28",
+      "time": "14:30",
+      "until": "15:30",
+      "text": "Piano"
+    },
+    {
+      "date": "2026-10-29",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "6th Dimension",
+      "note": "6th grade choir."
+    },
+    {
+      "date": "2026-10-29",
       "time": "17:30",
       "until": "18:30",
       "text": "Squash"
@@ -1601,8 +1627,16 @@
       "teacher": null,
       "period": null,
       "text": "Check PowerSchool for any NHIs (work not handed in) — tomorrow is Diamond Day",
-      "dueDate": "2026-10-28",
-      "note": "From next week's homework deck."
+      "dueDate": "2026-10-28"
+    },
+    {
+      "id": "dt-diamond-day-nhi",
+      "date": "2026-10-26",
+      "cls": "Diamond Team",
+      "teacher": null,
+      "period": null,
+      "text": "Check PowerSchool for any NHIs (work not handed in) — Wednesday is Diamond Day",
+      "dueDate": "2026-10-28"
     },
     {
       "id": "ela-show-dont-tell",
@@ -1653,6 +1687,106 @@
       "dueDate": "2026-10-26",
       "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz",
       "note": "Monday 10/26 is Presentational Writing; Wednesday 10/28 is the speaking part."
+    },
+    {
+      "id": "ela-hollow-ep1",
+      "date": "2026-10-26",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Listen to Episode 1 of “The Hollow” podcast and fill out what you can in the Guide (paper copy)",
+      "link": "https://gzmshows.com/shows/the-hollow/#listen"
+    },
+    {
+      "id": "math6h-l78-quiz-study",
+      "date": "2026-10-26",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Study for the Lesson 7 & 8 Quiz — adding, subtracting, multiplying and dividing multi-digit decimals",
+      "dueDate": "2026-10-27",
+      "note": "The quiz is tomorrow — no calculators."
+    },
+    {
+      "id": "sci-unit1-study",
+      "date": "2026-10-26",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Use your study resources to review for the Science Unit 1 Test",
+      "dueDate": "2026-10-27",
+      "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0"
+    },
+    {
+      "id": "sci-study-slides-1026",
+      "date": "2026-10-26",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Finish your personal study plan slides and “turn in” on Google Classroom",
+      "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0"
+    },
+    {
+      "id": "spanish-ipa-speaking-prep",
+      "date": "2026-10-26",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Review the IPA packet and the Slides on Google Classroom — the speaking part is Wednesday",
+      "dueDate": "2026-10-28",
+      "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz",
+      "note": "Wednesday 10/28 is Interpersonal Speaking."
+    },
+    {
+      "id": "spanish-ipa-speaking-prep",
+      "date": "2026-10-27",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Review the IPA packet and the Slides on Google Classroom — the speaking part is tomorrow",
+      "dueDate": "2026-10-28",
+      "link": "https://classroom.google.com/u/3/c/ODY3OTc5NDQ1OTkz",
+      "note": "Wednesday 10/28 is Interpersonal Speaking."
+    },
+    {
+      "id": "spanish-q1-work",
+      "date": "2026-10-26",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Turn in any Quarter 1 Spanish work you still owe",
+      "dueDate": "2026-10-30",
+      "note": "Only if you owe Profe Zeiner something. All Quarter 1 work is due Friday."
+    },
+    {
+      "id": "spanish-q1-work",
+      "date": "2026-10-27",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Turn in any Quarter 1 Spanish work you still owe",
+      "dueDate": "2026-10-30",
+      "note": "Only if you owe Profe Zeiner something. All Quarter 1 work is due Friday."
+    },
+    {
+      "id": "spanish-q1-work",
+      "date": "2026-10-28",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Turn in any Quarter 1 Spanish work you still owe",
+      "dueDate": "2026-10-30",
+      "note": "Only if you owe Profe Zeiner something. Profe Zeiner's Wednesday note also says the assessment “continues tomorrow” — if you haven't had your speaking turn yet, keep reviewing the IPA packet."
+    },
+    {
+      "id": "spanish-q1-work",
+      "date": "2026-10-29",
+      "cls": "Spanish",
+      "teacher": "Profe Zeiner",
+      "period": 1,
+      "text": "Turn in any Quarter 1 Spanish work you still owe",
+      "dueDate": "2026-10-30",
+      "note": "Only if you owe Profe Zeiner something. All Quarter 1 work is due tomorrow."
     }
   ],
   "quizzes": [
@@ -1697,12 +1831,12 @@
     {
       "date": "2026-10-20",
       "text": "ELA — Writing Assessment",
-      "note": "Might have moved: last week's deck lists it on Tue 10/20 and Wed 10/21, but this week's deck no longer shows it. Check with Ms. Metsack."
+      "note": "Probably moved: an older deck listed it on Tue 10/20 and Wed 10/21, but the newest deck's November calendar has it Wed 11/4–Fri 11/6."
     },
     {
       "date": "2026-10-21",
       "text": "ELA — Writing Assessment",
-      "note": "Might have moved: last week's deck lists it on Tue 10/20 and Wed 10/21, but this week's deck no longer shows it. Check with Ms. Metsack."
+      "note": "Probably moved: an older deck listed it on Tue 10/20 and Wed 10/21, but the newest deck's November calendar has it Wed 11/4–Fri 11/6."
     },
     {
       "date": "2026-10-22",
@@ -1727,7 +1861,7 @@
     {
       "date": "2026-10-27",
       "text": "Math 6H — Lesson 7 & 8 Quiz",
-      "note": "Ms. Rivera's Thursday and Friday homework notes confirm Tuesday 10/27. Next week's deck calendar doesn't list it yet."
+      "note": "Confirmed — this week's deck calendar and Ms. Rivera's homework notes all say Tuesday 10/27."
     },
     {
       "date": "2026-10-28",
@@ -1743,6 +1877,21 @@
       "date": "2026-10-30",
       "text": "Spanish — Interpersonal IPA",
       "note": "The team deck lists it Wed 10/28, Thu 10/29 and Fri 10/30; Profe Zeiner's homework note says Wednesday 10/28. Probably spread over the three days."
+    },
+    {
+      "date": "2026-11-04",
+      "text": "ELA — Writing Assessment",
+      "note": "The deck lists it Wed 11/4, Thu 11/5 and Fri 11/6 — probably spread over the three days."
+    },
+    {
+      "date": "2026-11-05",
+      "text": "ELA — Writing Assessment",
+      "note": "The deck lists it Wed 11/4, Thu 11/5 and Fri 11/6 — probably spread over the three days."
+    },
+    {
+      "date": "2026-11-06",
+      "text": "ELA — Writing Assessment",
+      "note": "The deck lists it Wed 11/4, Thu 11/5 and Fri 11/6 — probably spread over the three days."
     }
   ],
   "running": [],
@@ -1786,7 +1935,7 @@
     {
       "tag": "HW",
       "name": "Diamond HW Calendar, this week",
-      "url": "https://docs.google.com/presentation/d/17A6BfC2L9V73gac4LAMmZF8aXZgEddjuqQ1AzYlT1Pc/edit"
+      "url": "https://docs.google.com/presentation/d/1pvY6QlzI-SxLl8DsgezPQun3dYPzFjoYPv_npCdlIS0/edit"
     },
     {
       "tag": "ALL",
