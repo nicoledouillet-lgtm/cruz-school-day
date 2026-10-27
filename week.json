@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "weekOf": "2026-10-26",
   "deck": "https://docs.google.com/presentation/d/1pvY6QlzI-SxLl8DsgezPQun3dYPzFjoYPv_npCdlIS0/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -361,6 +361,15 @@
       "until": "16:00",
       "text": "6th Dimension",
       "note": "6th grade choir."
+    },
+    {
+      "date": "2026-10-27",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "Grade 6 Halloween Mixer",
+      "where": "Grade 6 Gym, KPMS",
+      "adult": true,
+      "note": "It's a ticketed event — check with a grown-up that you're going."
     },
     {
       "date": "2026-10-28",
@@ -1725,6 +1734,23 @@
       "period": 2,
       "text": "Finish your personal study plan slides and “turn in” on Google Classroom",
       "link": "https://classroom.google.com/u/3/c/ODc1NzYyNDMzMzM0"
+    },
+    {
+      "id": "ela-hollow-guide",
+      "date": "2026-10-27",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish the Podcast Guide for “The Hollow” (paper copy)",
+      "note": "Only if you didn't finish it in class."
+    },
+    {
+      "id": "math6h-review-ops-1027",
+      "date": "2026-10-27",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Review the operations you find hardest — multiplying and dividing with the standard algorithm"
     },
     {
       "id": "spanish-ipa-speaking-prep",
