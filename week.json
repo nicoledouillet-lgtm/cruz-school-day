@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "weekOf": "2026-10-26",
   "deck": "https://docs.google.com/presentation/d/1pvY6QlzI-SxLl8DsgezPQun3dYPzFjoYPv_npCdlIS0/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -1814,6 +1814,32 @@
       "text": "Turn in any Quarter 1 Spanish work you still owe",
       "dueDate": "2026-10-30",
       "note": "Only if you owe Profe Zeiner something. All Quarter 1 work is due tomorrow."
+    },
+    {
+      "id": "ela-halloween-figlang",
+      "date": "2026-10-28",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish the Halloween Figurative Language blue sheet"
+    },
+    {
+      "id": "math6h-p198",
+      "date": "2026-10-28",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Math book p.198 & 200, and review the multiplication and division (standard algorithm) you find hardest"
+    },
+    {
+      "id": "sci-bubble-lab-cer",
+      "date": "2026-10-28",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Bubble Lab CER",
+      "dueDate": "2026-10-30",
+      "note": "You'll work on it in class tomorrow. Only if you don't finish it then, it's due Friday."
     }
   ],
   "quizzes": [
