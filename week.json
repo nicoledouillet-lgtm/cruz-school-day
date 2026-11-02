@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-29",
-  "weekOf": "2026-10-26",
-  "deck": "https://docs.google.com/presentation/d/1pvY6QlzI-SxLl8DsgezPQun3dYPzFjoYPv_npCdlIS0/edit",
+  "updated": "2026-11-02",
+  "weekOf": "2026-11-02",
+  "deck": "https://docs.google.com/presentation/d/1HIwuUVNP4cqCADBQWcEangFJLlSOsWbGjVTcfJBYGWw/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
   "deckSlides": {
     "2026-09-21": "https://docs.google.com/presentation/d/1vzAYekq-UfZUA9mEe9ppIk9NY76oqlrj_5BEm0qSiqA/preview?slide=id.g3fa20da4644_0_6",
@@ -387,6 +387,48 @@
     },
     {
       "date": "2026-10-29",
+      "time": "17:30",
+      "until": "18:30",
+      "text": "Squash"
+    },
+    {
+      "date": "2026-11-02",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "6th Dimension",
+      "note": "6th grade choir."
+    },
+    {
+      "date": "2026-11-02",
+      "time": "16:40",
+      "until": "17:40",
+      "text": "Ritoli",
+      "adult": true,
+      "note": "You and Luca are going together — check with a grown-up what time you're leaving."
+    },
+    {
+      "date": "2026-11-04",
+      "time": "14:30",
+      "until": "15:30",
+      "text": "Piano"
+    },
+    {
+      "date": "2026-11-04",
+      "time": "15:30",
+      "until": "16:30",
+      "text": "Flu vaccine",
+      "adult": true,
+      "note": "Right after piano. A grown-up is taking you and Luca."
+    },
+    {
+      "date": "2026-11-05",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "6th Dimension",
+      "note": "6th grade choir."
+    },
+    {
+      "date": "2026-11-05",
       "time": "17:30",
       "until": "18:30",
       "text": "Squash"
@@ -1876,6 +1918,43 @@
       "teacher": "Ms. Rivera",
       "period": 4,
       "text": "Review the multiplication and division (standard algorithm) you find hardest"
+    },
+    {
+      "id": "ela-writing-assess-review",
+      "date": "2026-11-02",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Blooket & GimKit review for the Writing Assessment — you can make paper flashcards to study too",
+      "dueDate": "2026-11-04",
+      "note": "Only if you need the review. The Writing Assessment starts in class on Wednesday."
+    },
+    {
+      "id": "math6h-worksheet-1102",
+      "date": "2026-11-02",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Worksheet, and review the multiplication and division (standard algorithm) you find hardest",
+      "note": "No school Tuesday, so this is for Wednesday. Unit 2 Test is Tue 11/17 — no calculators."
+    },
+    {
+      "id": "sci-video-quiz-1102",
+      "date": "2026-11-02",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Finish the video quiz from class (Matter unit)",
+      "note": "Only if you didn't finish it in class."
+    },
+    {
+      "id": "math6h-review-ops-1104",
+      "date": "2026-11-04",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Review the multiplication and division (standard algorithm) you find hardest",
+      "note": "Unit 2 Test is Tue 11/17 — no calculators."
     }
   ],
   "quizzes": [
@@ -1991,6 +2070,19 @@
       "date": "2026-11-10",
       "text": "ELA — Writing Assessment",
       "note": "New on the deck's November calendar — it now runs Wed 11/4 through Tue 11/10."
+    },
+    {
+      "date": "2026-11-17",
+      "text": "Math 6H — Unit 2 Test (no calculators)",
+      "note": "The assessment calendar puts it on Tue 11/17. Ms. Rivera's homework note says “Tues. 11/16”, but 11/16 is a Monday."
+    },
+    {
+      "date": "2026-11-17",
+      "text": "Spanish — quiz on classroom objects"
+    },
+    {
+      "date": "2026-11-24",
+      "text": "Spanish — Speaking Skills Check with Profe Zeiner"
     }
   ],
   "running": [],
@@ -2034,7 +2126,7 @@
     {
       "tag": "HW",
       "name": "Diamond HW Calendar, this week",
-      "url": "https://docs.google.com/presentation/d/1pvY6QlzI-SxLl8DsgezPQun3dYPzFjoYPv_npCdlIS0/edit"
+      "url": "https://docs.google.com/presentation/d/1HIwuUVNP4cqCADBQWcEangFJLlSOsWbGjVTcfJBYGWw/edit"
     },
     {
       "tag": "ALL",
