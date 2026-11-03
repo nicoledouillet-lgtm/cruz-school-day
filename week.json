@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "weekOf": "2026-11-02",
   "deck": "https://docs.google.com/presentation/d/1HIwuUVNP4cqCADBQWcEangFJLlSOsWbGjVTcfJBYGWw/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -399,26 +399,20 @@
       "note": "6th grade choir."
     },
     {
-      "date": "2026-11-02",
-      "time": "16:40",
-      "until": "17:40",
-      "text": "Ritoli",
-      "adult": true,
-      "note": "You and Luca are going together — check with a grown-up what time you're leaving."
-    },
-    {
-      "date": "2026-11-04",
-      "time": "14:30",
-      "until": "15:30",
-      "text": "Piano"
-    },
-    {
       "date": "2026-11-04",
       "time": "15:30",
       "until": "16:30",
       "text": "Flu vaccine",
       "adult": true,
-      "note": "Right after piano. A grown-up is taking you and Luca."
+      "note": "A grown-up is taking you and Luca. No piano today — it's come off the calendar."
+    },
+    {
+      "date": "2026-11-04",
+      "time": "16:30",
+      "until": "17:30",
+      "text": "Ritoli",
+      "adult": true,
+      "note": "Moved from Monday. Right after the flu vaccine — you and Luca are going together."
     },
     {
       "date": "2026-11-05",
