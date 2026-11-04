@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "weekOf": "2026-11-02",
   "deck": "https://docs.google.com/presentation/d/1HIwuUVNP4cqCADBQWcEangFJLlSOsWbGjVTcfJBYGWw/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -1942,13 +1942,58 @@
       "note": "Only if you didn't finish it in class."
     },
     {
-      "id": "math6h-review-ops-1104",
+      "id": "ss-buckets-1102",
+      "date": "2026-11-02",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Finish the buckets / main arguments in your Lesson 3 packet",
+      "note": "Mr. Fleming added this to Monday's slide after the last update."
+    },
+    {
+      "id": "math6h-p217",
       "date": "2026-11-04",
       "cls": "Math 6H",
       "teacher": "Ms. Rivera",
       "period": 4,
-      "text": "Review the multiplication and division (standard algorithm) you find hardest",
+      "text": "Math book p.217 & 218, and review the multiplication and division (standard algorithm) you find hardest",
       "note": "Unit 2 Test is Tue 11/17 — no calculators."
+    },
+    {
+      "id": "ela-writing-assess-story",
+      "date": "2026-11-04",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Writing Assessment: pick one of the 3 Unit 1 short stories to continue — they're at the top of the Google Classroom stream if you need to reread them",
+      "link": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx",
+      "note": "Only if you need to refresh your memory. The Writing Assessment carries on in class through Tue 11/10."
+    },
+    {
+      "id": "sci-video-quiz-1102",
+      "date": "2026-11-04",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Finish the video quiz (Matter unit)",
+      "note": "Only if you didn't finish it in class today."
+    },
+    {
+      "id": "ss-evidence-1104",
+      "date": "2026-11-04",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Finish annotating the evidence in your Lesson 3 packet"
+    },
+    {
+      "id": "ss-ai-essay-plan-1105",
+      "date": "2026-11-05",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Pink AI Essay Planning page",
+      "note": "Only if you don't finish it in class on Thursday."
     }
   ],
   "quizzes": [
