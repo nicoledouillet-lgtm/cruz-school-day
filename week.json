@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "weekOf": "2026-11-02",
   "deck": "https://docs.google.com/presentation/d/1HIwuUVNP4cqCADBQWcEangFJLlSOsWbGjVTcfJBYGWw/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -424,8 +424,16 @@
     {
       "date": "2026-11-05",
       "time": "17:30",
-      "until": "18:30",
-      "text": "Squash"
+      "until": "18:15",
+      "text": "Squash",
+      "note": "Finishes a bit early today, at 6:15 — piano is straight after."
+    },
+    {
+      "date": "2026-11-05",
+      "time": "18:30",
+      "until": "19:30",
+      "text": "Piano",
+      "note": "Piano is on Thursday evening this week, right after squash — it came off Wednesday for the flu vaccine."
     }
   ],
   "items": [
@@ -1992,8 +2000,26 @@
       "cls": "Social Studies",
       "teacher": "Mr. Fleming",
       "period": 5,
-      "text": "Pink AI Essay Planning page",
-      "note": "Only if you don't finish it in class on Thursday."
+      "text": "Write the CLAIM (only) on your pink AI Essay Planning page",
+      "note": "Only if you didn't finish it in class today."
+    },
+    {
+      "id": "math6h-iready-1105",
+      "date": "2026-11-05",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Finish the iReady Teacher Assigned classwork, and review the concepts and skills you find hardest",
+      "note": "Unit 2 Test is Tue 11/17 — no calculators."
+    },
+    {
+      "id": "ss-ai-essay-plan-1106",
+      "date": "2026-11-06",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Finish your pink AI Essay Planning page",
+      "note": "Only if you didn't finish it in class today."
     }
   ],
   "quizzes": [
