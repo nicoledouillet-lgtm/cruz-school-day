@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-06",
-  "weekOf": "2026-11-02",
-  "deck": "https://docs.google.com/presentation/d/1HIwuUVNP4cqCADBQWcEangFJLlSOsWbGjVTcfJBYGWw/edit",
+  "updated": "2026-11-09",
+  "weekOf": "2026-11-09",
+  "deck": "https://docs.google.com/presentation/d/1tJL4ukJ4cCOK_9kwJvBSN3woGutbQVrmmzb6aDoWmr8/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
   "deckSlides": {
     "2026-09-21": "https://docs.google.com/presentation/d/1vzAYekq-UfZUA9mEe9ppIk9NY76oqlrj_5BEm0qSiqA/preview?slide=id.g3fa20da4644_0_6",
@@ -460,6 +460,52 @@
       "time": "17:30",
       "until": "18:30",
       "text": "Squash"
+    },
+    {
+      "date": "2026-11-16",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "6th Dimension",
+      "note": "6th grade choir."
+    },
+    {
+      "date": "2026-11-18",
+      "time": "14:30",
+      "until": "15:30",
+      "text": "Piano"
+    },
+    {
+      "date": "2026-11-19",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "6th Dimension",
+      "note": "6th grade choir."
+    },
+    {
+      "date": "2026-11-19",
+      "time": "17:30",
+      "until": "18:30",
+      "text": "Squash",
+      "adult": true,
+      "note": "Your haircut is at 5:30 today too — check with a grown-up which one you're doing."
+    },
+    {
+      "date": "2026-11-19",
+      "time": "17:30",
+      "until": "18:00",
+      "text": "Haircut",
+      "where": "Rebel Roots, 333 N Main St",
+      "adult": true,
+      "note": "Same time as squash — check with a grown-up which one you're doing."
+    },
+    {
+      "date": "2026-11-20",
+      "time": "13:00",
+      "until": "13:15",
+      "text": "Student-led conference",
+      "where": "Room 6 (Ms. Zeiner's room)",
+      "adult": true,
+      "note": "You lead it — you show your grown-ups your Conference Slides and talk about how you're doing and your goals."
     }
   ],
   "items": [
@@ -2098,6 +2144,83 @@
       "dueDate": "2026-11-16",
       "adult": true,
       "note": "A grown-up needs to sign it."
+    },
+    {
+      "id": "ela-story-continuation",
+      "date": "2026-11-09",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Story Continuation assessment — you work on it in class; Wednesday is the last class day for it",
+      "dueDate": "2026-11-12",
+      "note": "Nothing to do at home unless you're behind. It's due Thursday."
+    },
+    {
+      "id": "ela-story-continuation",
+      "date": "2026-11-10",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Story Continuation assessment — you work on it in class; Wednesday is the last class day for it",
+      "dueDate": "2026-11-12",
+      "note": "Nothing to do at home unless you're behind. It's due Thursday."
+    },
+    {
+      "id": "ela-story-continuation",
+      "date": "2026-11-11",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Story Continuation assessment — today was the last class day for it",
+      "dueDate": "2026-11-12",
+      "note": "It's due tomorrow. If it isn't finished, finish it tonight."
+    },
+    {
+      "id": "math6h-iready-divfrac",
+      "date": "2026-11-09",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "iReady Check: Dividing Fractions",
+      "note": "Dividing Fractions Quiz is tomorrow, Tue 11/10."
+    },
+    {
+      "id": "ss-ai-essay-plan-1109",
+      "date": "2026-11-09",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Finish your pink AI Essay Planning page",
+      "note": "Only if you didn't finish it in class."
+    },
+    {
+      "id": "ss-ai-essay-plan-1109",
+      "date": "2026-11-10",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Finish your pink AI Essay Planning page",
+      "note": "Only if you didn't finish it in class."
+    },
+    {
+      "id": "ss-ai-essay-plan-1109",
+      "date": "2026-11-11",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Finish your pink AI Essay Planning page",
+      "note": "Only if you didn't finish it in class."
+    },
+    {
+      "id": "ss-ai-intro",
+      "date": "2026-11-12",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Introduction paragraph for your AI essay — turn it in on Google Classroom",
+      "dueDate": "2026-11-13",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy",
+      "note": "You write it in class Thursday and Friday. It's due by the end of class on Friday."
     }
   ],
   "quizzes": [
@@ -2207,17 +2330,17 @@
     {
       "date": "2026-11-09",
       "text": "ELA — Writing Assessment",
-      "note": "New on the deck's November calendar — it now runs Wed 11/4 through Tue 11/10."
+      "note": "The assessment calendar ends it Tue 11/10, but Ms. Metsack's homework note says Wednesday is the last class day and it's due Thursday 11/12."
     },
     {
       "date": "2026-11-10",
       "text": "ELA — Writing Assessment",
-      "note": "New on the deck's November calendar — it now runs Wed 11/4 through Tue 11/10."
+      "note": "The assessment calendar ends it Tue 11/10, but Ms. Metsack's homework note says Wednesday is the last class day and it's due Thursday 11/12."
     },
     {
       "date": "2026-11-10",
       "text": "Math 6H — Dividing Fractions Quiz",
-      "note": "Ms. Rivera's Friday note and this week's assessment calendar say Tue 11/10. Next week's deck calendar doesn't show it yet."
+      "note": "Confirmed — both decks' calendars and Ms. Rivera's Monday note say Tue 11/10."
     },
     {
       "date": "2026-11-17",
@@ -2231,6 +2354,11 @@
     {
       "date": "2026-11-24",
       "text": "Spanish — Speaking Skills Check with Profe Zeiner"
+    },
+    {
+      "date": "2026-12-02",
+      "text": "Social Studies — AI essay due",
+      "note": "New on this week's assessment calendar."
     }
   ],
   "running": [],
@@ -2274,7 +2402,7 @@
     {
       "tag": "HW",
       "name": "Diamond HW Calendar, this week",
-      "url": "https://docs.google.com/presentation/d/1HIwuUVNP4cqCADBQWcEangFJLlSOsWbGjVTcfJBYGWw/edit"
+      "url": "https://docs.google.com/presentation/d/1tJL4ukJ4cCOK_9kwJvBSN3woGutbQVrmmzb6aDoWmr8/edit"
     },
     {
       "tag": "ALL",
