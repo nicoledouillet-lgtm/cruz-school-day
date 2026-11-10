@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "weekOf": "2026-11-09",
   "deck": "https://docs.google.com/presentation/d/1tJL4ukJ4cCOK_9kwJvBSN3woGutbQVrmmzb6aDoWmr8/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -2194,22 +2194,34 @@
       "note": "Only if you didn't finish it in class."
     },
     {
-      "id": "ss-ai-essay-plan-1109",
+      "id": "ss-learningcheck-claims",
       "date": "2026-11-10",
       "cls": "Social Studies",
       "teacher": "Mr. Fleming",
       "period": 5,
-      "text": "Finish your pink AI Essay Planning page",
+      "text": "Learning Check: Claims, Claims, Claims (Google Form)",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy",
       "note": "Only if you didn't finish it in class."
     },
     {
-      "id": "ss-ai-essay-plan-1109",
+      "id": "ss-learningcheck-claims",
       "date": "2026-11-11",
       "cls": "Social Studies",
       "teacher": "Mr. Fleming",
       "period": 5,
-      "text": "Finish your pink AI Essay Planning page",
-      "note": "Only if you didn't finish it in class."
+      "text": "Learning Check: Claims, Claims, Claims (Google Form)",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy",
+      "note": "Only if you haven't turned it in yet."
+    },
+    {
+      "id": "math6h-unit2-review-1110",
+      "date": "2026-11-10",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Review volume, and operations with decimals and fractions",
+      "dueDate": "2026-11-17",
+      "note": "Unit 2 Test is Tue 11/17 — no calculators."
     },
     {
       "id": "ss-ai-intro",
@@ -2345,7 +2357,7 @@
     {
       "date": "2026-11-17",
       "text": "Math 6H — Unit 2 Test (no calculators)",
-      "note": "The assessment calendar puts it on Tue 11/17. Ms. Rivera's homework note says “Tues. 11/16”, but 11/16 is a Monday."
+      "note": "Confirmed — the assessment calendar and Ms. Rivera's Tuesday 11/10 homework note both say Tue 11/17."
     },
     {
       "date": "2026-11-17",
