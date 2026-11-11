@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "weekOf": "2026-11-09",
   "deck": "https://docs.google.com/presentation/d/1tJL4ukJ4cCOK_9kwJvBSN3woGutbQVrmmzb6aDoWmr8/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -2221,6 +2221,15 @@
       "period": 4,
       "text": "Review volume, and operations with decimals and fractions",
       "dueDate": "2026-11-17",
+      "note": "Unit 2 Test is Tue 11/17 — no calculators."
+    },
+    {
+      "id": "math6h-volume-ws-1111",
+      "date": "2026-11-11",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Volume worksheet, then check your answers",
       "note": "Unit 2 Test is Tue 11/17 — no calculators."
     },
     {
