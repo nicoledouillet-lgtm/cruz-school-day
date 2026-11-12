@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "weekOf": "2026-11-09",
   "deck": "https://docs.google.com/presentation/d/1tJL4ukJ4cCOK_9kwJvBSN3woGutbQVrmmzb6aDoWmr8/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -444,9 +444,10 @@
     },
     {
       "date": "2026-11-11",
-      "time": "14:30",
-      "until": "15:30",
-      "text": "Piano"
+      "time": "19:00",
+      "until": "20:00",
+      "text": "Piano",
+      "note": "Piano has moved to Wednesday evenings."
     },
     {
       "date": "2026-11-12",
@@ -470,9 +471,10 @@
     },
     {
       "date": "2026-11-18",
-      "time": "14:30",
-      "until": "15:30",
-      "text": "Piano"
+      "time": "19:00",
+      "until": "20:00",
+      "text": "Piano",
+      "note": "Piano is in the evening now, at 7:00 — not straight after school."
     },
     {
       "date": "2026-11-19",
@@ -2242,6 +2244,15 @@
       "dueDate": "2026-11-13",
       "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy",
       "note": "You write it in class Thursday and Friday. It's due by the end of class on Friday."
+    },
+    {
+      "id": "math6h-iready-unit2-review",
+      "date": "2026-11-12",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Finish the iReady Teacher Assigned lesson — Unit 2 Review",
+      "note": "Unit 2 Test is Tue 11/17 — no calculators."
     }
   ],
   "quizzes": [
