@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "weekOf": "2026-11-09",
   "deck": "https://docs.google.com/presentation/d/1tJL4ukJ4cCOK_9kwJvBSN3woGutbQVrmmzb6aDoWmr8/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -478,6 +478,13 @@
     },
     {
       "date": "2026-11-19",
+      "time": "12:45",
+      "text": "Early dismissal",
+      "adult": true,
+      "note": "School finishes at 12:45 today for conferences. Check with a grown-up how you're getting home, and whether 6th Dimension is still on."
+    },
+    {
+      "date": "2026-11-19",
       "time": "15:00",
       "until": "16:00",
       "text": "6th Dimension",
@@ -499,6 +506,13 @@
       "where": "Rebel Roots, 333 N Main St",
       "adult": true,
       "note": "Same time as squash — check with a grown-up which one you're doing."
+    },
+    {
+      "date": "2026-11-20",
+      "time": "12:45",
+      "text": "Early dismissal",
+      "adult": true,
+      "note": "School finishes at 12:45 today for conferences. Your conference is right after, at 1:00."
     },
     {
       "date": "2026-11-20",
@@ -2253,6 +2267,16 @@
       "period": 4,
       "text": "Finish the iReady Teacher Assigned lesson — Unit 2 Review",
       "note": "Unit 2 Test is Tue 11/17 — no calculators."
+    },
+    {
+      "id": "math6h-unit2-study-1113",
+      "date": "2026-11-13",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Study operations with decimals and fractions for the Unit 2 Test",
+      "dueDate": "2026-11-17",
+      "note": "The test is Tuesday 11/17 — no calculators. Study over the weekend."
     }
   ],
   "quizzes": [
