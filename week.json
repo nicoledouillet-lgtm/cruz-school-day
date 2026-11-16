@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-13",
-  "weekOf": "2026-11-09",
-  "deck": "https://docs.google.com/presentation/d/1tJL4ukJ4cCOK_9kwJvBSN3woGutbQVrmmzb6aDoWmr8/edit",
+  "updated": "2026-11-16",
+  "weekOf": "2026-11-16",
+  "deck": "https://docs.google.com/presentation/d/1F6SKu3UThIPK3KikMxVPO2Q0AxKF_WHGW2-EeWXCKy8/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
   "deckSlides": {
     "2026-09-21": "https://docs.google.com/presentation/d/1vzAYekq-UfZUA9mEe9ppIk9NY76oqlrj_5BEm0qSiqA/preview?slide=id.g3fa20da4644_0_6",
@@ -522,6 +522,42 @@
       "where": "Room 6 (Ms. Zeiner's room)",
       "adult": true,
       "note": "You lead it — you show your grown-ups your Conference Slides and talk about how you're doing and your goals."
+    },
+    {
+      "date": "2026-11-20",
+      "time": "17:00",
+      "until": "18:30",
+      "text": "Henna"
+    },
+    {
+      "date": "2026-11-23",
+      "time": "11:00",
+      "until": "12:00",
+      "text": "Appointment in Glastonbury",
+      "adult": true,
+      "note": "It's in the middle of the school day — a grown-up is taking you."
+    },
+    {
+      "date": "2026-11-23",
+      "time": "15:00",
+      "until": "16:00",
+      "text": "6th Dimension",
+      "note": "6th grade choir."
+    },
+    {
+      "date": "2026-11-25",
+      "time": "17:00",
+      "until": "18:00",
+      "text": "Pre-Thanksgiving Family Bingo",
+      "where": "Hartford Golf Club",
+      "adult": true,
+      "note": "The whole family is going."
+    },
+    {
+      "date": "2026-11-25",
+      "time": "19:00",
+      "until": "20:00",
+      "text": "Piano"
     }
   ],
   "items": [
@@ -2277,6 +2313,34 @@
       "text": "Study operations with decimals and fractions for the Unit 2 Test",
       "dueDate": "2026-11-17",
       "note": "The test is Tuesday 11/17 — no calculators. Study over the weekend."
+    },
+    {
+      "id": "ela-noredink-pos1",
+      "date": "2026-11-16",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk: Parts of a Sentence 1"
+    },
+    {
+      "id": "math6h-unit2-study-1116",
+      "date": "2026-11-16",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Complete and correct the study guide, then study for the Unit 2 Test",
+      "dueDate": "2026-11-17",
+      "note": "The test is tomorrow — no calculators."
+    },
+    {
+      "id": "sci-diamond-castle",
+      "date": "2026-11-17",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Finish all your Diamond Castle station work — bring your green notebook home if you need to",
+      "dueDate": "2026-11-18",
+      "note": "Only if it isn't finished. It's all due tomorrow."
     }
   ],
   "quizzes": [
@@ -2408,6 +2472,11 @@
       "text": "Spanish — quiz on classroom objects"
     },
     {
+      "date": "2026-11-23",
+      "text": "ELA — Quiz on -tion/-sion",
+      "note": "New on this week's assessment calendar. It's the morpheme of the week."
+    },
+    {
       "date": "2026-11-24",
       "text": "Spanish — Speaking Skills Check with Profe Zeiner"
     },
@@ -2458,7 +2527,7 @@
     {
       "tag": "HW",
       "name": "Diamond HW Calendar, this week",
-      "url": "https://docs.google.com/presentation/d/1tJL4ukJ4cCOK_9kwJvBSN3woGutbQVrmmzb6aDoWmr8/edit"
+      "url": "https://docs.google.com/presentation/d/1F6SKu3UThIPK3KikMxVPO2Q0AxKF_WHGW2-EeWXCKy8/edit"
     },
     {
       "tag": "ALL",
