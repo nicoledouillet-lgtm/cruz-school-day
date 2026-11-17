@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "weekOf": "2026-11-16",
   "deck": "https://docs.google.com/presentation/d/1F6SKu3UThIPK3KikMxVPO2Q0AxKF_WHGW2-EeWXCKy8/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -2341,6 +2341,23 @@
       "text": "Finish all your Diamond Castle station work — bring your green notebook home if you need to",
       "dueDate": "2026-11-18",
       "note": "Only if it isn't finished. It's all due tomorrow."
+    },
+    {
+      "id": "ela-noredink-pos1",
+      "date": "2026-11-17",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk: Parts of a Sentence 1",
+      "note": "Set on Monday. Skip it if it's done; if not, do it tonight."
+    },
+    {
+      "id": "math6h-binder-units12",
+      "date": "2026-11-17",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Take the Unit 1 and Unit 2 papers out of your math binder"
     }
   ],
   "quizzes": [
