@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "weekOf": "2026-11-16",
   "deck": "https://docs.google.com/presentation/d/1F6SKu3UThIPK3KikMxVPO2Q0AxKF_WHGW2-EeWXCKy8/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -468,6 +468,13 @@
       "until": "16:00",
       "text": "6th Dimension",
       "note": "6th grade choir."
+    },
+    {
+      "date": "2026-11-18",
+      "time": "16:45",
+      "until": "17:45",
+      "text": "Squash",
+      "note": "Squash today. You're done by 5:45, and piano is at 7:00."
     },
     {
       "date": "2026-11-18",
@@ -2358,6 +2365,54 @@
       "teacher": "Ms. Rivera",
       "period": 4,
       "text": "Take the Unit 1 and Unit 2 papers out of your math binder"
+    },
+    {
+      "id": "ela-stations-sheet-1119",
+      "date": "2026-11-18",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "Finish your Stations Sheet",
+      "dueDate": "2026-11-19",
+      "link": "https://classroom.google.com/u/3/c/ODc2NTg4NTA0Nzkx",
+      "note": "Due by 8am Thursday. If you were absent, it's on Google Classroom."
+    },
+    {
+      "id": "math6h-iready-1118",
+      "date": "2026-11-18",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "GRADED iReady Teacher Assigned lesson",
+      "note": "To get credit, show your work clearly on a separate piece of paper and label each question number."
+    },
+    {
+      "id": "sci-powerschool-owe-1118",
+      "date": "2026-11-18",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Check PowerSchool. Do you owe Mrs. Vocke any work? If you do, finish it"
+    },
+    {
+      "id": "ela-noredink-1122",
+      "date": "2026-11-19",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk",
+      "dueDate": "2026-11-22",
+      "note": "Due by Sunday evening. The deck doesn't say which lesson, so check NoRedInk to see what's assigned."
+    },
+    {
+      "id": "ela-noredink-1122",
+      "date": "2026-11-20",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk",
+      "dueDate": "2026-11-22",
+      "note": "Due by Sunday evening. The deck doesn't say which lesson, so check NoRedInk to see what's assigned."
     }
   ],
   "quizzes": [
