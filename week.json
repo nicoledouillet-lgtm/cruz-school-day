@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "weekOf": "2026-11-16",
   "deck": "https://docs.google.com/presentation/d/1F6SKu3UThIPK3KikMxVPO2Q0AxKF_WHGW2-EeWXCKy8/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -2395,6 +2395,17 @@
       "text": "Check PowerSchool. Do you owe Mrs. Vocke any work? If you do, finish it"
     },
     {
+      "id": "ss-ai-body-para",
+      "date": "2026-11-18",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Body paragraph for your AI essay — turn it in on Google Classroom",
+      "dueDate": "2026-11-19",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy",
+      "note": "You write it in class. It's due by the end of class on Thursday. Mr. Fleming added this after the last update."
+    },
+    {
       "id": "ela-noredink-1122",
       "date": "2026-11-19",
       "cls": "ELA",
@@ -2413,6 +2424,25 @@
       "text": "NoRedInk",
       "dueDate": "2026-11-22",
       "note": "Due by Sunday evening. The deck doesn't say which lesson, so check NoRedInk to see what's assigned."
+    },
+    {
+      "id": "math6h-p270",
+      "date": "2026-11-19",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Math book p.270 #4, and all of p.272"
+    },
+    {
+      "id": "ss-ai-body-para",
+      "date": "2026-11-19",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "Body paragraph for your AI essay — turn it in on Google Classroom",
+      "dueDate": "2026-11-19",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy",
+      "note": "It was due by the end of class today. Only if you haven't turned it in yet — do it tonight."
     }
   ],
   "quizzes": [
@@ -2546,7 +2576,7 @@
     {
       "date": "2026-11-23",
       "text": "ELA — Quiz on -tion/-sion",
-      "note": "New on this week's assessment calendar. It's the morpheme of the week."
+      "note": "It's the morpheme of the week. This week's deck lists it, but next week's deck calendar doesn't — check with Ms. Metsack."
     },
     {
       "date": "2026-11-24",
@@ -2555,7 +2585,7 @@
     {
       "date": "2026-12-02",
       "text": "Social Studies — AI essay due",
-      "note": "New on this week's assessment calendar."
+      "note": "This week's deck lists it, but next week's deck calendar doesn't — check with Mr. Fleming."
     }
   ],
   "running": [],
