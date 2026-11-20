@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "weekOf": "2026-11-16",
   "deck": "https://docs.google.com/presentation/d/1F6SKu3UThIPK3KikMxVPO2Q0AxKF_WHGW2-EeWXCKy8/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -2443,6 +2443,15 @@
       "dueDate": "2026-11-19",
       "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy",
       "note": "It was due by the end of class today. Only if you haven't turned it in yet — do it tonight."
+    },
+    {
+      "id": "math6h-missing-1120",
+      "date": "2026-11-20",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Catch up on any missing math work — it's due by the Unit 3/4 test",
+      "note": "Only if you owe Ms. Rivera something. Lesson 12 Learning Check is Tue 11/24."
     }
   ],
   "quizzes": [
@@ -2581,6 +2590,11 @@
     {
       "date": "2026-11-24",
       "text": "Spanish — Speaking Skills Check with Profe Zeiner"
+    },
+    {
+      "date": "2026-11-24",
+      "text": "Math 6H — Lesson 12 Learning Check",
+      "note": "Ms. Rivera's Friday homework note and this week's deck calendar both say Tue 11/24."
     },
     {
       "date": "2026-12-02",
