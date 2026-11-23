@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-20",
-  "weekOf": "2026-11-16",
-  "deck": "https://docs.google.com/presentation/d/1F6SKu3UThIPK3KikMxVPO2Q0AxKF_WHGW2-EeWXCKy8/edit",
+  "updated": "2026-11-23",
+  "weekOf": "2026-11-23",
+  "deck": "https://docs.google.com/presentation/d/1j6cEd-fiJedZjlAbNLTVFGVDJrDTgO1a7wSOqh9wcbU/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
   "deckSlides": {
     "2026-09-21": "https://docs.google.com/presentation/d/1vzAYekq-UfZUA9mEe9ppIk9NY76oqlrj_5BEm0qSiqA/preview?slide=id.g3fa20da4644_0_6",
@@ -545,13 +545,6 @@
       "note": "It's in the middle of the school day — a grown-up is taking you."
     },
     {
-      "date": "2026-11-23",
-      "time": "15:00",
-      "until": "16:00",
-      "text": "6th Dimension",
-      "note": "6th grade choir."
-    },
-    {
       "date": "2026-11-25",
       "time": "17:00",
       "until": "18:00",
@@ -565,6 +558,14 @@
       "time": "19:00",
       "until": "20:00",
       "text": "Piano"
+    },
+    {
+      "date": "2026-11-26",
+      "time": "17:30",
+      "until": "18:30",
+      "text": "Squash",
+      "adult": true,
+      "note": "It's Thanksgiving — squash is still on the calendar, but check with a grown-up that it's really on."
     }
   ],
   "items": [
@@ -2452,6 +2453,87 @@
       "period": 4,
       "text": "Catch up on any missing math work — it's due by the Unit 3/4 test",
       "note": "Only if you owe Ms. Rivera something. Lesson 12 Learning Check is Tue 11/24."
+    },
+    {
+      "id": "ela-noredink-fanboys",
+      "date": "2026-11-23",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk: Quiz on Subjects, Verbs & FANBOYS — get 70% or higher",
+      "dueDate": "2026-11-29",
+      "note": "Due by Sunday evening."
+    },
+    {
+      "id": "math6h-iready-1123",
+      "date": "2026-11-23",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Finish the iReady practice from class, and get ready for the Lesson 12 Learning Check",
+      "dueDate": "2026-11-24",
+      "note": "The Lesson 12 Learning Check is tomorrow, Tue 11/24."
+    },
+    {
+      "id": "sci-powerschool-owe-1123",
+      "date": "2026-11-23",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Check PowerSchool. Do you owe Mrs. Vocke the “error hunt”, the physical properties checkpoint, or today's density checkpoint? If you do, finish it"
+    },
+    {
+      "id": "ss-ai-essay-full",
+      "date": "2026-11-23",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "AI essay — all 3 paragraphs (intro, body, conclusion) — turn it in on Google Classroom",
+      "dueDate": "2026-12-01",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy",
+      "note": "You're writing the conclusion in class this week. Due by Tuesday 12/1."
+    },
+    {
+      "id": "ela-noredink-fanboys",
+      "date": "2026-11-24",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk: Quiz on Subjects, Verbs & FANBOYS — get 70% or higher",
+      "dueDate": "2026-11-29",
+      "note": "Due by Sunday evening."
+    },
+    {
+      "id": "ss-ai-essay-full",
+      "date": "2026-11-24",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "AI essay — all 3 paragraphs (intro, body, conclusion) — turn it in on Google Classroom",
+      "dueDate": "2026-12-01",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy",
+      "note": "You're writing the conclusion in class this week. Due by Tuesday 12/1."
+    },
+    {
+      "id": "ela-noredink-fanboys",
+      "date": "2026-11-25",
+      "cls": "ELA",
+      "teacher": "Ms. Metsack",
+      "period": 7,
+      "text": "NoRedInk: Quiz on Subjects, Verbs & FANBOYS — get 70% or higher",
+      "dueDate": "2026-11-29",
+      "note": "Due by Sunday evening."
+    },
+    {
+      "id": "ss-ai-essay-full",
+      "date": "2026-11-25",
+      "cls": "Social Studies",
+      "teacher": "Mr. Fleming",
+      "period": 5,
+      "text": "AI essay — all 3 paragraphs (intro, body, conclusion) — turn it in on Google Classroom",
+      "dueDate": "2026-12-01",
+      "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy",
+      "note": "Due by Tuesday 12/1 — the first day back after Thanksgiving break is Monday."
     }
   ],
   "quizzes": [
@@ -2583,9 +2665,9 @@
       "text": "Spanish — quiz on classroom objects"
     },
     {
-      "date": "2026-11-23",
+      "date": "2026-11-24",
       "text": "ELA — Quiz on -tion/-sion",
-      "note": "It's the morpheme of the week. This week's deck lists it, but next week's deck calendar doesn't — check with Ms. Metsack."
+      "note": "Moved from Monday 11/23 to Tuesday — this week's deck calendar says so."
     },
     {
       "date": "2026-11-24",
@@ -2599,7 +2681,7 @@
     {
       "date": "2026-12-02",
       "text": "Social Studies — AI essay due",
-      "note": "This week's deck lists it, but next week's deck calendar doesn't — check with Mr. Fleming."
+      "note": "The deck's calendar says Wed 12/2, but Mr. Fleming's homework note says due by Tue 12/1 — aim for Tuesday."
     }
   ],
   "running": [],
@@ -2643,7 +2725,7 @@
     {
       "tag": "HW",
       "name": "Diamond HW Calendar, this week",
-      "url": "https://docs.google.com/presentation/d/1F6SKu3UThIPK3KikMxVPO2Q0AxKF_WHGW2-EeWXCKy8/edit"
+      "url": "https://docs.google.com/presentation/d/1j6cEd-fiJedZjlAbNLTVFGVDJrDTgO1a7wSOqh9wcbU/edit"
     },
     {
       "tag": "ALL",
