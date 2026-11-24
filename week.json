@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "weekOf": "2026-11-23",
   "deck": "https://docs.google.com/presentation/d/1j6cEd-fiJedZjlAbNLTVFGVDJrDTgO1a7wSOqh9wcbU/edit",
   "archive": "https://docs.google.com/document/d/1smWbYjBZx9auMdju2WeKwZ0Fy4kii8adl2c0ox9x1L4/edit",
@@ -2513,6 +2513,23 @@
       "dueDate": "2026-12-01",
       "link": "https://classroom.google.com/u/3/c/ODE5OTc1NDM3OTMy",
       "note": "You're writing the conclusion in class this week. Due by Tuesday 12/1."
+    },
+    {
+      "id": "math6h-p288",
+      "date": "2026-11-24",
+      "cls": "Math 6H",
+      "teacher": "Ms. Rivera",
+      "period": 4,
+      "text": "Math book p.288"
+    },
+    {
+      "id": "sci-powerschool-owe-1123",
+      "date": "2026-11-24",
+      "cls": "Science",
+      "teacher": "Mrs. Vocke",
+      "period": 2,
+      "text": "Check PowerSchool. Do you owe Mrs. Vocke the “error hunt”, the physical properties checkpoint, or the density checkpoint? If you do, finish it",
+      "note": "Same check as Monday. Skip it if you're all caught up."
     },
     {
       "id": "ela-noredink-fanboys",
